@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{74DE718A-7F7F-4946-A4AF-7725615E7858}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WinSubTrial</RootNamespace>
+    <AssemblyName>WinSubTrial</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoItX3.Assembly">
+      <HintPath>D:\ProgramFiles\autoit-v3\install\AutoItX\AutoItX3.Assembly.dll</HintPath>
+    </Reference>
+    <Reference Include="Faker.Net.4.5, Version=1.5.148.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Faker.Net.1.5.148\lib\net452\Faker.Net.4.5.dll</HintPath>
+    </Reference>
+    <Reference Include="KAutoHelper">
+      <HintPath>..\..\..\Libs\KAutoHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpAdbClient, Version=2.3.0.0, Culture=neutral, PublicKeyToken=d728076f5d82a2e8, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpAdbClient.2.3.23\lib\net461\SharpAdbClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.4.5.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Utils\Utils\Utils\bin\Debug\Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="xNet">
+      <HintPath>..\..\..\Libs\xNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApionTask\AddingPaymentTask.cs" />
+    <Compile Include="ApionTask\AirplaneModeTask.cs" />
+    <Compile Include="ApionTask\AutoClickTacTask.cs" />
+    <Compile Include="ApionTask\EnumApp.cs" />
+    <Compile Include="ApionTask\SnapchatTask.cs" />
+    <Compile Include="ApionTask\SubscribeYoutubeTask.cs" />
+    <Compile Include="ApionTask\TikTokTask.cs" />
+    <Compile Include="ApionTask\TouchPositionTask.cs" />
+    <Compile Include="ApionTask\WifiProxyTask.cs" />
+    <Compile Include="Data\CaptchaPoint.cs" />
+    <Compile Include="ExtensionMain\MainViewModel.cs" />
+    <Compile Include="Data\Gmail.cs" />
+    <Compile Include="Data\Network.cs" />
+    <Compile Include="Data\RestoreData.cs" />
+    <Compile Include="ExtensionMain\Main+Backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtensionMain\Main+DefaultFuncs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuration.Designer.cs">
+      <DependentUpon>Configuration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BackupData.cs" />
+    <Compile Include="Data\Configs.cs" />
+    <Compile Include="Data\FullInfo.cs" />
+    <Compile Include="Data\Settings.cs" />
+    <Compile Include="Data\Device.cs" />
+    <Compile Include="Forms\DeviceTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DeviceTools.Designer.cs">
+      <DependentUpon>DeviceTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RunScript.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RunScript.Designer.cs">
+      <DependentUpon>RunScript.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WinName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WinName.Designer.cs">
+      <DependentUpon>WinName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Functions\Backup.cs" />
+    <Compile Include="Functions\Change.cs" />
+    <Compile Include="ApionTask\CreateMailTask.cs" />
+    <Compile Include="Functions\ChangeA1.cs" />
+    <Compile Include="Functions\Cryption.cs" />
+    <Compile Include="ApionTask\FindExactlyContentAndTouch.cs" />
+    <Compile Include="ApionTask\GmailTask.cs" />
+    <Compile Include="Forms\InstalledPackages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InstalledPackages.Designer.cs">
+      <DependentUpon>InstalledPackages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionMain\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtensionMain\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NetApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NetApp.Designer.cs">
+      <DependentUpon>NetApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Common.cs" />
+    <Compile Include="Forms\OpenLink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OpenLink.Designer.cs">
+      <DependentUpon>OpenLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApionTask\InstallAppTask.cs" />
+    <Compile Include="ApionTask\PastePasswordTask.cs" />
+    <Compile Include="ApionTask\RecoveryEmailTask.cs" />
+    <Compile Include="ApionTask\RemoveAccountTask.cs" />
+    <Compile Include="Functions\Script.cs" />
+    <Compile Include="Forms\SubTrialSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SubTrialSupport.Designer.cs">
+      <DependentUpon>SubTrialSupport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SystemPackages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SystemPackages.Designer.cs">
+      <DependentUpon>SystemPackages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TrafficInstall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TrafficInstall.Designer.cs">
+      <DependentUpon>TrafficInstall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Adb.cs" />
+    <Compile Include="Utilities\Auto.cs" />
+    <Compile Include="Functions\Funcs.cs" />
+    <Compile Include="Forms\WipePackages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WipePackages.Designer.cs">
+      <DependentUpon>WipePackages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\Backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Backup.Designer.cs">
+      <DependentUpon>Backup.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Backup.resx">
+      <DependentUpon>Backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuration.resx">
+      <DependentUpon>Configuration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeviceTools.resx">
+      <DependentUpon>DeviceTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InstalledPackages.resx">
+      <DependentUpon>InstalledPackages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtensionMain\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NetApp.resx">
+      <DependentUpon>NetApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OpenLink.resx">
+      <DependentUpon>OpenLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RunScript.resx">
+      <DependentUpon>RunScript.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WinName.resx">
+      <DependentUpon>WinName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SubTrialSupport.resx">
+      <DependentUpon>SubTrialSupport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SystemPackages.resx">
+      <DependentUpon>SystemPackages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TrafficInstall.resx">
+      <DependentUpon>TrafficInstall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WipePackages.resx">
+      <DependentUpon>WipePackages.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup-restore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\capture.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\ip.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\offProxy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\reboot.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\stop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\vysor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\capture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\ip.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\link.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\offProxy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\reboot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\stop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Icons\vysor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\capture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ip.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\link.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\offProxy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reboot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vysor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <Content Include="Resources\email.png" />
+    <None Include="Resources\Restore.png" />
+    <None Include="Resources\Move.png" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\wipe.png" />
+    <None Include="Resources\editName.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets'))" />
+  </Target>
+</Project>

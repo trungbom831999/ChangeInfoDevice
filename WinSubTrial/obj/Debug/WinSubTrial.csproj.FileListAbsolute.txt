@@ -1,0 +1,601 @@
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\WinSubTrial.exe.config
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\WinSubTrial.exe
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\WinSubTrial.pdb
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\AutoItX3.Assembly.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\KAutoHelper.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\Newtonsoft.Json.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\Utils.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\xNet.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\AutoItX3.Assembly.xml
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\Utils.pdb
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\Utils.dll.config
+E:\CSharp\Project\WinSubTrial\WinSubTrial\obj\Debug\WinSubTrial.csproj.AssemblyReference.cache
+E:\CSharp\Project\WinSubTrial\WinSubTrial\obj\Debug\WinSubTrial.exe.config
+E:\CSharp\Project\WinSubTrial\WinSubTrial\obj\Debug\WinSubTrial.Backup.resources
+E:\CSharp\Project\WinSubTrial\WinSubTrial\obj\Debug\WinSubTrial.Configuration.resources
+E:\CSharp\Project\WinSubTrial\WinSubTrial\obj\Debug\WinSubTrial.InstalledPackages.resources
+E:\CSharp\Project\WinSubTrial\WinSubTrial\obj\Debug\WinSubTrial.Main.resources
+E:\CSharp\Project\WinSubTrial\WinSubTrial\obj\Debug\WinSubTrial.NetApp.resources
+E:\CSharp\Project\WinSubTrial\WinSubTrial\obj\Debug\WinSubTrial.OpenLink.resources
+E:\CSharp\Project\WinSubTrial\WinSubTrial\obj\Debug\WinSubTrial.Properties.Resources.resources
+E:\CSharp\Project\WinSubTrial\WinSubTrial\obj\Debug\WinSubTrial.SubTrialSupport.resources
+E:\CSharp\Project\WinSubTrial\WinSubTrial\obj\Debug\WinSubTrial.SystemPackages.resources
+E:\CSharp\Project\WinSubTrial\WinSubTrial\obj\Debug\WinSubTrial.TrafficInstall.resources
+E:\CSharp\Project\WinSubTrial\WinSubTrial\obj\Debug\WinSubTrial.WipePackages.resources
+E:\CSharp\Project\WinSubTrial\WinSubTrial\obj\Debug\WinSubTrial.csproj.GenerateResource.cache
+E:\CSharp\Project\WinSubTrial\WinSubTrial\obj\Debug\WinSubTrial.csproj.CoreCompileInputs.cache
+E:\CSharp\Project\WinSubTrial\WinSubTrial\obj\Debug\WinSubTrial.csproj.CopyComplete
+E:\CSharp\Project\WinSubTrial\WinSubTrial\obj\Debug\WinSubTrial.exe
+E:\CSharp\Project\WinSubTrial\WinSubTrial\obj\Debug\WinSubTrial.pdb
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\Microsoft.Win32.Primitives.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\netstandard.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.AppContext.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Collections.Concurrent.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Collections.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Collections.NonGeneric.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Collections.Specialized.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.ComponentModel.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.ComponentModel.EventBasedAsync.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.ComponentModel.Primitives.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.ComponentModel.TypeConverter.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Console.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Data.Common.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Diagnostics.Contracts.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Diagnostics.Debug.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Diagnostics.FileVersionInfo.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Diagnostics.Process.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Diagnostics.StackTrace.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Diagnostics.TextWriterTraceListener.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Diagnostics.Tools.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Diagnostics.TraceSource.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Diagnostics.Tracing.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Drawing.Primitives.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Dynamic.Runtime.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Globalization.Calendars.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Globalization.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Globalization.Extensions.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.IO.Compression.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.IO.Compression.ZipFile.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.IO.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.IO.FileSystem.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.IO.FileSystem.DriveInfo.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.IO.FileSystem.Primitives.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.IO.FileSystem.Watcher.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.IO.IsolatedStorage.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.IO.MemoryMappedFiles.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.IO.Pipes.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.IO.UnmanagedMemoryStream.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Linq.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Linq.Expressions.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Linq.Parallel.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Linq.Queryable.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Net.Http.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Net.NameResolution.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Net.NetworkInformation.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Net.Ping.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Net.Primitives.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Net.Requests.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Net.Security.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Net.Sockets.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Net.WebHeaderCollection.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Net.WebSockets.Client.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Net.WebSockets.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.ObjectModel.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Reflection.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Reflection.Extensions.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Reflection.Primitives.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Resources.Reader.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Resources.ResourceManager.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Resources.Writer.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Runtime.CompilerServices.VisualC.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Runtime.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Runtime.Extensions.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Runtime.Handles.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Runtime.InteropServices.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Runtime.Numerics.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Runtime.Serialization.Formatters.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Runtime.Serialization.Json.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Runtime.Serialization.Primitives.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Runtime.Serialization.Xml.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Security.Claims.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Security.Cryptography.Algorithms.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Security.Cryptography.Csp.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Security.Cryptography.Encoding.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Security.Cryptography.Primitives.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Security.Principal.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Security.SecureString.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Text.Encoding.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Text.Encoding.Extensions.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Text.RegularExpressions.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Threading.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Threading.Overlapped.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Threading.Tasks.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Threading.Tasks.Parallel.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Threading.Thread.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Threading.ThreadPool.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Threading.Timer.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.ValueTuple.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Xml.ReaderWriter.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Xml.XDocument.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Xml.XmlDocument.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Xml.XmlSerializer.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Xml.XPath.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Xml.XPath.XDocument.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\SharpAdbClient.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Buffers.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Drawing.Common.dll
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+E:\CSharp\Project\WinSubTrial\WinSubTrial\bin\Debug\System.Buffers.xml
+E:\CSharp\Project\WinSubTrial\WinSubTrial\obj\Debug\WinSubTrial.DeviceTools.resources
+E:\CSharp\Project\WinSubTrial\WinSubTrial\obj\Debug\WinSubTrial.WinName.resources
+E:\CSharp\Project\WinSubTrial\WinSubTrial\obj\Debug\WinSubTrial.RunScript.resources
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\WinSubTrial.exe.config
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\WinSubTrial.exe
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\WinSubTrial.pdb
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\Microsoft.Win32.Primitives.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\netstandard.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.AppContext.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Collections.Concurrent.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Collections.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Collections.NonGeneric.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Collections.Specialized.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.ComponentModel.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.ComponentModel.EventBasedAsync.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.ComponentModel.Primitives.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.ComponentModel.TypeConverter.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Console.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Data.Common.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Diagnostics.Contracts.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Diagnostics.Debug.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Diagnostics.FileVersionInfo.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Diagnostics.Process.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Diagnostics.StackTrace.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Diagnostics.TextWriterTraceListener.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Diagnostics.Tools.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Diagnostics.TraceSource.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Diagnostics.Tracing.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Drawing.Primitives.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Dynamic.Runtime.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Globalization.Calendars.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Globalization.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Globalization.Extensions.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.IO.Compression.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.IO.Compression.ZipFile.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.IO.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.IO.FileSystem.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.IO.FileSystem.DriveInfo.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.IO.FileSystem.Watcher.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.IO.IsolatedStorage.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.IO.MemoryMappedFiles.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.IO.Pipes.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.IO.UnmanagedMemoryStream.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Linq.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Linq.Expressions.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Linq.Parallel.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Linq.Queryable.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Net.Http.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Net.NameResolution.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Net.NetworkInformation.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Net.Ping.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Net.Primitives.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Net.Requests.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Net.Security.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Net.Sockets.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Net.WebHeaderCollection.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Net.WebSockets.Client.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Net.WebSockets.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.ObjectModel.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Reflection.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Reflection.Extensions.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Reflection.Primitives.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Resources.Reader.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Resources.ResourceManager.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Resources.Writer.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Runtime.CompilerServices.VisualC.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Runtime.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Runtime.Extensions.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Runtime.Handles.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Runtime.InteropServices.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Runtime.Numerics.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Runtime.Serialization.Formatters.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Runtime.Serialization.Json.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Runtime.Serialization.Primitives.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Runtime.Serialization.Xml.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Security.Claims.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Security.Cryptography.Csp.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Security.Principal.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Security.SecureString.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Text.Encoding.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Text.Encoding.Extensions.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Text.RegularExpressions.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Threading.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Threading.Overlapped.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Threading.Tasks.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Threading.Tasks.Parallel.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Threading.Thread.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Threading.ThreadPool.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Threading.Timer.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.ValueTuple.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Xml.ReaderWriter.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Xml.XDocument.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Xml.XmlDocument.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Xml.XmlSerializer.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Xml.XPath.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Xml.XPath.XDocument.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\SharpAdbClient.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Buffers.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Drawing.Common.dll
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\AutoItX3.Assembly.xml
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\System.Buffers.xml
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\Utils.pdb
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\bin\Debug\Utils.dll.config
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\obj\Debug\WinSubTrial.csproj.AssemblyReference.cache
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\obj\Debug\WinSubTrial.exe.config
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\obj\Debug\WinSubTrial.Backup.resources
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\obj\Debug\WinSubTrial.Configuration.resources
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\obj\Debug\WinSubTrial.DeviceTools.resources
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\obj\Debug\WinSubTrial.InstalledPackages.resources
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\obj\Debug\WinSubTrial.Main.resources
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\obj\Debug\WinSubTrial.NetApp.resources
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\obj\Debug\WinSubTrial.OpenLink.resources
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\obj\Debug\WinSubTrial.RunScript.resources
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\obj\Debug\WinSubTrial.WinName.resources
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\obj\Debug\WinSubTrial.Properties.Resources.resources
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\obj\Debug\WinSubTrial.SubTrialSupport.resources
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\obj\Debug\WinSubTrial.SystemPackages.resources
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\obj\Debug\WinSubTrial.TrafficInstall.resources
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\obj\Debug\WinSubTrial.WipePackages.resources
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\obj\Debug\WinSubTrial.csproj.GenerateResource.cache
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\obj\Debug\WinSubTrial.csproj.CoreCompileInputs.cache
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\obj\Debug\WinSubTrial.csproj.CopyComplete
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\obj\Debug\WinSubTrial.exe
+C:\Users\TRINH VAN CUONG\OneDrive\Desktop\WinSub Trials (source)\WinSubTrial_CSharp\WinSubTrial\obj\Debug\WinSubTrial.pdb
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.csproj.AssemblyReference.cache
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.exe.config
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.Backup.resources
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.Configuration.resources
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.DeviceTools.resources
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.InstalledPackages.resources
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.Main.resources
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.NetApp.resources
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.OpenLink.resources
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.RunScript.resources
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.WinName.resources
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.Properties.Resources.resources
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.SubTrialSupport.resources
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.SystemPackages.resources
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.TrafficInstall.resources
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.WipePackages.resources
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.csproj.GenerateResource.cache
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.csproj.CoreCompileInputs.cache
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.exe
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.pdb
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\WinSubTrial.exe.config
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\WinSubTrial.exe
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\WinSubTrial.pdb
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\Microsoft.Win32.Primitives.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\netstandard.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.AppContext.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Collections.Concurrent.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Collections.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Collections.NonGeneric.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Collections.Specialized.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.ComponentModel.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.ComponentModel.EventBasedAsync.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.ComponentModel.Primitives.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.ComponentModel.TypeConverter.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Console.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Data.Common.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Diagnostics.Contracts.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Diagnostics.Debug.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Diagnostics.FileVersionInfo.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Diagnostics.Process.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Diagnostics.StackTrace.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Diagnostics.TextWriterTraceListener.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Diagnostics.Tools.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Diagnostics.TraceSource.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Diagnostics.Tracing.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Drawing.Primitives.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Dynamic.Runtime.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Globalization.Calendars.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Globalization.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Globalization.Extensions.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.IO.Compression.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.IO.Compression.ZipFile.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.IO.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.IO.FileSystem.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.IO.FileSystem.DriveInfo.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.IO.FileSystem.Watcher.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.IO.IsolatedStorage.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.IO.MemoryMappedFiles.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.IO.Pipes.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.IO.UnmanagedMemoryStream.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Linq.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Linq.Expressions.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Linq.Parallel.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Linq.Queryable.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Net.Http.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Net.NameResolution.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Net.NetworkInformation.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Net.Ping.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Net.Primitives.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Net.Requests.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Net.Security.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Net.Sockets.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Net.WebHeaderCollection.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Net.WebSockets.Client.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Net.WebSockets.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.ObjectModel.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Reflection.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Reflection.Extensions.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Reflection.Primitives.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Resources.Reader.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Resources.ResourceManager.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Resources.Writer.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Runtime.CompilerServices.VisualC.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Runtime.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Runtime.Extensions.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Runtime.Handles.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Runtime.InteropServices.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Runtime.Numerics.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Runtime.Serialization.Formatters.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Runtime.Serialization.Json.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Runtime.Serialization.Primitives.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Runtime.Serialization.Xml.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Security.Claims.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Security.Cryptography.Csp.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Security.Principal.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Security.SecureString.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Text.Encoding.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Text.Encoding.Extensions.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Text.RegularExpressions.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Threading.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Threading.Overlapped.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Threading.Tasks.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Threading.Tasks.Parallel.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Threading.Thread.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Threading.ThreadPool.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Threading.Timer.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.ValueTuple.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Xml.ReaderWriter.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Xml.XDocument.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Xml.XmlDocument.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Xml.XmlSerializer.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Xml.XPath.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Xml.XPath.XDocument.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\Newtonsoft.Json.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\SharpAdbClient.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Buffers.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Drawing.Common.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\AutoItX3.Assembly.xml
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\Newtonsoft.Json.xml
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Buffers.xml
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\Utils.pdb
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\Utils.dll.config
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.csproj.CopyComplete
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\Faker.Net.4.5.dll
+C:\Users\SUPERNAM\Downloads\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\de-DE\Faker.Net.4.5.resources.dll
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\WinSubTrial.exe.config
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\WinSubTrial.exe
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\WinSubTrial.pdb
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\Faker.Net.4.5.dll
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\Newtonsoft.Json.dll
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\SharpAdbClient.dll
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Buffers.dll
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Drawing.Common.dll
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\AutoItX3.Assembly.xml
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\Newtonsoft.Json.xml
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\System.Buffers.xml
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\Utils.pdb
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\Utils.dll.config
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\bin\Debug\de-DE\Faker.Net.4.5.resources.dll
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.csproj.AssemblyReference.cache
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.csproj.SuggestedBindingRedirects.cache
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.Backup.resources
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.Configuration.resources
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.DeviceTools.resources
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.InstalledPackages.resources
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.Main.resources
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.NetApp.resources
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.OpenLink.resources
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.RunScript.resources
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.WinName.resources
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.Properties.Resources.resources
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.SubTrialSupport.resources
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.SystemPackages.resources
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.TrafficInstall.resources
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.WipePackages.resources
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.csproj.GenerateResource.cache
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.csproj.CoreCompileInputs.cache
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.exe
+C:\Users\AndroidITT\Desktop\WinSubTrial_CSharpCurrent\WinSubTrial\obj\Debug\WinSubTrial.pdb
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\WinSubTrial.exe.config
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\WinSubTrial.exe
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\WinSubTrial.pdb
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Faker.Net.4.5.dll
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Newtonsoft.Json.dll
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\SharpAdbClient.dll
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\System.Buffers.dll
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\System.Drawing.Common.dll
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Newtonsoft.Json.xml
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\System.Buffers.xml
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\de-DE\Faker.Net.4.5.resources.dll
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.SuggestedBindingRedirects.cache
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.Backup.resources
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.Configuration.resources
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.DeviceTools.resources
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.InstalledPackages.resources
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.Main.resources
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.NetApp.resources
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.OpenLink.resources
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.RunScript.resources
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.WinName.resources
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.Properties.Resources.resources
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.SubTrialSupport.resources
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.SystemPackages.resources
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.TrafficInstall.resources
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.WipePackages.resources
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.GenerateResource.cache
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.CoreCompileInputs.cache
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.exe
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.pdb
+C:\Users\AndroidT5\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.AssemblyReference.cache
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\WinSubTrial.exe.config
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\WinSubTrial.exe
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\WinSubTrial.pdb
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Faker.Net.4.5.dll
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\SharpAdbClient.dll
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\System.Buffers.dll
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\System.Drawing.Common.dll
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\System.Buffers.xml
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\de-DE\Faker.Net.4.5.resources.dll
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.AssemblyReference.cache
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.SuggestedBindingRedirects.cache
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.Backup.resources
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.Configuration.resources
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.DeviceTools.resources
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.InstalledPackages.resources
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.Main.resources
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.NetApp.resources
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.OpenLink.resources
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.RunScript.resources
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.WinName.resources
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.Properties.Resources.resources
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.SubTrialSupport.resources
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.SystemPackages.resources
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.TrafficInstall.resources
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.WipePackages.resources
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.GenerateResource.cache
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.CoreCompileInputs.cache
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.exe
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.pdb
+C:\Users\ApionHome\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.CopyComplete
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\bin\Debug\WinSubTrial.exe.config
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\bin\Debug\WinSubTrial.exe
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\bin\Debug\WinSubTrial.pdb
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Faker.Net.4.5.dll
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Newtonsoft.Json.dll
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\bin\Debug\SharpAdbClient.dll
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\bin\Debug\System.Buffers.dll
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\bin\Debug\System.Drawing.Common.dll
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Newtonsoft.Json.xml
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\bin\Debug\System.Buffers.xml
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\bin\Debug\de-DE\Faker.Net.4.5.resources.dll
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.AssemblyReference.cache
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.SuggestedBindingRedirects.cache
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.Backup.resources
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.Configuration.resources
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.DeviceTools.resources
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.InstalledPackages.resources
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.Main.resources
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.NetApp.resources
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.OpenLink.resources
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.RunScript.resources
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.WinName.resources
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.Properties.Resources.resources
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.SubTrialSupport.resources
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.SystemPackages.resources
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.TrafficInstall.resources
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.WipePackages.resources
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.GenerateResource.cache
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.CoreCompileInputs.cache
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.CopyComplete
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.exe
+C:\Users\janus\Pictures\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.pdb
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\bin\Debug\WinSubTrial.exe.config
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\bin\Debug\WinSubTrial.exe
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\bin\Debug\WinSubTrial.pdb
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Faker.Net.4.5.dll
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Newtonsoft.Json.dll
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\bin\Debug\SharpAdbClient.dll
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\bin\Debug\System.Buffers.dll
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\bin\Debug\System.Drawing.Common.dll
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Newtonsoft.Json.xml
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\bin\Debug\System.Buffers.xml
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\bin\Debug\de-DE\Faker.Net.4.5.resources.dll
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.AssemblyReference.cache
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.SuggestedBindingRedirects.cache
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.Backup.resources
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.Configuration.resources
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.DeviceTools.resources
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.InstalledPackages.resources
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.Main.resources
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.NetApp.resources
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.OpenLink.resources
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.RunScript.resources
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.WinName.resources
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.Properties.Resources.resources
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.SubTrialSupport.resources
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.SystemPackages.resources
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.TrafficInstall.resources
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.WipePackages.resources
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.GenerateResource.cache
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.CoreCompileInputs.cache
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.CopyComplete
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.exe
+C:\Users\admin\3D Objects\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.pdb
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\WinSubTrial.exe.config
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\WinSubTrial.exe
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\WinSubTrial.pdb
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Faker.Net.4.5.dll
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\SharpAdbClient.dll
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\System.Buffers.dll
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\System.Drawing.Common.dll
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\System.Buffers.xml
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\bin\Debug\de-DE\Faker.Net.4.5.resources.dll
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.SuggestedBindingRedirects.cache
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.Backup.resources
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.Configuration.resources
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.DeviceTools.resources
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.InstalledPackages.resources
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.Main.resources
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.NetApp.resources
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.OpenLink.resources
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.RunScript.resources
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.WinName.resources
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.Properties.Resources.resources
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.SubTrialSupport.resources
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.SystemPackages.resources
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.TrafficInstall.resources
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.WipePackages.resources
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.CopyComplete
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.exe
+C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.pdb
