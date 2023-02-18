@@ -671,18 +671,30 @@ namespace WinSubTrial
                         return;
                     }
                     TaskResult snapchatEnable = new SnapchatTask { phonenumber = numberSnapchat }.LoginSnapchat(serial);
-                    if (snapchatEnable == TaskResult.Success)
+                    switch (snapchatEnable)
                     {
-                        Common.SetStatus(serial, $"Login snapchat {numberSnapchat} done");
-                    }
-                    else if (snapchatEnable == TaskResult.StopAuto)
-                    {
-                        return;
-                    }
-                    else
-                    {
-                        Common.SetStatus(serial, $"Login snapchat {numberSnapchat} fail, run other phone!");
-                        continue;
+                        case TaskResult.Success:
+                            {
+                                Common.SetStatus(serial, $"Login snapchat {numberSnapchat} done");
+                                break;
+                            }
+                        case TaskResult.StopAuto:
+                            {
+                                return;
+                            }
+                        case TaskResult.ProxyError:
+                            {
+                                timesChanged = 5;
+                                Common.SetStatus(serial, $"Login snapchat {numberSnapchat} fail, run other phone!");
+                                continue;
+                            }
+                        case TaskResult.Failure:
+                            {
+                                Common.SetStatus(serial, $"Login snapchat {numberSnapchat} fail, run other phone!");
+                                continue;
+                            }
+                        default:
+                            return;
                     }
                     #endregion GetTikTok
                     

@@ -180,7 +180,16 @@ namespace WinSubTrial
                         TapDynamic(serial, "continue_button");
                         Common.Sleep(1000);
                     }
-                    continue;
+                    DumpUi(serial);
+                    Common.Sleep(500);
+                    if (ContainsIgnoreCase(TextDump, "password_error_message"))
+                    {
+                        return TaskResult.ProxyError;
+                    }
+                    else
+                    {
+                        continue;
+                    }
                 }
 
                 if (ContainsIgnoreCase(TextDump, "signup_with_phone_instead"))
@@ -266,9 +275,6 @@ namespace WinSubTrial
                         }
                     }
                 }
-
-
-
 
                 if (ContainsIgnoreCase(TextDump, "continue_button"))
                 {
