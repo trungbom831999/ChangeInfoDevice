@@ -39,6 +39,9 @@ namespace WinSubTrial
         public bool isLoaded = false;
         private readonly Random _rand = new Random();
 
+        //số lần reboot
+        private const int constTimesChanged = 3;
+
         public void fetch()
         {
             networkList = JsonConvert.DeserializeObject<List<Network>>(MyFile.ReadAllText("Data\\networks.json"));
@@ -617,11 +620,11 @@ namespace WinSubTrial
                 Device device = devicesModel.FirstOrDefault(x => x.Serial.Equals(serial));
                 int indexDevice = devicesModel.FindIndex(element => element.Serial == serial);
                 int times = 10000000;
-                int timesChanged = 5;
+                int timesChanged = constTimesChanged;
 
                 while (times > 0)
                 {
-                    if (timesChanged > 4) // reboot
+                    if (timesChanged > (constTimesChanged-1)) // reboot
                     {
                         #region Change Info
                         if (device == null)
@@ -663,7 +666,7 @@ namespace WinSubTrial
                     Common.Sleep(Rand.Next(1000 * indexDevice, (1000 * indexDevice) + 1000));
                     string numberSnapchat = GetRandomTiktokNumber();
                     Common.SetStatus(serial, $"Get Tiktok from file done: {numberSnapchat}");
-                    Common.Sleep(1000);
+                    //Common.Sleep(1000);
                     if (numberSnapchat == null)
                     {
                         Common.SetStatus(serial, "Call API fail. Out of number");
@@ -684,7 +687,7 @@ namespace WinSubTrial
                             }
                         case TaskResult.ProxyError:
                             {
-                                timesChanged = 5;
+                                timesChanged = constTimesChanged;
                                 Common.SetStatus(serial, $"Login snapchat {numberSnapchat} fail, run other phone!");
                                 continue;
                             }
