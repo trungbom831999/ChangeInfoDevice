@@ -213,6 +213,10 @@ namespace WinSubTrial
 
                         if (ContainsIgnoreCase(TextDump, "bottom_phone_form_field"))
                         {
+                            if (ContainsIgnoreCase(TextDump, "phone_error_message"))
+                            {
+                                return TaskResult.OtpError;
+                            }
                             InputDynamic(serial, "bottom_phone_form_field", phonenumber);
                             Common.SetStatus(serial, "Enter Phone number");
                             //Common.Sleep(3000);
@@ -248,6 +252,7 @@ namespace WinSubTrial
                             Common.SetStatus(serial, "Tapped code text filed");
                             Common.Sleep(6000);
 
+                            //Xử lý khi ko lấy đc OTP
                             TapDynamic(serial, "back_button"); //nut back
                             Common.Sleep(2000);
                             DumpUi(serial);

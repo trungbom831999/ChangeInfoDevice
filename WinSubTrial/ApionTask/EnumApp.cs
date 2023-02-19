@@ -11,7 +11,8 @@ namespace WinSubTrial
         Success,
         Failure,
         StopAuto,
-        ProxyError
+        ProxyError,
+        OtpError
     }
 
     public enum MailTask

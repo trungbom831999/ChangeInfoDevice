@@ -621,6 +621,7 @@ namespace WinSubTrial
                 int indexDevice = devicesModel.FindIndex(element => element.Serial == serial);
                 int times = 10000000;
                 int timesChanged = constTimesChanged;
+                //int timesChanged = 1;
 
                 while (times > 0)
                 {
@@ -686,6 +687,7 @@ namespace WinSubTrial
                                 return;
                             }
                         case TaskResult.ProxyError:
+                        case TaskResult.OtpError:
                             {
                                 timesChanged = constTimesChanged;
                                 Common.SetStatus(serial, $"Login snapchat {numberSnapchat} fail, run other phone!");
