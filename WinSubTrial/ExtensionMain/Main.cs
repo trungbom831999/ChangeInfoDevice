@@ -334,5 +334,22 @@ namespace WinSubTrial
             thread.Start();
         }
 
+        private void TinderButtonClick(object sender, EventArgs e)
+        {
+            if (!viewModel.someDevicesSelected()) return;
+            Thread thread = new Thread(new ThreadStart(() =>
+            {
+                foreach (Device device in viewModel.devicesModel.Where(x => x.isSelected == true))
+                {
+                    Task.Run(() =>
+                    {
+                        viewModel.deviceWaitForStop[device.Serial] = false;
+                        viewModel.TinderAutomation(device.Serial);
+                    });
+                }
+            }))
+            { IsBackground = true };
+            thread.Start();
+        }
     }
 }

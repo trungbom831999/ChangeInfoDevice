@@ -618,7 +618,6 @@ namespace WinSubTrial
             Thread thread = new Thread(new ThreadStart(() =>
             {
                 Device device = devicesModel.FirstOrDefault(x => x.Serial.Equals(serial));
-                int indexDevice = devicesModel.FindIndex(element => element.Serial == serial);
                 int times = 10000000;
                 int timesChanged = constTimesChanged;
                 //int timesChanged = 1;
@@ -662,11 +661,8 @@ namespace WinSubTrial
 
                     //Adb.Shell(serial, "pm dump com.snapchat.android | grep -A 1 MAIN");
 
-                    #region GetTikTok
-                    Common.SetStatus(serial, $"In queue get tiktok after {indexDevice} seconds");
-                    Common.Sleep(Rand.Next(1000 * indexDevice, (1000 * indexDevice) + 1000));
                     string numberSnapchat = GetRandomTiktokNumber();
-                    Common.SetStatus(serial, $"Get Tiktok from file done: {numberSnapchat}");
+                    Common.SetStatus(serial, $"Get Snapchat from file done: {numberSnapchat}");
                     //Common.Sleep(1000);
                     if (numberSnapchat == null)
                     {
@@ -701,16 +697,114 @@ namespace WinSubTrial
                         default:
                             return;
                     }
-                    #endregion GetTikTok
-                    
-
-
                 }
-
             }))
             { IsBackground = true };
             deviceThreads[serial] = thread;
             thread.Start();
+        }
+
+        public void TinderAutomation(string serial)
+        {
+            if (IsDeviceInTask(serial))
+            {
+                deviceThreads[serial].Abort();
+            }
+            Thread thread = new Thread(new ThreadStart(() =>
+            {
+                Device device = devicesModel.FirstOrDefault(x => x.Serial.Equals(serial));
+                int times = 10000000;
+                int timesChanged = constTimesChanged;
+                //int timesChanged = 1;
+
+                while (times > 0)
+                {
+                    if (timesChanged > (constTimesChanged - 1)) // reboot
+                    {
+                        //reboot khi quá số lần auto
+                        RebootDevice(serial, device);
+                        timesChanged = 0;
+                    }
+                    else
+                    {
+                        // wipe app /
+                        new ChangeA1 { device = device }.WipeAppsData();
+                        timesChanged += 1;
+                    }
+
+                    string numberTinder = GetRandomTiktokNumber();
+                    Common.SetStatus(serial, $"Get Tinder from file done: {numberTinder}");
+                    //Common.Sleep(1000);
+                    if (numberTinder == null)
+                    {
+                        Common.SetStatus(serial, "Call API fail. Out of number");
+                        Common.Sleep(4000);
+                        return;
+                    }
+                    TaskResult tinderResult = new TinderTask { phonenumber = numberTinder }.TinderAutomationRegister(serial);
+                    switch (tinderResult)
+                    {
+                        case TaskResult.Success:
+                            {
+                                Common.SetStatus(serial, $"Login Tinder {numberTinder} done");
+                                break;
+                            }
+                        case TaskResult.StopAuto:
+                            {
+                                return;
+                            }
+                        case TaskResult.ProxyError:
+                        case TaskResult.OtpError:
+                            {
+                                timesChanged = constTimesChanged;
+                                Common.SetStatus(serial, $"Login tinder {numberTinder} fail, run other phone!");
+                                continue;
+                            }
+                        case TaskResult.Failure:
+                            {
+                                Common.SetStatus(serial, $"Login tinder {numberTinder} fail, run other phone!");
+                                continue;
+                            }
+                        default:
+                            return;
+                    }
+                }
+            }))
+            { IsBackground = true };
+            deviceThreads[serial] = thread;
+            thread.Start();
+        }
+
+        public void RebootDevice(string serial, Device device)
+        {
+            #region Change Info
+            if (device == null)
+            {
+                Common.SetStatus(serial, "Not found this device, stop auto");
+                return;
+            }
+            if (device.RequestOption == null) device.RequestOption = new RequestInfo();
+            device.RequestOption.Brand = brand;
+            device.RequestOption.SDK = listSdk[Rand.Next(0, listSdk.Count() - 1)];
+            device.RequestOption.Country = countryChosen;
+            device.RequestOption.Network = operatorChosen;
+
+            device.GetInfo();
+            #endregion Change Info
+
+            #region RebootFast
+            if (device.RequestOption == null)
+            {
+                Common.SetStatus(device.Serial, "Info không thay đổi");
+                return;
+            }
+            Common.SetStatus(device.Serial, "Saving info...");
+            new ChangeA1 { device = device }.SaveInfo();
+
+            Common.SetStatus(device.Serial, "Saving info done");
+            //Remove changed info
+            device.RequestOption = null;
+            #endregion RebootFast
         }
 
 
@@ -812,6 +906,16 @@ namespace WinSubTrial
 
 
         public string GetRandomTiktokNumber()
+        {
+            try
+            {
+                string[] info = MyFile.GetLine(filePath: "Data\\tiktok.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
+                return info[0];
+            }
+            catch { return null; }
+        }
+
+        public string GetRandomTinderNumber()
         {
             try
             {

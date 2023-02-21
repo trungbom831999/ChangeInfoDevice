@@ -59,7 +59,8 @@ namespace WinSubTrial
             this.netAppToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageChange = new System.Windows.Forms.TabPage();
-            this.button11 = new System.Windows.Forms.Button();
+            this.buttonTinder = new System.Windows.Forms.Button();
+            this.buttonSnapchat = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -162,13 +163,15 @@ namespace WinSubTrial
             // mnuTop
             // 
             this.mnuTop.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.mnuTop.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuTop.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolToolStripMenuItem,
             this.packageManagerToolStripMenuItem,
             this.netAppConfigurationToolStripMenuItem});
             this.mnuTop.Location = new System.Drawing.Point(0, 0);
             this.mnuTop.Name = "mnuTop";
-            this.mnuTop.Size = new System.Drawing.Size(925, 24);
+            this.mnuTop.Padding = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.mnuTop.Size = new System.Drawing.Size(1020, 24);
             this.mnuTop.TabIndex = 0;
             this.mnuTop.Text = "menuStrip1";
             // 
@@ -272,7 +275,7 @@ namespace WinSubTrial
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(925, 896);
+            this.tabControl1.Size = new System.Drawing.Size(1020, 760);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 2;
             this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
@@ -280,7 +283,8 @@ namespace WinSubTrial
             // 
             // tabPageChange
             // 
-            this.tabPageChange.Controls.Add(this.button11);
+            this.tabPageChange.Controls.Add(this.buttonTinder);
+            this.tabPageChange.Controls.Add(this.buttonSnapchat);
             this.tabPageChange.Controls.Add(this.button10);
             this.tabPageChange.Controls.Add(this.button9);
             this.tabPageChange.Controls.Add(this.button8);
@@ -328,24 +332,34 @@ namespace WinSubTrial
             this.tabPageChange.Location = new System.Drawing.Point(60, 4);
             this.tabPageChange.Name = "tabPageChange";
             this.tabPageChange.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageChange.Size = new System.Drawing.Size(861, 888);
+            this.tabPageChange.Size = new System.Drawing.Size(956, 752);
             this.tabPageChange.TabIndex = 0;
             this.tabPageChange.Text = "Main";
             this.tabPageChange.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // buttonTinder
             // 
-            this.button11.Location = new System.Drawing.Point(682, 830);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(138, 23);
-            this.button11.TabIndex = 60;
-            this.button11.Text = "Snapchat script";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.snapchatButtonTapped);
+            this.buttonTinder.Location = new System.Drawing.Point(538, 705);
+            this.buttonTinder.Name = "buttonTinder";
+            this.buttonTinder.Size = new System.Drawing.Size(138, 23);
+            this.buttonTinder.TabIndex = 61;
+            this.buttonTinder.Text = "Tinder script";
+            this.buttonTinder.UseVisualStyleBackColor = true;
+            this.buttonTinder.Click += new System.EventHandler(this.TinderButtonClick);
+            // 
+            // buttonSnapchat
+            // 
+            this.buttonSnapchat.Location = new System.Drawing.Point(682, 705);
+            this.buttonSnapchat.Name = "buttonSnapchat";
+            this.buttonSnapchat.Size = new System.Drawing.Size(138, 23);
+            this.buttonSnapchat.TabIndex = 60;
+            this.buttonSnapchat.Text = "Snapchat script";
+            this.buttonSnapchat.UseVisualStyleBackColor = true;
+            this.buttonSnapchat.Click += new System.EventHandler(this.snapchatButtonTapped);
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(538, 830);
+            this.button10.Location = new System.Drawing.Point(356, 726);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(138, 23);
             this.button10.TabIndex = 59;
@@ -355,7 +369,7 @@ namespace WinSubTrial
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(375, 830);
+            this.button9.Location = new System.Drawing.Point(212, 726);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(138, 23);
             this.button9.TabIndex = 58;
@@ -365,7 +379,7 @@ namespace WinSubTrial
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(231, 830);
+            this.button8.Location = new System.Drawing.Point(68, 726);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(138, 23);
             this.button8.TabIndex = 57;
@@ -375,7 +389,7 @@ namespace WinSubTrial
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(375, 656);
+            this.button7.Location = new System.Drawing.Point(375, 534);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(138, 23);
             this.button7.TabIndex = 56;
@@ -385,7 +399,7 @@ namespace WinSubTrial
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(231, 801);
+            this.button6.Location = new System.Drawing.Point(231, 679);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(138, 23);
             this.button6.TabIndex = 55;
@@ -395,7 +409,7 @@ namespace WinSubTrial
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(375, 802);
+            this.button3.Location = new System.Drawing.Point(375, 680);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(138, 23);
             this.button3.TabIndex = 54;
@@ -405,7 +419,7 @@ namespace WinSubTrial
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(231, 743);
+            this.button1.Location = new System.Drawing.Point(231, 621);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(138, 23);
             this.button1.TabIndex = 53;
@@ -415,7 +429,7 @@ namespace WinSubTrial
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(375, 772);
+            this.button5.Location = new System.Drawing.Point(375, 650);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(138, 23);
             this.button5.TabIndex = 50;
@@ -425,7 +439,7 @@ namespace WinSubTrial
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(231, 772);
+            this.button4.Location = new System.Drawing.Point(231, 650);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(138, 23);
             this.button4.TabIndex = 49;
@@ -435,7 +449,7 @@ namespace WinSubTrial
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(375, 743);
+            this.button2.Location = new System.Drawing.Point(375, 621);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(138, 23);
             this.button2.TabIndex = 47;
@@ -458,7 +472,7 @@ namespace WinSubTrial
             this.cboBackupFiles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBackupFiles.DropDownWidth = 186;
             this.cboBackupFiles.FormattingEnabled = true;
-            this.cboBackupFiles.Location = new System.Drawing.Point(621, 800);
+            this.cboBackupFiles.Location = new System.Drawing.Point(621, 678);
             this.cboBackupFiles.Name = "cboBackupFiles";
             this.cboBackupFiles.Size = new System.Drawing.Size(199, 21);
             this.cboBackupFiles.TabIndex = 42;
@@ -466,7 +480,7 @@ namespace WinSubTrial
             // 
             // txtSearchBackup
             // 
-            this.txtSearchBackup.Location = new System.Drawing.Point(538, 801);
+            this.txtSearchBackup.Location = new System.Drawing.Point(538, 679);
             this.txtSearchBackup.Name = "txtSearchBackup";
             this.txtSearchBackup.Size = new System.Drawing.Size(75, 20);
             this.txtSearchBackup.TabIndex = 41;
@@ -476,7 +490,7 @@ namespace WinSubTrial
             // 
             // btnRestore
             // 
-            this.btnRestore.Location = new System.Drawing.Point(733, 765);
+            this.btnRestore.Location = new System.Drawing.Point(733, 644);
             this.btnRestore.Name = "btnRestore";
             this.btnRestore.Size = new System.Drawing.Size(87, 23);
             this.btnRestore.TabIndex = 39;
@@ -486,7 +500,7 @@ namespace WinSubTrial
             // 
             // btnRunScript
             // 
-            this.btnRunScript.Location = new System.Drawing.Point(631, 765);
+            this.btnRunScript.Location = new System.Drawing.Point(631, 644);
             this.btnRunScript.Name = "btnRunScript";
             this.btnRunScript.Size = new System.Drawing.Size(96, 23);
             this.btnRunScript.TabIndex = 38;
@@ -497,7 +511,7 @@ namespace WinSubTrial
             // btnCreateScript
             // 
             this.btnCreateScript.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnCreateScript.Location = new System.Drawing.Point(538, 765);
+            this.btnCreateScript.Location = new System.Drawing.Point(538, 644);
             this.btnCreateScript.Name = "btnCreateScript";
             this.btnCreateScript.Size = new System.Drawing.Size(90, 23);
             this.btnCreateScript.TabIndex = 36;
@@ -507,7 +521,7 @@ namespace WinSubTrial
             // 
             // btnHomeAll
             // 
-            this.btnHomeAll.Location = new System.Drawing.Point(682, 729);
+            this.btnHomeAll.Location = new System.Drawing.Point(682, 607);
             this.btnHomeAll.Name = "btnHomeAll";
             this.btnHomeAll.Size = new System.Drawing.Size(138, 23);
             this.btnHomeAll.TabIndex = 35;
@@ -517,7 +531,7 @@ namespace WinSubTrial
             // 
             // btnWipeMailAll
             // 
-            this.btnWipeMailAll.Location = new System.Drawing.Point(682, 692);
+            this.btnWipeMailAll.Location = new System.Drawing.Point(682, 570);
             this.btnWipeMailAll.Name = "btnWipeMailAll";
             this.btnWipeMailAll.Size = new System.Drawing.Size(138, 23);
             this.btnWipeMailAll.TabIndex = 34;
@@ -527,7 +541,7 @@ namespace WinSubTrial
             // 
             // btnOffProxyAll
             // 
-            this.btnOffProxyAll.Location = new System.Drawing.Point(538, 729);
+            this.btnOffProxyAll.Location = new System.Drawing.Point(538, 607);
             this.btnOffProxyAll.Name = "btnOffProxyAll";
             this.btnOffProxyAll.Size = new System.Drawing.Size(138, 23);
             this.btnOffProxyAll.TabIndex = 33;
@@ -538,7 +552,7 @@ namespace WinSubTrial
             // btnWipePackageAll
             // 
             this.btnWipePackageAll.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnWipePackageAll.Location = new System.Drawing.Point(538, 692);
+            this.btnWipePackageAll.Location = new System.Drawing.Point(538, 570);
             this.btnWipePackageAll.Name = "btnWipePackageAll";
             this.btnWipePackageAll.Size = new System.Drawing.Size(138, 23);
             this.btnWipePackageAll.TabIndex = 32;
@@ -548,7 +562,7 @@ namespace WinSubTrial
             // 
             // btnBackupChange
             // 
-            this.btnBackupChange.Location = new System.Drawing.Point(682, 657);
+            this.btnBackupChange.Location = new System.Drawing.Point(682, 535);
             this.btnBackupChange.Name = "btnBackupChange";
             this.btnBackupChange.Size = new System.Drawing.Size(138, 23);
             this.btnBackupChange.TabIndex = 30;
@@ -559,7 +573,7 @@ namespace WinSubTrial
             // btnBackup
             // 
             this.btnBackup.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnBackup.Location = new System.Drawing.Point(538, 657);
+            this.btnBackup.Location = new System.Drawing.Point(538, 535);
             this.btnBackup.Name = "btnBackup";
             this.btnBackup.Size = new System.Drawing.Size(138, 23);
             this.btnBackup.TabIndex = 28;
@@ -569,7 +583,7 @@ namespace WinSubTrial
             // 
             // btnSaveInfoAll
             // 
-            this.btnSaveInfoAll.Location = new System.Drawing.Point(682, 619);
+            this.btnSaveInfoAll.Location = new System.Drawing.Point(682, 497);
             this.btnSaveInfoAll.Name = "btnSaveInfoAll";
             this.btnSaveInfoAll.Size = new System.Drawing.Size(138, 23);
             this.btnSaveInfoAll.TabIndex = 27;
@@ -579,7 +593,7 @@ namespace WinSubTrial
             // 
             // btnRandomInfoAll
             // 
-            this.btnRandomInfoAll.Location = new System.Drawing.Point(538, 619);
+            this.btnRandomInfoAll.Location = new System.Drawing.Point(538, 497);
             this.btnRandomInfoAll.Name = "btnRandomInfoAll";
             this.btnRandomInfoAll.Size = new System.Drawing.Size(138, 23);
             this.btnRandomInfoAll.TabIndex = 25;
@@ -590,7 +604,7 @@ namespace WinSubTrial
             // lblReportChange
             // 
             this.lblReportChange.AutoSize = true;
-            this.lblReportChange.Location = new System.Drawing.Point(311, 710);
+            this.lblReportChange.Location = new System.Drawing.Point(311, 588);
             this.lblReportChange.Name = "lblReportChange";
             this.lblReportChange.Size = new System.Drawing.Size(24, 13);
             this.lblReportChange.TabIndex = 23;
@@ -599,7 +613,7 @@ namespace WinSubTrial
             // lblDevicesCount
             // 
             this.lblDevicesCount.AutoSize = true;
-            this.lblDevicesCount.Location = new System.Drawing.Point(311, 687);
+            this.lblDevicesCount.Location = new System.Drawing.Point(311, 566);
             this.lblDevicesCount.Name = "lblDevicesCount";
             this.lblDevicesCount.Size = new System.Drawing.Size(13, 13);
             this.lblDevicesCount.TabIndex = 22;
@@ -608,7 +622,7 @@ namespace WinSubTrial
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(228, 710);
+            this.label8.Location = new System.Drawing.Point(228, 588);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(82, 13);
             this.label8.TabIndex = 21;
@@ -617,7 +631,7 @@ namespace WinSubTrial
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(228, 687);
+            this.label7.Location = new System.Drawing.Point(228, 566);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 13);
             this.label7.TabIndex = 20;
@@ -625,7 +639,7 @@ namespace WinSubTrial
             // 
             // btnLoginGmailAll
             // 
-            this.btnLoginGmailAll.Location = new System.Drawing.Point(231, 656);
+            this.btnLoginGmailAll.Location = new System.Drawing.Point(231, 534);
             this.btnLoginGmailAll.Name = "btnLoginGmailAll";
             this.btnLoginGmailAll.Size = new System.Drawing.Size(138, 23);
             this.btnLoginGmailAll.TabIndex = 19;
@@ -635,7 +649,7 @@ namespace WinSubTrial
             // 
             // btnGoPaymentMethod
             // 
-            this.btnGoPaymentMethod.Location = new System.Drawing.Point(375, 619);
+            this.btnGoPaymentMethod.Location = new System.Drawing.Point(375, 497);
             this.btnGoPaymentMethod.Name = "btnGoPaymentMethod";
             this.btnGoPaymentMethod.Size = new System.Drawing.Size(138, 23);
             this.btnGoPaymentMethod.TabIndex = 18;
@@ -646,7 +660,7 @@ namespace WinSubTrial
             // btnResetDPI
             // 
             this.btnResetDPI.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnResetDPI.Location = new System.Drawing.Point(231, 619);
+            this.btnResetDPI.Location = new System.Drawing.Point(231, 497);
             this.btnResetDPI.Name = "btnResetDPI";
             this.btnResetDPI.Size = new System.Drawing.Size(138, 23);
             this.btnResetDPI.TabIndex = 16;
@@ -656,14 +670,14 @@ namespace WinSubTrial
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(85, 805);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(85, 683);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(121, 20);
             this.txtPhoneNumber.TabIndex = 15;
             // 
             // txtModel
             // 
-            this.txtModel.Location = new System.Drawing.Point(85, 656);
+            this.txtModel.Location = new System.Drawing.Point(85, 534);
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(121, 20);
             this.txtModel.TabIndex = 14;
@@ -671,7 +685,7 @@ namespace WinSubTrial
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(28, 808);
+            this.label6.Location = new System.Drawing.Point(28, 686);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 13);
             this.label6.TabIndex = 12;
@@ -684,7 +698,7 @@ namespace WinSubTrial
             this.cboOperator.Items.AddRange(new object[] {
             "Viettel Telecom",
             "Mobifone"});
-            this.cboOperator.Location = new System.Drawing.Point(85, 765);
+            this.cboOperator.Location = new System.Drawing.Point(85, 644);
             this.cboOperator.Name = "cboOperator";
             this.cboOperator.Size = new System.Drawing.Size(121, 21);
             this.cboOperator.TabIndex = 11;
@@ -693,7 +707,7 @@ namespace WinSubTrial
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(28, 768);
+            this.label5.Location = new System.Drawing.Point(28, 646);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 13);
             this.label5.TabIndex = 10;
@@ -706,7 +720,7 @@ namespace WinSubTrial
             this.cboCountry.Items.AddRange(new object[] {
             "VN",
             "US"});
-            this.cboCountry.Location = new System.Drawing.Point(85, 729);
+            this.cboCountry.Location = new System.Drawing.Point(85, 607);
             this.cboCountry.Name = "cboCountry";
             this.cboCountry.Size = new System.Drawing.Size(121, 21);
             this.cboCountry.TabIndex = 9;
@@ -715,7 +729,7 @@ namespace WinSubTrial
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 732);
+            this.label4.Location = new System.Drawing.Point(28, 610);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 8;
@@ -731,7 +745,7 @@ namespace WinSubTrial
             "9",
             "8.1",
             "8.0"});
-            this.cboSDK.Location = new System.Drawing.Point(85, 692);
+            this.cboSDK.Location = new System.Drawing.Point(85, 570);
             this.cboSDK.Name = "cboSDK";
             this.cboSDK.Size = new System.Drawing.Size(121, 21);
             this.cboSDK.TabIndex = 7;
@@ -739,7 +753,7 @@ namespace WinSubTrial
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 695);
+            this.label3.Location = new System.Drawing.Point(28, 573);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 6;
@@ -748,7 +762,7 @@ namespace WinSubTrial
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 659);
+            this.label2.Location = new System.Drawing.Point(28, 537);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 4;
@@ -764,7 +778,7 @@ namespace WinSubTrial
             "LGE",
             "samsung",
             "Sony"});
-            this.cboBrand.Location = new System.Drawing.Point(85, 619);
+            this.cboBrand.Location = new System.Drawing.Point(85, 497);
             this.cboBrand.Name = "cboBrand";
             this.cboBrand.Size = new System.Drawing.Size(121, 21);
             this.cboBrand.TabIndex = 3;
@@ -773,7 +787,7 @@ namespace WinSubTrial
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 622);
+            this.label1.Location = new System.Drawing.Point(28, 500);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 2;
@@ -838,6 +852,7 @@ namespace WinSubTrial
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDevice.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDevice.RowHeadersVisible = false;
+            this.dgvDevice.RowHeadersWidth = 51;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.Transparent;
             this.dgvDevice.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDevice.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Transparent;
@@ -846,7 +861,7 @@ namespace WinSubTrial
             this.dgvDevice.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvDevice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDevice.ShowEditingIcon = false;
-            this.dgvDevice.Size = new System.Drawing.Size(855, 602);
+            this.dgvDevice.Size = new System.Drawing.Size(855, 485);
             this.dgvDevice.TabIndex = 1;
             this.dgvDevice.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDevice_CellContentClick);
             this.dgvDevice.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDevice_MouseClick);
@@ -865,6 +880,7 @@ namespace WinSubTrial
             // deviceName
             // 
             this.deviceName.HeaderText = "Device Name";
+            this.deviceName.MinimumWidth = 6;
             this.deviceName.Name = "deviceName";
             this.deviceName.ReadOnly = true;
             this.deviceName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -873,6 +889,7 @@ namespace WinSubTrial
             // deviceSerial
             // 
             this.deviceSerial.HeaderText = "Serial";
+            this.deviceSerial.MinimumWidth = 6;
             this.deviceSerial.Name = "deviceSerial";
             this.deviceSerial.ReadOnly = true;
             this.deviceSerial.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -882,6 +899,7 @@ namespace WinSubTrial
             // deviceKey
             // 
             this.deviceKey.HeaderText = "Key";
+            this.deviceKey.MinimumWidth = 6;
             this.deviceKey.Name = "deviceKey";
             this.deviceKey.ReadOnly = true;
             this.deviceKey.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -891,6 +909,7 @@ namespace WinSubTrial
             // taskStatus
             // 
             this.taskStatus.HeaderText = "Status";
+            this.taskStatus.MinimumWidth = 6;
             this.taskStatus.Name = "taskStatus";
             this.taskStatus.ReadOnly = true;
             this.taskStatus.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -911,7 +930,7 @@ namespace WinSubTrial
             this.tabPageBackup.Location = new System.Drawing.Point(60, 4);
             this.tabPageBackup.Name = "tabPageBackup";
             this.tabPageBackup.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageBackup.Size = new System.Drawing.Size(861, 888);
+            this.tabPageBackup.Size = new System.Drawing.Size(956, 900);
             this.tabPageBackup.TabIndex = 1;
             this.tabPageBackup.Text = "Backup";
             this.tabPageBackup.UseVisualStyleBackColor = true;
@@ -995,6 +1014,7 @@ namespace WinSubTrial
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvBackupFiles.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvBackupFiles.RowHeadersVisible = false;
+            this.dgvBackupFiles.RowHeadersWidth = 51;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.Transparent;
             this.dgvBackupFiles.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvBackupFiles.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Transparent;
@@ -1021,6 +1041,7 @@ namespace WinSubTrial
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
             this.dataGridViewTextBoxColumn7.Width = 224;
@@ -1028,6 +1049,7 @@ namespace WinSubTrial
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.HeaderText = "Size";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
             this.dataGridViewTextBoxColumn10.Width = 47;
@@ -1035,6 +1057,7 @@ namespace WinSubTrial
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.HeaderText = "Folder";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
             this.dataGridViewTextBoxColumn11.Width = 79;
@@ -1042,6 +1065,7 @@ namespace WinSubTrial
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.HeaderText = "Date";
+            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             this.dataGridViewTextBoxColumn12.ReadOnly = true;
             this.dataGridViewTextBoxColumn12.Width = 76;
@@ -1049,6 +1073,7 @@ namespace WinSubTrial
             // Column1
             // 
             this.Column1.HeaderText = "Status";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Width = 236;
@@ -1142,7 +1167,7 @@ namespace WinSubTrial
             this.tabPageRestore.Controls.Add(this.label14);
             this.tabPageRestore.Location = new System.Drawing.Point(60, 4);
             this.tabPageRestore.Name = "tabPageRestore";
-            this.tabPageRestore.Size = new System.Drawing.Size(861, 888);
+            this.tabPageRestore.Size = new System.Drawing.Size(956, 900);
             this.tabPageRestore.TabIndex = 2;
             this.tabPageRestore.Text = "Restore";
             this.tabPageRestore.UseVisualStyleBackColor = true;
@@ -1227,6 +1252,7 @@ namespace WinSubTrial
             dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvRestoreFiles.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvRestoreFiles.RowHeadersVisible = false;
+            this.dgvRestoreFiles.RowHeadersWidth = 51;
             dataGridViewCellStyle15.BackColor = System.Drawing.Color.Transparent;
             this.dgvRestoreFiles.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvRestoreFiles.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Transparent;
@@ -1254,6 +1280,7 @@ namespace WinSubTrial
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -1262,6 +1289,7 @@ namespace WinSubTrial
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.HeaderText = "Size";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -1270,6 +1298,7 @@ namespace WinSubTrial
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.HeaderText = "Folder";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -1278,6 +1307,7 @@ namespace WinSubTrial
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.HeaderText = "Restore Date";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -1286,6 +1316,7 @@ namespace WinSubTrial
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.HeaderText = "Status";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Width = 295;
@@ -1361,7 +1392,7 @@ namespace WinSubTrial
             this.tabPageLicense.Controls.Add(this.dgvLicense);
             this.tabPageLicense.Location = new System.Drawing.Point(60, 4);
             this.tabPageLicense.Name = "tabPageLicense";
-            this.tabPageLicense.Size = new System.Drawing.Size(861, 888);
+            this.tabPageLicense.Size = new System.Drawing.Size(956, 900);
             this.tabPageLicense.TabIndex = 3;
             this.tabPageLicense.Text = "License";
             this.tabPageLicense.UseVisualStyleBackColor = true;
@@ -1373,6 +1404,7 @@ namespace WinSubTrial
             this.dgvLicense.BackgroundColor = System.Drawing.Color.White;
             this.dgvLicense.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvLicense.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvLicense.ColumnHeadersHeight = 29;
             this.dgvLicense.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvLicense.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn8,
@@ -1382,6 +1414,7 @@ namespace WinSubTrial
             this.dgvLicense.Location = new System.Drawing.Point(3, 1);
             this.dgvLicense.Name = "dgvLicense";
             this.dgvLicense.ReadOnly = true;
+            this.dgvLicense.RowHeadersWidth = 51;
             this.dgvLicense.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvLicense.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvLicense.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1392,6 +1425,7 @@ namespace WinSubTrial
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.HeaderText = "Key";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
             this.dataGridViewTextBoxColumn8.Width = 200;
@@ -1399,6 +1433,7 @@ namespace WinSubTrial
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.HeaderText = "Expire";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
             this.dataGridViewTextBoxColumn9.Width = 150;
@@ -1407,15 +1442,17 @@ namespace WinSubTrial
             // 
             this.select.FalseValue = "0";
             this.select.HeaderText = "Select";
+            this.select.MinimumWidth = 6;
             this.select.Name = "select";
             this.select.ToolTipText = "Select device";
             this.select.TrueValue = "1";
+            this.select.Width = 125;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 920);
+            this.ClientSize = new System.Drawing.Size(1020, 784);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.mnuTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1547,7 +1584,8 @@ namespace WinSubTrial
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button buttonSnapchat;
+        private System.Windows.Forms.Button buttonTinder;
     }
 }
 
