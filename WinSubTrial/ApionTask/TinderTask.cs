@@ -128,6 +128,18 @@ namespace WinSubTrial
                         }
                         Common.Sleep(2000);
                         DumpUi(serial);
+                        //Xác thực email - Coi như thành công
+                        if (ContainsIgnoreCase(TextDump, "collect_email_title")
+                            || ContainsIgnoreCase(TextDump, "collect_email_input_edit_text"))
+                        {
+                            //back về đăng ký
+                            TapDynamic(serial, "collect_email_back_button");
+                            Common.SetStatus(serial, "Tapped back after email");
+
+                            return TaskResult.Success;
+                        }
+
+                        DumpUi(serial);
                         if (ContainsIgnoreCase(TextDump, "resendButton"))
                         {
                             TapDynamic(serial, "resendButton");
@@ -147,6 +159,10 @@ namespace WinSubTrial
                 if(ContainsIgnoreCase(TextDump, "collect_email_title")
                     || ContainsIgnoreCase(TextDump, "collect_email_input_edit_text"))
                 {
+                    //back về đăng ký
+                    TapDynamic(serial, "collect_email_back_button");
+                    Common.SetStatus(serial, "Tapped back after email");
+                    
                     return TaskResult.Success;
                 }
 
