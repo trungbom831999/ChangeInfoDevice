@@ -21,11 +21,6 @@ namespace WinSubTrial
         public bool isStopAuto = false;
         public string phonenumber { get; set; }
 
-        private string[] peopleName = { "Duy", "Phuc", "Quan", "Nghia", "Tham", "Toai", "Trang", "Hoang", "Anh" };
-        private string[] peopleFirst = { "Nguyen", "Trinh", "Tran", "Vu" };
-        private string[] months = { "thg%s1", "thg%s2", "thg%s3", "thg%s4", "thg%s5", "thg%s6", "thg%s7", "thg%s8", "thg%s9", "thg%s10", "thg%s11", "thg%s12" };
-        private string[] years = { "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003" };
-
         public TaskResult TinderAutomationRegister(string serial)
         {
             Adb.SendKey(serial, "KEYCODE_HOME");
@@ -108,27 +103,51 @@ namespace WinSubTrial
                     || ContainsIgnoreCase(TextDump, "phoneNumberLabel") 
                     || ContainsIgnoreCase(TextDump, "resendButton"))
                 {
-                    //Lấy mã OTP
-                    OpenGetCodeApi(serial);
-                    Common.SetStatus(serial, "Enter 6-digit code");
-                    DumpUi(serial);
-
-                    TapDynamic(serial, "btnGetOtp");
-                    Common.SetStatus(serial, "Tapped button get otp");
-                    //Quay lại Tinder điền OTP
-                    OpenTinderApp(serial);
-                    DumpUi(serial);
-                    TapDynamic(serial, "NAF");
-                    InputClipboard(serial);
-                    Common.SetStatus(serial, "Tapped code text filed");
-
-                    //tiếp tục
-                    if (ContainsIgnoreCase(TextDump, "continueButton"))
+                    int countResendOTP = 3;
+                    while (countResendOTP > 0)
                     {
-                        TapDynamic(serial, "continueButton");
-                        Common.SetStatus(serial, "Tapped continueButton");
+                        //Lấy mã OTP
+                        OpenGetCodeApi(serial);
+                        Common.SetStatus(serial, "Enter 6-digit code");
+                        DumpUi(serial);
+
+                        TapDynamic(serial, "btnGetOtp");
+                        Common.SetStatus(serial, "Tapped button get otp");
+                        //Quay lại Tinder điền OTP
+                        OpenTinderApp(serial);
+                        DumpUi(serial);
+                        TapDynamic(serial, "NAF");
+                        InputClipboard(serial);
+                        Common.SetStatus(serial, "Tapped code text filed");
+
+                        //tiếp tục
+                        if (ContainsIgnoreCase(TextDump, "continueButton"))
+                        {
+                            TapDynamic(serial, "continueButton");
+                            Common.SetStatus(serial, "Tapped continueButton");
+                        }
+                        Common.Sleep(2000);
+                        DumpUi(serial);
+                        if (ContainsIgnoreCase(TextDump, "resendButton"))
+                        {
+                            TapDynamic(serial, "resendButton");
+                            Common.SetStatus(serial, "Tapped resend OTP");
+                        }
+                        countResendOTP--;
+                        if (countResendOTP <= 0)
+                        {
+                            return TaskResult.Failure;
+                            break;
+                        }
+                        continue;
                     }
-                    continue;
+                }
+
+                //Xác thực email - Coi như thành công
+                if(ContainsIgnoreCase(TextDump, "collect_email_title")
+                    || ContainsIgnoreCase(TextDump, "collect_email_input_edit_text"))
+                {
+                    return TaskResult.Success;
                 }
 
                 if (ContainsIgnoreCase(TextDump, "continueButton"))

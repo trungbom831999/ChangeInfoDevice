@@ -33,6 +33,9 @@ namespace WinSubTrial
         public string countryChosen = "VN";
         public string operatorChosen = "Viettel Mobile";
         public string brand = "Random";
+        public string[] listBrand = { "Random", "google", "LGE", "samsung", "Sony" };
+        public string[] listOperator = { "EVNTelecom", "Gmobile", "I-Telecom", "MobiFone", "S-Fone", "Vietnammobile", "Vinaphone", "Viettel Telecom" };
+
         public DeviceType deviceType = DeviceType.miA1;
 
         public bool isGetDevice = false;
@@ -626,31 +629,7 @@ namespace WinSubTrial
                 {
                     if (timesChanged > (constTimesChanged-1)) // reboot
                     {
-                        #region Change Info
-                        if (device == null)
-                        {
-                            Common.SetStatus(serial, "Not found this device, stop auto");
-                            return;
-                        }
-                        if (device.RequestOption == null) device.RequestOption = new RequestInfo();
-                        device.RequestOption.Brand = brand;
-                        device.RequestOption.SDK = listSdk[Rand.Next(0, listSdk.Count() - 1)];
-                        device.RequestOption.Country = countryChosen;
-                        device.RequestOption.Network = operatorChosen;
-                        device.GetInfo();
-                        #endregion Change Info
-
-                        #region RebootFast
-                        if (device.RequestOption == null)
-                        {
-                            Common.SetStatus(serial, "Info không thay đổi");
-                            return;
-                        }
-                        Common.SetStatus(serial, "Saving info...");
-                        new ChangeA1 { device = device }.SaveInfo();
-                        Common.SetStatus(serial, "Saving info done");
-                        device.RequestOption = null;
-                        #endregion RebootFast
+                        RebootDevice(serial, device);
                         timesChanged = 0;
                     } else
                     {
@@ -784,10 +763,10 @@ namespace WinSubTrial
                 return;
             }
             if (device.RequestOption == null) device.RequestOption = new RequestInfo();
-            device.RequestOption.Brand = brand;
-            device.RequestOption.SDK = listSdk[Rand.Next(0, listSdk.Count() - 1)];
+            device.RequestOption.Brand = listBrand[Rand.Next(0, listBrand.Length)];
+            device.RequestOption.SDK = listSdk[Rand.Next(0, listSdk.Length)];
             device.RequestOption.Country = countryChosen;
-            device.RequestOption.Network = operatorChosen;
+            device.RequestOption.Network = listOperator[Rand.Next(0, listOperator.Length)];
 
             device.GetInfo();
             #endregion Change Info
