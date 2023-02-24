@@ -11,17 +11,16 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Utils;
+using WinSubTrial.ApionTask;
 using WinSubTrial.Utilities;
 
 namespace WinSubTrial
 {
-    class SnapchatTask
+    class SnapchatTask : BaseActivity
     {
         public bool isStopAuto = false;
         public string phonenumber { get; set; }
 
-        private string TextDump;
-        private readonly Random _rand = new Random();
         private string[] peopleName = { "Duy", "Phuc", "Quan", "Nghia", "Tham", "Toai", "Trang", "Hoang", "Anh" };
         private string[] peopleFirst = { "Nguyen", "Trinh", "Tran", "Vu" };
         private string[] months = { "thg%s1", "thg%s2", "thg%s3", "thg%s4", "thg%s5", "thg%s6", "thg%s7", "thg%s8", "thg%s9", "thg%s10", "thg%s11", "thg%s12" };
@@ -259,7 +258,7 @@ namespace WinSubTrial
                             Common.Sleep(500);
                             if (ContainsIgnoreCase(TextDump, "bottom_phone_form_field"))
                             {
-                                phonenumber = GetRandomTiktokNumber();
+                                phonenumber = GetRandomSnapchatNumber();
                                 OpenGetCodeApi(serial);
                                 Common.Sleep(1000);
                                 DumpUi(serial);
@@ -315,112 +314,14 @@ namespace WinSubTrial
 
         }
 
-        public string RandomPasswordString()
-        {
-            int length = _rand.Next(12, 14);
-            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz";
-            return new string(Enumerable.Repeat(chars, length)
-              .Select(s => s[_rand.Next(s.Length)]).ToArray());
-        }
-
-        public string GetRandomTiktokNumber()
+        public string GetRandomSnapchatNumber()
         {
             try
             {
-                string[] info = MyFile.GetLine(filePath: "Data\\tiktok.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
+                string[] info = MyFile.GetLine(filePath: "Data\\snapchat.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
                 return info[0];
             }
             catch { return null; }
-        }
-
-        private void TapPosition(string serial, Point point)
-        {
-            point.X += _rand.Next(5, 20);
-            point.Y += _rand.Next(5, 20);
-            Adb.Shell(serial, $"input tap {point.X} {point.Y}");
-        }
-
-        private void SwipeUp(string serial)
-        {
-            Adb.Shell(serial, "input swipe 500 1700 50 50");
-        }
-
-        private void Enter(string serial)
-        {
-            Adb.SendKey(serial, "KEYCODE_ENTER");
-        }
-        private void Tab(string serial)
-        {
-            Adb.SendKey(serial, "KEYCODE_TAB");
-        }
-        
-
-        private void Back(string serial)
-        {
-            Adb.SendKey(serial, "KEYCODE_BACK");
-        }
-
-        private void InputDynamic(string serial, string query, string text)
-        {
-            Point point = GetPointFromUi(query);
-            if (point != default) Adb.Shell(serial, $"input tap {point.X} {point.Y}");
-            Input(serial, text);
-        }
-
-        private void Input(string serial, string text, bool isClear = true)
-        {
-            if (isClear)
-            {
-                Adb.SendKey(serial, "123");
-                Adb.SendKey(serial, "--longpress 67 67 67 67 67 67 67 67 67 67 67");
-            }
-            Adb.Shell(serial, $"input text {text}");
-        }
-
-        private void InputClipboard(string serial, bool isClear = true)
-        {
-            if (isClear)
-            {
-                Adb.SendKey(serial, "123");
-                Adb.SendKey(serial, "--longpress 67 67 67 67 67 67 67 67 67 67 67");
-            }
-            Adb.Shell(serial, $"input keyevent 279");
-        }
-
-        private Point GetPointFromUi(string query)
-        {
-            Point point = default;
-            try
-            {
-                string value = Regex.Match(TextDump, $@"({query}[^\>]+)>", RegexOptions.IgnoreCase).Groups[1].Value;
-                if (ContainsIgnoreCase(query, "identifierid")) Utils.Debug.Log("value: " + value);
-                Match match = Regex.Match(value, @"\[(\d+),(\d+)\]\[(\d+),(\d+)\]");
-                if (!match.Success) return point;
-
-                string[] coords = new string[] { match.Groups[1].Value, match.Groups[2].Value };
-                string[] sizes = new string[] { match.Groups[3].Value, match.Groups[4].Value };
-                if (ContainsIgnoreCase(query, "identifierid")) Utils.Debug.Log("coords: " + string.Join(",", coords));
-                if (ContainsIgnoreCase(query, "identifierid")) Utils.Debug.Log("sizes: " + string.Join(",", sizes));
-
-                int x = (int.Parse(coords[0]) + int.Parse(sizes[0])) / 2;
-                int y = (int.Parse(coords[1]) + int.Parse(sizes[1])) / 2;
-                point = new Point(x, y);
-                if (ContainsIgnoreCase(query, "identifierid")) Utils.Debug.Log("coords: " + string.Join(",", point));
-            }
-            catch (Exception ex)
-            {
-                Utils.Debug.Log(ex.Message);
-            }
-
-            return point;
-        }
-
-        private void TapDynamic(string serial, string text)
-        {
-            Point point = GetPointFromUi(text);
-            point.X += _rand.Next(5, 15);
-            point.Y += _rand.Next(5, 15);
-            Adb.Shell(serial, $"input tap {point.X} {point.Y}");
         }
 
         private void OpenGetCodeApi(string serial)
@@ -431,23 +332,6 @@ namespace WinSubTrial
         private void OpenSnapchatApp(string serial)
         {
             Adb.Shell(serial, "am start -n com.snapchat.android/.LandingPageActivity");
-        }
-
-
-
-        public string DumpUi(string serial)
-        {
-            TextDump = "";
-            if (Adb.Shell(serial, "rm -f /sdcard/window_dump.xml; uiautomator dump --compressed").Contains("UI hierchary dumped to"))
-            {
-                TextDump = Adb.Shell(serial, "cat sdcard/window_dump.xml");
-            }
-            return TextDump;
-        }
-
-        public bool ContainsIgnoreCase(string source, string subString)
-        {
-            return Regex.IsMatch(source, subString, RegexOptions.IgnoreCase);
         }
     }
 }

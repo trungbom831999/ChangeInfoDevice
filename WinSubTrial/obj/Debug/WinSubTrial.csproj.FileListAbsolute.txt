@@ -599,3 +599,37 @@ C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTri
 C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.csproj.CopyComplete
 C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.exe
 C:\Users\Administrator\Desktop\WinSubTrial_Fixed\WinSubTrial\obj\Debug\WinSubTrial.pdb
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.csproj.AssemblyReference.cache
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.csproj.SuggestedBindingRedirects.cache
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.Backup.resources
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.Configuration.resources
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.DeviceTools.resources
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.InstalledPackages.resources
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.Main.resources
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.NetApp.resources
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.OpenLink.resources
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.RunScript.resources
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.WinName.resources
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.Properties.Resources.resources
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.SubTrialSupport.resources
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.SystemPackages.resources
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.TrafficInstall.resources
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.WipePackages.resources
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.csproj.GenerateResource.cache
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.csproj.CoreCompileInputs.cache
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\bin\Debug\WinSubTrial.exe.config
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\bin\Debug\WinSubTrial.exe
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\bin\Debug\WinSubTrial.pdb
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\bin\Debug\Faker.Net.4.5.dll
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\bin\Debug\Newtonsoft.Json.dll
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\bin\Debug\SharpAdbClient.dll
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\bin\Debug\System.Buffers.dll
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\bin\Debug\System.Drawing.Common.dll
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\bin\Debug\Newtonsoft.Json.xml
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\bin\Debug\System.Buffers.xml
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\bin\Debug\de-DE\Faker.Net.4.5.resources.dll
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.csproj.CopyComplete
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.exe
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.pdb

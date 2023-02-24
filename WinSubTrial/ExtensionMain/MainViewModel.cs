@@ -640,7 +640,7 @@ namespace WinSubTrial
 
                     //Adb.Shell(serial, "pm dump com.snapchat.android | grep -A 1 MAIN");
 
-                    string numberSnapchat = GetRandomTiktokNumber();
+                    string numberSnapchat = GetRandomSnapchatNumber();
                     Common.SetStatus(serial, $"Get Snapchat from file done: {numberSnapchat}");
                     //Common.Sleep(1000);
                     if (numberSnapchat == null)
@@ -685,6 +685,7 @@ namespace WinSubTrial
 
         public void TinderAutomation(string serial)
         {
+            int constTimeChangeTinder = 2;
             if (IsDeviceInTask(serial))
             {
                 deviceThreads[serial].Abort();
@@ -693,16 +694,16 @@ namespace WinSubTrial
             {
                 Device device = devicesModel.FirstOrDefault(x => x.Serial.Equals(serial));
                 int times = 10000000;
-                int timesChanged = constTimesChanged;
+                int timesChanged = constTimeChangeTinder;
                 //int timesChanged = 1;
 
                 while (times > 0)
                 {
-                    if (timesChanged > (constTimesChanged - 1)) // reboot
+                    if (timesChanged >= constTimeChangeTinder) // reboot
                     {
                         //reboot khi quá số lần auto
                         RebootDevice(serial, device);
-                        timesChanged = 0;
+                        timesChanged = 1;
                     }
                     else
                     {
@@ -711,7 +712,7 @@ namespace WinSubTrial
                         timesChanged += 1;
                     }
 
-                    string numberTinder = GetRandomTiktokNumber();
+                    string numberTinder = GetRandomTinderNumber();
                     Common.SetStatus(serial, $"Get Tinder from file done: {numberTinder}");
                     //Common.Sleep(1000);
                     if (numberTinder == null)
@@ -735,13 +736,83 @@ namespace WinSubTrial
                         case TaskResult.ProxyError:
                         case TaskResult.OtpError:
                             {
-                                timesChanged = constTimesChanged;
+                                timesChanged = constTimeChangeTinder;
                                 Common.SetStatus(serial, $"Login tinder {numberTinder} fail, run other phone!");
                                 continue;
                             }
                         case TaskResult.Failure:
                             {
                                 Common.SetStatus(serial, $"Login tinder {numberTinder} fail, run other phone!");
+                                continue;
+                            }
+                        default:
+                            return;
+                    }
+                }
+            }))
+            { IsBackground = true };
+            deviceThreads[serial] = thread;
+            thread.Start();
+        }
+
+        public void SnapchatPasswordRetrieval(string serial)
+        {
+            if (IsDeviceInTask(serial))
+            {
+                deviceThreads[serial].Abort();
+            }
+            Thread thread = new Thread(new ThreadStart(() =>
+            {
+                Device device = devicesModel.FirstOrDefault(x => x.Serial.Equals(serial));
+                int times = 10000000;
+                int timesChanged = constTimesChanged;
+                //int timesChanged = 1;
+
+                while (times > 0)
+                {
+                    if (timesChanged > (constTimesChanged - 1)) // reboot
+                    {
+                        //reboot khi quá số lần auto
+                        //RebootDevice(serial, device);
+                        timesChanged = 0;
+                    }
+                    else
+                    {
+                        // wipe app /
+                        new ChangeA1 { device = device }.WipeAppsData();
+                        timesChanged += 1;
+                    }
+
+                    string numberphone = GetRandomSnapchatPasswordNumber();
+                    Common.SetStatus(serial, $"Get snapchat phonenumber from file done: {numberphone}");
+                    //Common.Sleep(1000);
+                    if (numberphone == null)
+                    {
+                        Common.SetStatus(serial, "Call API fail. Out of number");
+                        Common.Sleep(4000);
+                        return;
+                    }
+                    TaskResult result = new SnapchatPasswordTask { phonenumber = numberphone }.SnapchatPasswordRetrieval(serial);
+                    switch (result)
+                    {
+                        case TaskResult.Success:
+                            {
+                                Common.SetStatus(serial, $"Password {numberphone} done");
+                                break;
+                            }
+                        case TaskResult.StopAuto:
+                            {
+                                return;
+                            }
+                        case TaskResult.OtpError:
+                            {
+                                timesChanged = constTimesChanged;
+                                Common.SetStatus(serial, $"Password {numberphone} fail, run other phone!");
+                                continue;
+                            }
+                        case TaskResult.Failure:
+                            {
+                                Common.SetStatus(serial, $"Password {numberphone} fail, run other phone!");
                                 continue;
                             }
                         default:
@@ -898,7 +969,27 @@ namespace WinSubTrial
         {
             try
             {
-                string[] info = MyFile.GetLine(filePath: "Data\\tiktok.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
+                string[] info = MyFile.GetLine(filePath: "Data\\tinder.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
+                return info[0];
+            }
+            catch { return null; }
+        }
+
+        public string GetRandomSnapchatNumber()
+        {
+            try
+            {
+                string[] info = MyFile.GetLine(filePath: "Data\\snapchat.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
+                return info[0];
+            }
+            catch { return null; }
+        }
+
+        public string GetRandomSnapchatPasswordNumber()
+        {
+            try
+            {
+                string[] info = MyFile.GetLine(filePath: "Data\\snapchat_password_retrieval.txt", index: 1, remove: true).Split(new string[] { "||" }, StringSplitOptions.RemoveEmptyEntries);
                 return info[0];
             }
             catch { return null; }

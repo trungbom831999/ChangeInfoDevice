@@ -135,7 +135,7 @@ namespace WinSubTrial
                             //back về đăng ký
                             TapDynamic(serial, "collect_email_back_button");
                             Common.SetStatus(serial, "Tapped back after email");
-
+                            CloseAllAppAfterSuccess(serial);
                             return TaskResult.Success;
                         }
 
@@ -149,7 +149,6 @@ namespace WinSubTrial
                         if (countResendOTP <= 0)
                         {
                             return TaskResult.Failure;
-                            break;
                         }
                         continue;
                     }
@@ -162,7 +161,7 @@ namespace WinSubTrial
                     //back về đăng ký
                     TapDynamic(serial, "collect_email_back_button");
                     Common.SetStatus(serial, "Tapped back after email");
-                    
+                    CloseAllAppAfterSuccess(serial);
                     return TaskResult.Success;
                 }
 
@@ -173,7 +172,12 @@ namespace WinSubTrial
                     Common.SetStatus(serial, "Tapped continueButton");
                     Common.Sleep(200);
                     continue;
-                } 
+                }
+
+                //if (ContainsIgnoreCase(TextDump, "abcxyz"))
+                //{
+
+                //}
             }
         }
 
@@ -181,7 +185,7 @@ namespace WinSubTrial
         {
             try
             {
-                string[] info = MyFile.GetLine(filePath: "Data\\tiktok.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
+                string[] info = MyFile.GetLine(filePath: "Data\\tinder.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
                 return info[0];
             }
             catch { return null; }
@@ -196,6 +200,11 @@ namespace WinSubTrial
         {
             Adb.Shell(serial, " am start -n com.tinder/.activities.LoginActivity");
         }
-        
+
+        private void CloseAllAppAfterSuccess(string serial)
+        {
+            CloseApp(serial, "tinder");
+            CloseApp(serial, "getcodeapi");
+        }
     }
 }

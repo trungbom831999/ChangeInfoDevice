@@ -89,6 +89,7 @@
     <Compile Include="ApionTask\AutoClickTacTask.cs" />
     <Compile Include="ApionTask\BaseActivity.cs" />
     <Compile Include="ApionTask\EnumApp.cs" />
+    <Compile Include="ApionTask\SnapchatPasswordTask.cs" />
     <Compile Include="ApionTask\TinderTask.cs" />
     <Compile Include="ApionTask\SnapchatTask.cs" />
     <Compile Include="ApionTask\SubscribeYoutubeTask.cs" />

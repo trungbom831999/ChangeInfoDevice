@@ -103,9 +103,44 @@ namespace WinSubTrial.ApionTask
             return point;
         }
 
+        protected Point GetPointFromUiNotIgnore(string query)
+        {
+            Point point = default;
+            try
+            {
+                string value = Regex.Match(TextDump, $@"({query}[^\>]+)>").Groups[1].Value;
+                if (ContainsIgnoreCase(query, "identifierid")) Utils.Debug.Log("value: " + value);
+                Match match = Regex.Match(value, @"\[(\d+),(\d+)\]\[(\d+),(\d+)\]");
+                if (!match.Success) return point;
+
+                string[] coords = new string[] { match.Groups[1].Value, match.Groups[2].Value };
+                string[] sizes = new string[] { match.Groups[3].Value, match.Groups[4].Value };
+                if (ContainsIgnoreCase(query, "identifierid")) Utils.Debug.Log("coords: " + string.Join(",", coords));
+                if (ContainsIgnoreCase(query, "identifierid")) Utils.Debug.Log("sizes: " + string.Join(",", sizes));
+
+                int x = (int.Parse(coords[0]) + int.Parse(sizes[0])) / 2;
+                int y = (int.Parse(coords[1]) + int.Parse(sizes[1])) / 2;
+                point = new Point(x, y);
+                if (ContainsIgnoreCase(query, "identifierid")) Utils.Debug.Log("coords: " + string.Join(",", point));
+            }
+            catch (Exception ex)
+            {
+                Utils.Debug.Log(ex.Message);
+            }
+
+            return point;
+        }
+
         protected void TapDynamic(string serial, string text)
         {
             Point point = GetPointFromUi(text);
+            point.X += _rand.Next(5, 15);
+            point.Y += _rand.Next(5, 15);
+            Adb.Shell(serial, $"input tap {point.X} {point.Y}");
+        }
+        protected void TapDynamicNotIgnore(string serial, string text)
+        {
+            Point point = GetPointFromUiNotIgnore(text);
             point.X += _rand.Next(5, 15);
             point.Y += _rand.Next(5, 15);
             Adb.Shell(serial, $"input tap {point.X} {point.Y}");
@@ -122,6 +157,22 @@ namespace WinSubTrial.ApionTask
                 TextDump = Adb.Shell(serial, "cat sdcard/window_dump.xml");
             }
             return TextDump;
+        }
+        //Đóng app
+        protected void CloseApp(string serial, string appName)
+        {
+            switch (appName)
+            {
+                case "snapchat":
+                    Adb.Shell(serial, "pm clear com.snapchat.android");
+                    break;
+                case "tinder":
+                    Adb.Shell(serial, "pm clear com.tinder");
+                    break;
+                case "getcodeapi":
+                    Adb.Shell(serial, "pm clear com.example.getcodeapi");
+                    break;
+            }
         }
     }
 }
