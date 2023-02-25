@@ -78,10 +78,20 @@ namespace WinSubTrial
                 //Nhấn đăng ký bằng số đt
                 if (ContainsIgnoreCase(TextDump, "login_epoxy_recycler_view"))
                 {
-                    TapDynamic(serial, "THO");
-                    Common.SetStatus(serial, "Tapped Register by phone number");
-                    Common.Sleep(200);
-                    continue;
+                    if (ContainsIgnoreCase(TextDump, "THO"))
+                    {
+                        TapDynamic(serial, "THO");
+                        Common.SetStatus(serial, "Tapped Register by phone number");
+                        Common.Sleep(200);
+                        continue;
+                    }
+                    else if(ContainsIgnoreCase(TextDump, "kh"))
+                    {
+                        TapDynamicNotIgnore(serial, "kh");
+                        Common.SetStatus(serial, "Tapped other option register");
+                        Common.Sleep(200);
+                        continue;
+                    }
                 }
 
                 //Nhập sđt
