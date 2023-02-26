@@ -773,7 +773,7 @@ namespace WinSubTrial
                     if (timesChanged > (constTimesChanged - 1)) // reboot
                     {
                         //reboot khi quá số lần auto
-                        //RebootDevice(serial, device);
+                        RebootDevice(serial, device);
                         timesChanged = 0;
                     }
                     else

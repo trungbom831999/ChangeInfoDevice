@@ -145,7 +145,7 @@ namespace WinSubTrial
                             //back về đăng ký
                             TapDynamic(serial, "collect_email_back_button");
                             Common.SetStatus(serial, "Tapped back after email");
-                            CloseAllAppAfterSuccess(serial);
+                            CloseAllApp(serial);
                             return TaskResult.Success;
                         }
 
@@ -158,6 +158,7 @@ namespace WinSubTrial
                         countResendOTP--;
                         if (countResendOTP <= 0)
                         {
+                            CloseAllApp(serial);
                             return TaskResult.Failure;
                         }
                         continue;
@@ -171,7 +172,7 @@ namespace WinSubTrial
                     //back về đăng ký
                     TapDynamic(serial, "collect_email_back_button");
                     Common.SetStatus(serial, "Tapped back after email");
-                    CloseAllAppAfterSuccess(serial);
+                    CloseAllApp(serial);
                     return TaskResult.Success;
                 }
 
@@ -211,7 +212,7 @@ namespace WinSubTrial
             Adb.Shell(serial, " am start -n com.tinder/.activities.LoginActivity");
         }
 
-        private void CloseAllAppAfterSuccess(string serial)
+        private void CloseAllApp(string serial)
         {
             CloseApp(serial, "tinder");
             CloseApp(serial, "getcodeapi");
