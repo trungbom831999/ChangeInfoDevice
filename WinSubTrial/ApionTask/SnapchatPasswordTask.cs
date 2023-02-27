@@ -61,7 +61,7 @@ namespace WinSubTrial
                     Common.SetStatus(serial, "Enter Brand");
                     //Common.Sleep(500);
 
-                    //TapDynamic(serial, "btnGetCode");
+                    TapDynamic(serial, "btnGetCode");
                     Common.SetStatus(serial, "tappeb btnGetCode");
                     //Common.Sleep(1000);
                     OpenSnapchatApp(serial);
@@ -119,14 +119,15 @@ namespace WinSubTrial
                     Common.SetStatus(serial, "Tapped nhập sđt");
 
                     //Lấy code trc khi gửi
-                    OpenGetCodeApi(serial);
-                    DumpUi(serial);
-                    TapDynamic(serial, "btnGetCode");
-                    Common.SetStatus(serial, "tappeb btnGetCode");
+                    //OpenGetCodeApi(serial);
+                    //DumpUi(serial);
+                    //TapDynamic(serial, "btnGetCode");
+                    //Common.SetStatus(serial, "tappeb btnGetCode");
 
-                    OpenSnapchatApp(serial);
+                    //OpenSnapchatApp(serial);
                     DumpUi(serial);
-                    TapDynamic(serial, "recovery_phone_continue"); 
+                    TapDynamic(serial, "recovery_phone_continue");
+                    Common.Sleep(1000);
                     continue;
                 }
 
