@@ -755,6 +755,60 @@ namespace WinSubTrial
             thread.Start();
         }
 
+        public void BigoAutomation(string serial)
+        {
+            if (IsDeviceInTask(serial))
+            {
+                deviceThreads[serial].Abort();
+            }
+            Thread thread = new Thread(new ThreadStart(() =>
+            {
+                Device device = devicesModel.FirstOrDefault(x => x.Serial.Equals(serial));
+                int times = 10000000;
+
+                while (times > 0)
+                {
+                    //reboot sau mỗi lần đki
+                    new ChangeA1 { device = device }.WipeAppsData();
+                    RebootDevice(serial, device);
+
+                    string numberphone = GetRandomBigoNumber();
+                    Common.SetStatus(serial, $"Get bigo phonenumber from file done: {numberphone}");
+                    //Common.Sleep(1000);
+                    if (numberphone == null)
+                    {
+                        Common.SetStatus(serial, "Call API fail. Out of number");
+                        Common.Sleep(4000);
+                        return;
+                    }
+                    TaskResult result = new BigoTask { phonenumber = numberphone }.BigoAutoRegister(serial);
+                    switch (result)
+                    {
+                        case TaskResult.Success:
+                            {
+                                Common.SetStatus(serial, $"Bigo register {numberphone} done");
+                                break;
+                            }
+                        case TaskResult.OtpError:
+                            {
+                                Common.SetStatus(serial, $"Bigo OTP fail {numberphone}, run other phone!");
+                                continue;
+                            }
+                        case TaskResult.Failure:
+                            {
+                                Common.SetStatus(serial, $"Bigo register {numberphone} fail, run other phone!");
+                                continue;
+                            }
+                        default:
+                            return;
+                    }
+                }
+            }))
+            { IsBackground = true };
+            deviceThreads[serial] = thread;
+            thread.Start();
+        }
+
         public void SnapchatPasswordRetrieval(string serial)
         {
             if (IsDeviceInTask(serial))
@@ -990,6 +1044,16 @@ namespace WinSubTrial
             try
             {
                 string[] info = MyFile.GetLine(filePath: "Data\\snapchat_password_retrieval.txt", index: 1, remove: true).Split(new string[] { "||" }, StringSplitOptions.RemoveEmptyEntries);
+                return info[0];
+            }
+            catch { return null; }
+        }
+
+        public string GetRandomBigoNumber()
+        {
+            try
+            {
+                string[] info = MyFile.GetLine(filePath: "Data\\bigo.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
                 return info[0];
             }
             catch { return null; }

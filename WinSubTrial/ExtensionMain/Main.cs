@@ -352,6 +352,24 @@ namespace WinSubTrial
             thread.Start();
         }
 
+        private void BigoButtonClick(object sender, EventArgs e)
+        {
+            if (!viewModel.someDevicesSelected()) return;
+            Thread thread = new Thread(new ThreadStart(() =>
+            {
+                foreach (Device device in viewModel.devicesModel.Where(x => x.isSelected == true))
+                {
+                    Task.Run(() =>
+                    {
+                        viewModel.deviceWaitForStop[device.Serial] = false;
+                        viewModel.BigoAutomation(device.Serial);
+                    });
+                }
+            }))
+            { IsBackground = true };
+            thread.Start();
+        }
+
         private void snapchatPasswordRetrieval(object sender, EventArgs e)
         {
             if (!viewModel.someDevicesSelected()) return;

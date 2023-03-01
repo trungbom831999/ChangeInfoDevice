@@ -202,16 +202,6 @@ namespace WinSubTrial
             catch { return null; }
         }
 
-        private void OpenGetCodeApi(string serial)
-        {
-            Adb.Shell(serial, "am start -n com.example.getcodeapi/.MainActivity");
-        }
-
-        private void OpenTinderApp(string serial)
-        {
-            Adb.Shell(serial, " am start -n com.tinder/.activities.LoginActivity");
-        }
-
         private void CloseAllApp(string serial)
         {
             CloseApp(serial, "tinder");

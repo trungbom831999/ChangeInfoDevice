@@ -169,10 +169,33 @@ namespace WinSubTrial.ApionTask
                 case "tinder":
                     Adb.Shell(serial, "pm clear com.tinder");
                     break;
+                case "bigo":
+                    Adb.Shell(serial, "pm clear sg.bigo.live");
+                    break;
                 case "getcodeapi":
                     Adb.Shell(serial, "pm clear com.example.getcodeapi");
                     break;
             }
+        }
+        //Mở app
+        protected void OpenGetCodeApi(string serial)
+        {
+            Adb.Shell(serial, "am start -n com.example.getcodeapi/.MainActivity");
+        }
+
+        protected void OpenTinderApp(string serial)
+        {
+            Adb.Shell(serial, " am start -n com.tinder/.activities.LoginActivity");
+        }
+
+        protected void OpenSnapchatApp(string serial)
+        {
+            Adb.Shell(serial, "am start -n com.snapchat.android/.LandingPageActivity");
+        }
+
+        protected void OpenBigoApp(string serial)
+        {
+            Adb.Shell(serial, "am start -n sg.bigo.live/.home.MainActivity");
         }
     }
 }

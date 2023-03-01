@@ -59,6 +59,7 @@ namespace WinSubTrial
             this.netAppToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageChange = new System.Windows.Forms.TabPage();
+            this.buttonBigo = new System.Windows.Forms.Button();
             this.buttonSnapchatPassword = new System.Windows.Forms.Button();
             this.buttonTinder = new System.Windows.Forms.Button();
             this.buttonSnapchat = new System.Windows.Forms.Button();
@@ -276,7 +277,7 @@ namespace WinSubTrial
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1038, 760);
+            this.tabControl1.Size = new System.Drawing.Size(1038, 776);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 2;
             this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
@@ -284,6 +285,7 @@ namespace WinSubTrial
             // 
             // tabPageChange
             // 
+            this.tabPageChange.Controls.Add(this.buttonBigo);
             this.tabPageChange.Controls.Add(this.buttonSnapchatPassword);
             this.tabPageChange.Controls.Add(this.buttonTinder);
             this.tabPageChange.Controls.Add(this.buttonSnapchat);
@@ -334,10 +336,20 @@ namespace WinSubTrial
             this.tabPageChange.Location = new System.Drawing.Point(60, 4);
             this.tabPageChange.Name = "tabPageChange";
             this.tabPageChange.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageChange.Size = new System.Drawing.Size(974, 752);
+            this.tabPageChange.Size = new System.Drawing.Size(974, 768);
             this.tabPageChange.TabIndex = 0;
             this.tabPageChange.Text = "Main";
             this.tabPageChange.UseVisualStyleBackColor = true;
+            // 
+            // buttonBigo
+            // 
+            this.buttonBigo.Location = new System.Drawing.Point(538, 737);
+            this.buttonBigo.Name = "buttonBigo";
+            this.buttonBigo.Size = new System.Drawing.Size(138, 23);
+            this.buttonBigo.TabIndex = 63;
+            this.buttonBigo.Text = "Bigo script";
+            this.buttonBigo.UseVisualStyleBackColor = true;
+            this.buttonBigo.Click += new System.EventHandler(this.BigoButtonClick);
             // 
             // buttonSnapchatPassword
             // 
@@ -357,7 +369,7 @@ namespace WinSubTrial
             this.buttonTinder.TabIndex = 61;
             this.buttonTinder.Text = "Tinder script";
             this.buttonTinder.UseVisualStyleBackColor = true;
-            this.buttonTinder.Click += new System.EventHandler(this.TinderButtonClick);
+            this.buttonTinder.Click += new System.EventHandler(this.BigoButtonClick);
             // 
             // buttonSnapchat
             // 
@@ -371,7 +383,7 @@ namespace WinSubTrial
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(356, 726);
+            this.button10.Location = new System.Drawing.Point(375, 737);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(138, 23);
             this.button10.TabIndex = 59;
@@ -381,7 +393,7 @@ namespace WinSubTrial
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(212, 726);
+            this.button9.Location = new System.Drawing.Point(231, 737);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(138, 23);
             this.button9.TabIndex = 58;
@@ -391,7 +403,7 @@ namespace WinSubTrial
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(68, 726);
+            this.button8.Location = new System.Drawing.Point(87, 737);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(138, 23);
             this.button8.TabIndex = 57;
@@ -942,7 +954,7 @@ namespace WinSubTrial
             this.tabPageBackup.Location = new System.Drawing.Point(60, 4);
             this.tabPageBackup.Name = "tabPageBackup";
             this.tabPageBackup.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageBackup.Size = new System.Drawing.Size(974, 752);
+            this.tabPageBackup.Size = new System.Drawing.Size(974, 768);
             this.tabPageBackup.TabIndex = 1;
             this.tabPageBackup.Text = "Backup";
             this.tabPageBackup.UseVisualStyleBackColor = true;
@@ -1179,7 +1191,7 @@ namespace WinSubTrial
             this.tabPageRestore.Controls.Add(this.label14);
             this.tabPageRestore.Location = new System.Drawing.Point(60, 4);
             this.tabPageRestore.Name = "tabPageRestore";
-            this.tabPageRestore.Size = new System.Drawing.Size(974, 752);
+            this.tabPageRestore.Size = new System.Drawing.Size(974, 768);
             this.tabPageRestore.TabIndex = 2;
             this.tabPageRestore.Text = "Restore";
             this.tabPageRestore.UseVisualStyleBackColor = true;
@@ -1404,7 +1416,7 @@ namespace WinSubTrial
             this.tabPageLicense.Controls.Add(this.dgvLicense);
             this.tabPageLicense.Location = new System.Drawing.Point(60, 4);
             this.tabPageLicense.Name = "tabPageLicense";
-            this.tabPageLicense.Size = new System.Drawing.Size(974, 752);
+            this.tabPageLicense.Size = new System.Drawing.Size(974, 768);
             this.tabPageLicense.TabIndex = 3;
             this.tabPageLicense.Text = "License";
             this.tabPageLicense.UseVisualStyleBackColor = true;
@@ -1464,7 +1476,7 @@ namespace WinSubTrial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1038, 784);
+            this.ClientSize = new System.Drawing.Size(1038, 800);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.mnuTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1599,6 +1611,7 @@ namespace WinSubTrial
         private System.Windows.Forms.Button buttonSnapchat;
         private System.Windows.Forms.Button buttonTinder;
         private System.Windows.Forms.Button buttonSnapchatPassword;
+        private System.Windows.Forms.Button buttonBigo;
     }
 }
 
