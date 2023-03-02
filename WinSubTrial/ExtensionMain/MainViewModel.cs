@@ -765,12 +765,22 @@ namespace WinSubTrial
             {
                 Device device = devicesModel.FirstOrDefault(x => x.Serial.Equals(serial));
                 int times = 10000000;
+                int timesChanged = constTimesChanged;
 
                 while (times > 0)
                 {
-                    //reboot sau mỗi lần đki
-                    new ChangeA1 { device = device }.WipeAppsData();
-                    RebootDevice(serial, device);
+                    if (timesChanged >= constTimesChanged) // reboot
+                    {
+                        //reboot khi quá số lần auto
+                        RebootDevice(serial, device);
+                        timesChanged = 1;
+                    }
+                    else
+                    {
+                        // wipe app /
+                        new ChangeA1 { device = device }.WipeAppsData();
+                        timesChanged += 1;
+                    }
 
                     string numberphone = GetRandomBigoNumber();
                     Common.SetStatus(serial, $"Get bigo phonenumber from file done: {numberphone}");
@@ -791,7 +801,9 @@ namespace WinSubTrial
                             }
                         case TaskResult.OtpError:
                             {
+                                timesChanged = timesChanged == 1 ? timesChanged : timesChanged--;
                                 Common.SetStatus(serial, $"Bigo OTP fail {numberphone}, run other phone!");
+
                                 continue;
                             }
                         case TaskResult.Failure:

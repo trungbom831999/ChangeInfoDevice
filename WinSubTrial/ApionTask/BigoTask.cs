@@ -113,8 +113,9 @@ namespace WinSubTrial
                 {
                     TapDynamic(serial, "btn_resend");
                     Common.SetStatus(serial, "tappeb send oin code");
-                    //lấy otp 3 lần ko đc thì làm lại từ đầu
-                    int countgetdOTP = 3;
+                    Common.Sleep(3000);
+                    //lấy otp 1 lần ko đc thì làm lại từ đầu
+                    int countgetdOTP = 1;
                     while (countgetdOTP > 0)
                     {
                         //lấy OTP
@@ -130,7 +131,7 @@ namespace WinSubTrial
                         InputClipboard(serial);
                         Common.SetStatus(serial, "Input OTP");
                         TapDynamic(serial, "tv_next");
-                        Common.Sleep(2000);
+                        Common.Sleep(3000);
                         DumpUi(serial);
 
                         //Sang trang chủ là thành công
@@ -143,7 +144,7 @@ namespace WinSubTrial
                         if (countgetdOTP <= 0)
                         {
                             CloseAllApp(serial);
-                            return TaskResult.Failure;
+                            return TaskResult.OtpError;
                         }
                         continue;
                     }
