@@ -801,7 +801,7 @@ namespace WinSubTrial
                             }
                         case TaskResult.OtpError:
                             {
-                                timesChanged = timesChanged == 1 ? timesChanged : timesChanged--;
+                                timesChanged = timesChanged == 1 ? timesChanged : (timesChanged-1);
                                 Common.SetStatus(serial, $"Bigo OTP fail {numberphone}, run other phone!");
 
                                 continue;
@@ -809,6 +809,56 @@ namespace WinSubTrial
                         case TaskResult.Failure:
                             {
                                 Common.SetStatus(serial, $"Bigo register {numberphone} fail, run other phone!");
+                                continue;
+                            }
+                        default:
+                            return;
+                    }
+                }
+            }))
+            { IsBackground = true };
+            deviceThreads[serial] = thread;
+            thread.Start();
+        }
+
+        public void BigoLiteAutomation(string serial)
+        {
+            if (IsDeviceInTask(serial))
+            {
+                deviceThreads[serial].Abort();
+            }
+            Thread thread = new Thread(new ThreadStart(() =>
+            {
+                Device device = devicesModel.FirstOrDefault(x => x.Serial.Equals(serial));
+                int times = 10000000;
+                int timesChanged = constTimesChanged;
+
+                while (times > 0)
+                {
+                    if (timesChanged >= constTimesChanged) // reboot
+                    {
+                        //reboot
+                        RebootDevice(serial, device);
+                        timesChanged = 1;
+                    }
+                    else
+                    {
+                        // wipe app /
+                        new ChangeA1 { device = device }.WipeAppsData();
+                        timesChanged += 1;
+                    }
+
+                    TaskResult result = new BigoLiteTask { }.BigoLiteFilterPhone(serial);
+                    switch (result)
+                    {
+                        case TaskResult.Success:
+                            {
+                                Common.SetStatus(serial, $"Bigo filter phone done");
+                                break;
+                            }
+                        case TaskResult.Failure:
+                            {
+                                Common.SetStatus(serial, $"Bigo lite fail, run away!");
                                 continue;
                             }
                         default:
@@ -1035,7 +1085,7 @@ namespace WinSubTrial
         {
             try
             {
-                string[] info = MyFile.GetLine(filePath: "Data\\tinder.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
+                string[] info = MyFile.GetLine(filePath: "Data\\04-Tinder.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
                 return info[0];
             }
             catch { return null; }
@@ -1045,7 +1095,7 @@ namespace WinSubTrial
         {
             try
             {
-                string[] info = MyFile.GetLine(filePath: "Data\\snapchat.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
+                string[] info = MyFile.GetLine(filePath: "Data\\01-SnapchatIN.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
                 return info[0];
             }
             catch { return null; }
@@ -1055,7 +1105,7 @@ namespace WinSubTrial
         {
             try
             {
-                string[] info = MyFile.GetLine(filePath: "Data\\snapchat_password_retrieval.txt", index: 1, remove: true).Split(new string[] { "||" }, StringSplitOptions.RemoveEmptyEntries);
+                string[] info = MyFile.GetLine(filePath: "Data\\03-SnapchatForgotPassword.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
                 return info[0];
             }
             catch { return null; }
@@ -1065,7 +1115,7 @@ namespace WinSubTrial
         {
             try
             {
-                string[] info = MyFile.GetLine(filePath: "Data\\bigo.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
+                string[] info = MyFile.GetLine(filePath: "Data\\05-BigoLoginSMS.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
                 return info[0];
             }
             catch { return null; }

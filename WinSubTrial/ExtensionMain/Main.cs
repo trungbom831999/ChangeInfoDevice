@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using Utils;
 using WinSubTrial.Functions;
 using WinSubTrial.Utilities;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify;
 
 namespace WinSubTrial
 {
@@ -370,22 +371,44 @@ namespace WinSubTrial
             thread.Start();
         }
 
+        private void BigoLiteButtonClick(object sender, EventArgs e)
+        {
+            if (!viewModel.someDevicesSelected()) return;
+            viewModel.devicesModel.Where(x => x.isSelected == true).AsParallel().ForAll(device =>
+            {
+                Task.Run(() =>
+                {
+                    viewModel.deviceWaitForStop[device.Serial] = false;
+                    viewModel.BigoLiteAutomation(device.Serial);
+                });
+            });
+        }
+
         private void snapchatPasswordRetrieval(object sender, EventArgs e)
         {
             if (!viewModel.someDevicesSelected()) return;
-            Thread thread = new Thread(new ThreadStart(() =>
+            viewModel.devicesModel.Where(x => x.isSelected == true).AsParallel().ForAll(device =>
             {
-                foreach (Device device in viewModel.devicesModel.Where(x => x.isSelected == true))
+                Task.Run(() =>
                 {
-                    Task.Run(() =>
-                    {
-                        viewModel.deviceWaitForStop[device.Serial] = false;
-                        viewModel.SnapchatPasswordRetrieval(device.Serial);
-                    });
-                }
-            }))
-            { IsBackground = true };
-            thread.Start();
+                    viewModel.deviceWaitForStop[device.Serial] = false;
+                    viewModel.SnapchatPasswordRetrieval(device.Serial);
+                });
+            });
+
+            //Thread thread = new Thread(new ThreadStart(() =>
+            //{
+            //    foreach (Device device in viewModel.devicesModel.Where(x => x.isSelected == true))
+            //    {
+            //        Task.Run(() =>
+            //        {
+            //            viewModel.deviceWaitForStop[device.Serial] = false;
+            //            viewModel.SnapchatPasswordRetrieval(device.Serial);
+            //        });
+            //    }
+            //}))
+            //{ IsBackground = true };
+            //thread.Start();
         }
     }
 }

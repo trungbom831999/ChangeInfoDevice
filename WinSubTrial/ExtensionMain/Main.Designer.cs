@@ -150,6 +150,7 @@ namespace WinSubTrial
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.BigoLite = new System.Windows.Forms.Button();
             this.mnuTop.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageChange.SuspendLayout();
@@ -285,6 +286,7 @@ namespace WinSubTrial
             // 
             // tabPageChange
             // 
+            this.tabPageChange.Controls.Add(this.BigoLite);
             this.tabPageChange.Controls.Add(this.buttonBigo);
             this.tabPageChange.Controls.Add(this.buttonSnapchatPassword);
             this.tabPageChange.Controls.Add(this.buttonTinder);
@@ -335,25 +337,35 @@ namespace WinSubTrial
             this.tabPageChange.Controls.Add(this.dgvDevice);
             this.tabPageChange.Location = new System.Drawing.Point(60, 4);
             this.tabPageChange.Name = "tabPageChange";
-            this.tabPageChange.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageChange.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPageChange.Size = new System.Drawing.Size(974, 768);
             this.tabPageChange.TabIndex = 0;
             this.tabPageChange.Text = "Main";
             this.tabPageChange.UseVisualStyleBackColor = true;
             // 
-            // buttonBigo
+            // buttonBigoSMS
             // 
-            this.buttonBigo.Location = new System.Drawing.Point(538, 737);
+            this.buttonBigo.Location = new System.Drawing.Point(805, 679);
             this.buttonBigo.Name = "buttonBigo";
             this.buttonBigo.Size = new System.Drawing.Size(138, 23);
             this.buttonBigo.TabIndex = 63;
-            this.buttonBigo.Text = "Bigo script";
+            this.buttonBigo.Text = "Bigo Login SMS";
             this.buttonBigo.UseVisualStyleBackColor = true;
             this.buttonBigo.Click += new System.EventHandler(this.BigoButtonClick);
             // 
+            // BigoLite
+            // 
+            this.BigoLite.Location = new System.Drawing.Point(805, 708);
+            this.BigoLite.Name = "BigoLite";
+            this.BigoLite.Size = new System.Drawing.Size(138, 23);
+            this.BigoLite.TabIndex = 64;
+            this.BigoLite.Text = "Bigo Lite";
+            this.BigoLite.UseVisualStyleBackColor = true;
+            this.BigoLite.Click += new System.EventHandler(this.BigoLiteButtonClick);
+            // 
             // buttonSnapchatPassword
             // 
-            this.buttonSnapchatPassword.Location = new System.Drawing.Point(826, 705);
+            this.buttonSnapchatPassword.Location = new System.Drawing.Point(517, 708);
             this.buttonSnapchatPassword.Name = "buttonSnapchatPassword";
             this.buttonSnapchatPassword.Size = new System.Drawing.Size(138, 23);
             this.buttonSnapchatPassword.TabIndex = 62;
@@ -363,27 +375,27 @@ namespace WinSubTrial
             // 
             // buttonTinder
             // 
-            this.buttonTinder.Location = new System.Drawing.Point(538, 705);
+            this.buttonTinder.Location = new System.Drawing.Point(661, 679);
             this.buttonTinder.Name = "buttonTinder";
             this.buttonTinder.Size = new System.Drawing.Size(138, 23);
             this.buttonTinder.TabIndex = 61;
-            this.buttonTinder.Text = "Tinder script";
+            this.buttonTinder.Text = "Tinder Register";
             this.buttonTinder.UseVisualStyleBackColor = true;
-            this.buttonTinder.Click += new System.EventHandler(this.BigoButtonClick);
+            this.buttonTinder.Click += new System.EventHandler(this.TinderButtonClick);
             // 
             // buttonSnapchat
             // 
-            this.buttonSnapchat.Location = new System.Drawing.Point(682, 705);
+            this.buttonSnapchat.Location = new System.Drawing.Point(517, 679);
             this.buttonSnapchat.Name = "buttonSnapchat";
             this.buttonSnapchat.Size = new System.Drawing.Size(138, 23);
             this.buttonSnapchat.TabIndex = 60;
-            this.buttonSnapchat.Text = "Snapchat script";
+            this.buttonSnapchat.Text = "Snapchat Register";
             this.buttonSnapchat.UseVisualStyleBackColor = true;
-            this.buttonSnapchat.Click += new System.EventHandler(this.snapchatPasswordRetrieval);
+            this.buttonSnapchat.Click += new System.EventHandler(this.snapchatButtonTapped);
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(375, 737);
+            this.button10.Location = new System.Drawing.Point(354, 682);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(138, 23);
             this.button10.TabIndex = 59;
@@ -393,7 +405,7 @@ namespace WinSubTrial
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(231, 737);
+            this.button9.Location = new System.Drawing.Point(210, 682);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(138, 23);
             this.button9.TabIndex = 58;
@@ -403,7 +415,7 @@ namespace WinSubTrial
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(87, 737);
+            this.button8.Location = new System.Drawing.Point(66, 682);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(138, 23);
             this.button8.TabIndex = 57;
@@ -413,7 +425,7 @@ namespace WinSubTrial
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(375, 534);
+            this.button7.Location = new System.Drawing.Point(354, 507);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(138, 23);
             this.button7.TabIndex = 56;
@@ -423,7 +435,7 @@ namespace WinSubTrial
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(231, 679);
+            this.button6.Location = new System.Drawing.Point(210, 652);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(138, 23);
             this.button6.TabIndex = 55;
@@ -433,7 +445,7 @@ namespace WinSubTrial
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(375, 680);
+            this.button3.Location = new System.Drawing.Point(354, 653);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(138, 23);
             this.button3.TabIndex = 54;
@@ -443,7 +455,7 @@ namespace WinSubTrial
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(231, 621);
+            this.button1.Location = new System.Drawing.Point(210, 594);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(138, 23);
             this.button1.TabIndex = 53;
@@ -453,7 +465,7 @@ namespace WinSubTrial
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(375, 650);
+            this.button5.Location = new System.Drawing.Point(354, 623);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(138, 23);
             this.button5.TabIndex = 50;
@@ -463,7 +475,7 @@ namespace WinSubTrial
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(231, 650);
+            this.button4.Location = new System.Drawing.Point(210, 623);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(138, 23);
             this.button4.TabIndex = 49;
@@ -473,7 +485,7 @@ namespace WinSubTrial
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(375, 621);
+            this.button2.Location = new System.Drawing.Point(354, 594);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(138, 23);
             this.button2.TabIndex = 47;
@@ -496,7 +508,7 @@ namespace WinSubTrial
             this.cboBackupFiles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBackupFiles.DropDownWidth = 186;
             this.cboBackupFiles.FormattingEnabled = true;
-            this.cboBackupFiles.Location = new System.Drawing.Point(621, 678);
+            this.cboBackupFiles.Location = new System.Drawing.Point(600, 651);
             this.cboBackupFiles.Name = "cboBackupFiles";
             this.cboBackupFiles.Size = new System.Drawing.Size(199, 21);
             this.cboBackupFiles.TabIndex = 42;
@@ -504,7 +516,7 @@ namespace WinSubTrial
             // 
             // txtSearchBackup
             // 
-            this.txtSearchBackup.Location = new System.Drawing.Point(538, 679);
+            this.txtSearchBackup.Location = new System.Drawing.Point(517, 652);
             this.txtSearchBackup.Name = "txtSearchBackup";
             this.txtSearchBackup.Size = new System.Drawing.Size(75, 20);
             this.txtSearchBackup.TabIndex = 41;
@@ -514,7 +526,7 @@ namespace WinSubTrial
             // 
             // btnRestore
             // 
-            this.btnRestore.Location = new System.Drawing.Point(733, 644);
+            this.btnRestore.Location = new System.Drawing.Point(712, 617);
             this.btnRestore.Name = "btnRestore";
             this.btnRestore.Size = new System.Drawing.Size(87, 23);
             this.btnRestore.TabIndex = 39;
@@ -524,7 +536,7 @@ namespace WinSubTrial
             // 
             // btnRunScript
             // 
-            this.btnRunScript.Location = new System.Drawing.Point(631, 644);
+            this.btnRunScript.Location = new System.Drawing.Point(610, 617);
             this.btnRunScript.Name = "btnRunScript";
             this.btnRunScript.Size = new System.Drawing.Size(96, 23);
             this.btnRunScript.TabIndex = 38;
@@ -535,7 +547,7 @@ namespace WinSubTrial
             // btnCreateScript
             // 
             this.btnCreateScript.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnCreateScript.Location = new System.Drawing.Point(538, 644);
+            this.btnCreateScript.Location = new System.Drawing.Point(517, 617);
             this.btnCreateScript.Name = "btnCreateScript";
             this.btnCreateScript.Size = new System.Drawing.Size(90, 23);
             this.btnCreateScript.TabIndex = 36;
@@ -545,7 +557,7 @@ namespace WinSubTrial
             // 
             // btnHomeAll
             // 
-            this.btnHomeAll.Location = new System.Drawing.Point(682, 607);
+            this.btnHomeAll.Location = new System.Drawing.Point(661, 580);
             this.btnHomeAll.Name = "btnHomeAll";
             this.btnHomeAll.Size = new System.Drawing.Size(138, 23);
             this.btnHomeAll.TabIndex = 35;
@@ -555,7 +567,7 @@ namespace WinSubTrial
             // 
             // btnWipeMailAll
             // 
-            this.btnWipeMailAll.Location = new System.Drawing.Point(682, 570);
+            this.btnWipeMailAll.Location = new System.Drawing.Point(661, 543);
             this.btnWipeMailAll.Name = "btnWipeMailAll";
             this.btnWipeMailAll.Size = new System.Drawing.Size(138, 23);
             this.btnWipeMailAll.TabIndex = 34;
@@ -565,7 +577,7 @@ namespace WinSubTrial
             // 
             // btnOffProxyAll
             // 
-            this.btnOffProxyAll.Location = new System.Drawing.Point(538, 607);
+            this.btnOffProxyAll.Location = new System.Drawing.Point(517, 580);
             this.btnOffProxyAll.Name = "btnOffProxyAll";
             this.btnOffProxyAll.Size = new System.Drawing.Size(138, 23);
             this.btnOffProxyAll.TabIndex = 33;
@@ -576,7 +588,7 @@ namespace WinSubTrial
             // btnWipePackageAll
             // 
             this.btnWipePackageAll.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnWipePackageAll.Location = new System.Drawing.Point(538, 570);
+            this.btnWipePackageAll.Location = new System.Drawing.Point(517, 543);
             this.btnWipePackageAll.Name = "btnWipePackageAll";
             this.btnWipePackageAll.Size = new System.Drawing.Size(138, 23);
             this.btnWipePackageAll.TabIndex = 32;
@@ -586,7 +598,7 @@ namespace WinSubTrial
             // 
             // btnBackupChange
             // 
-            this.btnBackupChange.Location = new System.Drawing.Point(682, 535);
+            this.btnBackupChange.Location = new System.Drawing.Point(661, 508);
             this.btnBackupChange.Name = "btnBackupChange";
             this.btnBackupChange.Size = new System.Drawing.Size(138, 23);
             this.btnBackupChange.TabIndex = 30;
@@ -597,7 +609,7 @@ namespace WinSubTrial
             // btnBackup
             // 
             this.btnBackup.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnBackup.Location = new System.Drawing.Point(538, 535);
+            this.btnBackup.Location = new System.Drawing.Point(517, 508);
             this.btnBackup.Name = "btnBackup";
             this.btnBackup.Size = new System.Drawing.Size(138, 23);
             this.btnBackup.TabIndex = 28;
@@ -607,7 +619,7 @@ namespace WinSubTrial
             // 
             // btnSaveInfoAll
             // 
-            this.btnSaveInfoAll.Location = new System.Drawing.Point(682, 497);
+            this.btnSaveInfoAll.Location = new System.Drawing.Point(661, 470);
             this.btnSaveInfoAll.Name = "btnSaveInfoAll";
             this.btnSaveInfoAll.Size = new System.Drawing.Size(138, 23);
             this.btnSaveInfoAll.TabIndex = 27;
@@ -617,7 +629,7 @@ namespace WinSubTrial
             // 
             // btnRandomInfoAll
             // 
-            this.btnRandomInfoAll.Location = new System.Drawing.Point(538, 497);
+            this.btnRandomInfoAll.Location = new System.Drawing.Point(517, 470);
             this.btnRandomInfoAll.Name = "btnRandomInfoAll";
             this.btnRandomInfoAll.Size = new System.Drawing.Size(138, 23);
             this.btnRandomInfoAll.TabIndex = 25;
@@ -628,7 +640,7 @@ namespace WinSubTrial
             // lblReportChange
             // 
             this.lblReportChange.AutoSize = true;
-            this.lblReportChange.Location = new System.Drawing.Point(311, 588);
+            this.lblReportChange.Location = new System.Drawing.Point(290, 561);
             this.lblReportChange.Name = "lblReportChange";
             this.lblReportChange.Size = new System.Drawing.Size(24, 13);
             this.lblReportChange.TabIndex = 23;
@@ -637,7 +649,7 @@ namespace WinSubTrial
             // lblDevicesCount
             // 
             this.lblDevicesCount.AutoSize = true;
-            this.lblDevicesCount.Location = new System.Drawing.Point(311, 566);
+            this.lblDevicesCount.Location = new System.Drawing.Point(290, 539);
             this.lblDevicesCount.Name = "lblDevicesCount";
             this.lblDevicesCount.Size = new System.Drawing.Size(13, 13);
             this.lblDevicesCount.TabIndex = 22;
@@ -646,7 +658,7 @@ namespace WinSubTrial
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(228, 588);
+            this.label8.Location = new System.Drawing.Point(207, 561);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(82, 13);
             this.label8.TabIndex = 21;
@@ -655,7 +667,7 @@ namespace WinSubTrial
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(228, 566);
+            this.label7.Location = new System.Drawing.Point(207, 539);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 13);
             this.label7.TabIndex = 20;
@@ -663,7 +675,7 @@ namespace WinSubTrial
             // 
             // btnLoginGmailAll
             // 
-            this.btnLoginGmailAll.Location = new System.Drawing.Point(231, 534);
+            this.btnLoginGmailAll.Location = new System.Drawing.Point(210, 507);
             this.btnLoginGmailAll.Name = "btnLoginGmailAll";
             this.btnLoginGmailAll.Size = new System.Drawing.Size(138, 23);
             this.btnLoginGmailAll.TabIndex = 19;
@@ -673,7 +685,7 @@ namespace WinSubTrial
             // 
             // btnGoPaymentMethod
             // 
-            this.btnGoPaymentMethod.Location = new System.Drawing.Point(375, 497);
+            this.btnGoPaymentMethod.Location = new System.Drawing.Point(354, 470);
             this.btnGoPaymentMethod.Name = "btnGoPaymentMethod";
             this.btnGoPaymentMethod.Size = new System.Drawing.Size(138, 23);
             this.btnGoPaymentMethod.TabIndex = 18;
@@ -684,7 +696,7 @@ namespace WinSubTrial
             // btnResetDPI
             // 
             this.btnResetDPI.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnResetDPI.Location = new System.Drawing.Point(231, 497);
+            this.btnResetDPI.Location = new System.Drawing.Point(210, 470);
             this.btnResetDPI.Name = "btnResetDPI";
             this.btnResetDPI.Size = new System.Drawing.Size(138, 23);
             this.btnResetDPI.TabIndex = 16;
@@ -694,14 +706,14 @@ namespace WinSubTrial
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(85, 683);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(64, 656);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(121, 20);
             this.txtPhoneNumber.TabIndex = 15;
             // 
             // txtModel
             // 
-            this.txtModel.Location = new System.Drawing.Point(85, 534);
+            this.txtModel.Location = new System.Drawing.Point(64, 507);
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(121, 20);
             this.txtModel.TabIndex = 14;
@@ -709,7 +721,7 @@ namespace WinSubTrial
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(28, 686);
+            this.label6.Location = new System.Drawing.Point(7, 659);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 13);
             this.label6.TabIndex = 12;
@@ -722,7 +734,7 @@ namespace WinSubTrial
             this.cboOperator.Items.AddRange(new object[] {
             "Viettel Telecom",
             "Mobifone"});
-            this.cboOperator.Location = new System.Drawing.Point(85, 644);
+            this.cboOperator.Location = new System.Drawing.Point(64, 617);
             this.cboOperator.Name = "cboOperator";
             this.cboOperator.Size = new System.Drawing.Size(121, 21);
             this.cboOperator.TabIndex = 11;
@@ -731,7 +743,7 @@ namespace WinSubTrial
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(28, 646);
+            this.label5.Location = new System.Drawing.Point(7, 619);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 13);
             this.label5.TabIndex = 10;
@@ -744,7 +756,7 @@ namespace WinSubTrial
             this.cboCountry.Items.AddRange(new object[] {
             "VN",
             "US"});
-            this.cboCountry.Location = new System.Drawing.Point(85, 607);
+            this.cboCountry.Location = new System.Drawing.Point(64, 580);
             this.cboCountry.Name = "cboCountry";
             this.cboCountry.Size = new System.Drawing.Size(121, 21);
             this.cboCountry.TabIndex = 9;
@@ -753,7 +765,7 @@ namespace WinSubTrial
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 610);
+            this.label4.Location = new System.Drawing.Point(7, 583);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 8;
@@ -769,7 +781,7 @@ namespace WinSubTrial
             "9",
             "8.1",
             "8.0"});
-            this.cboSDK.Location = new System.Drawing.Point(85, 570);
+            this.cboSDK.Location = new System.Drawing.Point(64, 543);
             this.cboSDK.Name = "cboSDK";
             this.cboSDK.Size = new System.Drawing.Size(121, 21);
             this.cboSDK.TabIndex = 7;
@@ -777,7 +789,7 @@ namespace WinSubTrial
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 573);
+            this.label3.Location = new System.Drawing.Point(7, 546);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 6;
@@ -786,7 +798,7 @@ namespace WinSubTrial
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 537);
+            this.label2.Location = new System.Drawing.Point(7, 510);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 4;
@@ -802,7 +814,7 @@ namespace WinSubTrial
             "LGE",
             "samsung",
             "Sony"});
-            this.cboBrand.Location = new System.Drawing.Point(85, 497);
+            this.cboBrand.Location = new System.Drawing.Point(64, 470);
             this.cboBrand.Name = "cboBrand";
             this.cboBrand.Size = new System.Drawing.Size(121, 21);
             this.cboBrand.TabIndex = 3;
@@ -811,7 +823,7 @@ namespace WinSubTrial
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 500);
+            this.label1.Location = new System.Drawing.Point(7, 473);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 2;
@@ -885,7 +897,7 @@ namespace WinSubTrial
             this.dgvDevice.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvDevice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDevice.ShowEditingIcon = false;
-            this.dgvDevice.Size = new System.Drawing.Size(961, 485);
+            this.dgvDevice.Size = new System.Drawing.Size(961, 461);
             this.dgvDevice.TabIndex = 1;
             this.dgvDevice.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDevice_CellContentClick);
             this.dgvDevice.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDevice_MouseClick);
@@ -953,8 +965,8 @@ namespace WinSubTrial
             this.tabPageBackup.Controls.Add(this.label11);
             this.tabPageBackup.Location = new System.Drawing.Point(60, 4);
             this.tabPageBackup.Name = "tabPageBackup";
-            this.tabPageBackup.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageBackup.Size = new System.Drawing.Size(974, 768);
+            this.tabPageBackup.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageBackup.Size = new System.Drawing.Size(974, 770);
             this.tabPageBackup.TabIndex = 1;
             this.tabPageBackup.Text = "Backup";
             this.tabPageBackup.UseVisualStyleBackColor = true;
@@ -1191,7 +1203,7 @@ namespace WinSubTrial
             this.tabPageRestore.Controls.Add(this.label14);
             this.tabPageRestore.Location = new System.Drawing.Point(60, 4);
             this.tabPageRestore.Name = "tabPageRestore";
-            this.tabPageRestore.Size = new System.Drawing.Size(974, 768);
+            this.tabPageRestore.Size = new System.Drawing.Size(974, 770);
             this.tabPageRestore.TabIndex = 2;
             this.tabPageRestore.Text = "Restore";
             this.tabPageRestore.UseVisualStyleBackColor = true;
@@ -1416,7 +1428,7 @@ namespace WinSubTrial
             this.tabPageLicense.Controls.Add(this.dgvLicense);
             this.tabPageLicense.Location = new System.Drawing.Point(60, 4);
             this.tabPageLicense.Name = "tabPageLicense";
-            this.tabPageLicense.Size = new System.Drawing.Size(974, 768);
+            this.tabPageLicense.Size = new System.Drawing.Size(974, 770);
             this.tabPageLicense.TabIndex = 3;
             this.tabPageLicense.Text = "License";
             this.tabPageLicense.UseVisualStyleBackColor = true;
@@ -1612,6 +1624,7 @@ namespace WinSubTrial
         private System.Windows.Forms.Button buttonTinder;
         private System.Windows.Forms.Button buttonSnapchatPassword;
         private System.Windows.Forms.Button buttonBigo;
+        private System.Windows.Forms.Button BigoLite;
     }
 }
 
