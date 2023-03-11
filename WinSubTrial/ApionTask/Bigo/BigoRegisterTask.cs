@@ -100,6 +100,13 @@ namespace WinSubTrial
                     continue;
                 }
 
+                //Ấn xác nhận
+                if (ContainsIgnoreCase(TextDump, "android:id/button1"))
+                {
+                    TapDynamic(serial, "android:id/button1");
+                    continue;
+                }
+
                 //Ấn đăng nhập qua mã xác minh
                 if (ContainsIgnoreCase(TextDump, "tv_use_pin_code_login"))
                 {
@@ -113,7 +120,13 @@ namespace WinSubTrial
                 {
                     TapDynamic(serial, "btn_resend");
                     Common.SetStatus(serial, "tappeb send pin code");
-                    Common.Sleep(3000);
+                    Common.Sleep(2000);
+                    DumpUi(serial);
+                    if (ContainsIgnoreCase(TextDump, "android:id/button1"))
+                    {
+                        CloseAllApp(serial);
+                        return TaskResult.OtpError;
+                    }
 
                     //lấy OTP
                     OpenGetCodeApi(serial);
@@ -130,7 +143,8 @@ namespace WinSubTrial
                     TapDynamic(serial, "tv_next");
                     Common.Sleep(5000);
                     DumpUi(serial);
-                    if (ContainsIgnoreCase(TextDump, "btn_resend") && ContainsIgnoreCase(TextDump, "ll_phone_resend"))
+                    if ((ContainsIgnoreCase(TextDump, "btn_resend") && ContainsIgnoreCase(TextDump, "ll_phone_resend"))
+                        || ContainsIgnoreCase(TextDump, "android:id/button1"))
                     {
                         CloseAllApp(serial);
                         return TaskResult.OtpError;
@@ -186,10 +200,10 @@ namespace WinSubTrial
                 }
 
 
-                //if (ContainsIgnoreCase(TextDump, "abcxyz"))
-                //{
+                if (ContainsIgnoreCase(TextDump, "abcxyz"))
+                {
 
-                //}
+                }
 
             }
         }
