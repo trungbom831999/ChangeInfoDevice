@@ -353,7 +353,17 @@ namespace WinSubTrial
             thread.Start();
         }
 
-        private void BigoButtonClick(object sender, EventArgs e)
+        private void BigoButtonSMSlick(object sender, EventArgs e)
+        {
+            BigoButtonClick();
+        }
+
+        private void BigoButtonRegisterClick(object sender, EventArgs e)
+        {
+            BigoButtonClick(false);
+        }
+
+        private void BigoButtonClick(bool isSMS = true)
         {
             if (!viewModel.someDevicesSelected()) return;
             Thread thread = new Thread(new ThreadStart(() =>
@@ -363,7 +373,7 @@ namespace WinSubTrial
                     Task.Run(() =>
                     {
                         viewModel.deviceWaitForStop[device.Serial] = false;
-                        viewModel.BigoAutomation(device.Serial);
+                        viewModel.BigoAutomation(device.Serial, isSMS);
                     });
                 }
             }))

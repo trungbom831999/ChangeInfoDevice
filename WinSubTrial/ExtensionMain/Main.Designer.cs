@@ -59,7 +59,8 @@ namespace WinSubTrial
             this.netAppToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageChange = new System.Windows.Forms.TabPage();
-            this.buttonBigo = new System.Windows.Forms.Button();
+            this.BigoLite = new System.Windows.Forms.Button();
+            this.buttonBigoSMS = new System.Windows.Forms.Button();
             this.buttonSnapchatPassword = new System.Windows.Forms.Button();
             this.buttonTinder = new System.Windows.Forms.Button();
             this.buttonSnapchat = new System.Windows.Forms.Button();
@@ -150,7 +151,7 @@ namespace WinSubTrial
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.BigoLite = new System.Windows.Forms.Button();
+            this.buttonBigoRegister = new System.Windows.Forms.Button();
             this.mnuTop.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageChange.SuspendLayout();
@@ -286,8 +287,9 @@ namespace WinSubTrial
             // 
             // tabPageChange
             // 
+            this.tabPageChange.Controls.Add(this.buttonBigoRegister);
             this.tabPageChange.Controls.Add(this.BigoLite);
-            this.tabPageChange.Controls.Add(this.buttonBigo);
+            this.tabPageChange.Controls.Add(this.buttonBigoSMS);
             this.tabPageChange.Controls.Add(this.buttonSnapchatPassword);
             this.tabPageChange.Controls.Add(this.buttonTinder);
             this.tabPageChange.Controls.Add(this.buttonSnapchat);
@@ -337,21 +339,11 @@ namespace WinSubTrial
             this.tabPageChange.Controls.Add(this.dgvDevice);
             this.tabPageChange.Location = new System.Drawing.Point(60, 4);
             this.tabPageChange.Name = "tabPageChange";
-            this.tabPageChange.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageChange.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageChange.Size = new System.Drawing.Size(974, 768);
             this.tabPageChange.TabIndex = 0;
             this.tabPageChange.Text = "Main";
             this.tabPageChange.UseVisualStyleBackColor = true;
-            // 
-            // buttonBigoSMS
-            // 
-            this.buttonBigo.Location = new System.Drawing.Point(805, 679);
-            this.buttonBigo.Name = "buttonBigo";
-            this.buttonBigo.Size = new System.Drawing.Size(138, 23);
-            this.buttonBigo.TabIndex = 63;
-            this.buttonBigo.Text = "Bigo Login SMS";
-            this.buttonBigo.UseVisualStyleBackColor = true;
-            this.buttonBigo.Click += new System.EventHandler(this.BigoButtonClick);
             // 
             // BigoLite
             // 
@@ -362,6 +354,26 @@ namespace WinSubTrial
             this.BigoLite.Text = "Bigo Lite";
             this.BigoLite.UseVisualStyleBackColor = true;
             this.BigoLite.Click += new System.EventHandler(this.BigoLiteButtonClick);
+            // 
+            // buttonBigoSMS
+            // 
+            this.buttonBigoSMS.Location = new System.Drawing.Point(805, 679);
+            this.buttonBigoSMS.Name = "buttonBigoSMS";
+            this.buttonBigoSMS.Size = new System.Drawing.Size(138, 23);
+            this.buttonBigoSMS.TabIndex = 63;
+            this.buttonBigoSMS.Text = "Bigo Login SMS";
+            this.buttonBigoSMS.UseVisualStyleBackColor = true;
+            this.buttonBigoSMS.Click += new System.EventHandler(this.BigoButtonSMSlick);
+            // 
+            // buttonBigoRegister
+            // 
+            this.buttonBigoRegister.Location = new System.Drawing.Point(805, 737);
+            this.buttonBigoRegister.Name = "buttonBigoRegister";
+            this.buttonBigoRegister.Size = new System.Drawing.Size(138, 23);
+            this.buttonBigoRegister.TabIndex = 65;
+            this.buttonBigoRegister.Text = "Bigo Register";
+            this.buttonBigoRegister.UseVisualStyleBackColor = true;
+            this.buttonBigoRegister.Click += new System.EventHandler(this.BigoButtonRegisterClick);
             // 
             // buttonSnapchatPassword
             // 
@@ -965,8 +977,8 @@ namespace WinSubTrial
             this.tabPageBackup.Controls.Add(this.label11);
             this.tabPageBackup.Location = new System.Drawing.Point(60, 4);
             this.tabPageBackup.Name = "tabPageBackup";
-            this.tabPageBackup.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPageBackup.Size = new System.Drawing.Size(974, 770);
+            this.tabPageBackup.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageBackup.Size = new System.Drawing.Size(974, 768);
             this.tabPageBackup.TabIndex = 1;
             this.tabPageBackup.Text = "Backup";
             this.tabPageBackup.UseVisualStyleBackColor = true;
@@ -1203,7 +1215,7 @@ namespace WinSubTrial
             this.tabPageRestore.Controls.Add(this.label14);
             this.tabPageRestore.Location = new System.Drawing.Point(60, 4);
             this.tabPageRestore.Name = "tabPageRestore";
-            this.tabPageRestore.Size = new System.Drawing.Size(974, 770);
+            this.tabPageRestore.Size = new System.Drawing.Size(974, 768);
             this.tabPageRestore.TabIndex = 2;
             this.tabPageRestore.Text = "Restore";
             this.tabPageRestore.UseVisualStyleBackColor = true;
@@ -1428,7 +1440,7 @@ namespace WinSubTrial
             this.tabPageLicense.Controls.Add(this.dgvLicense);
             this.tabPageLicense.Location = new System.Drawing.Point(60, 4);
             this.tabPageLicense.Name = "tabPageLicense";
-            this.tabPageLicense.Size = new System.Drawing.Size(974, 770);
+            this.tabPageLicense.Size = new System.Drawing.Size(974, 768);
             this.tabPageLicense.TabIndex = 3;
             this.tabPageLicense.Text = "License";
             this.tabPageLicense.UseVisualStyleBackColor = true;
@@ -1623,8 +1635,9 @@ namespace WinSubTrial
         private System.Windows.Forms.Button buttonSnapchat;
         private System.Windows.Forms.Button buttonTinder;
         private System.Windows.Forms.Button buttonSnapchatPassword;
-        private System.Windows.Forms.Button buttonBigo;
+        private System.Windows.Forms.Button buttonBigoSMS;
         private System.Windows.Forms.Button BigoLite;
+        private System.Windows.Forms.Button buttonBigoRegister;
     }
 }
 

@@ -755,7 +755,7 @@ namespace WinSubTrial
             thread.Start();
         }
 
-        public void BigoAutomation(string serial)
+        public void BigoAutomation(string serial, bool isSMS = true)
         {
             if (IsDeviceInTask(serial))
             {
@@ -782,33 +782,33 @@ namespace WinSubTrial
                         timesChanged += 1;
                     }
 
-                    string numberphone = GetRandomBigoNumber();
-                    Common.SetStatus(serial, $"Get bigo phonenumber from file done: {numberphone}");
-                    //Common.Sleep(1000);
-                    if (numberphone == null)
+                    Common.SetStatus(serial, $"Get bigo phonenumber from file done");
+                    TaskResult result = new TaskResult();
+                    if (isSMS)
                     {
-                        Common.SetStatus(serial, "Call API fail. Out of number");
-                        Common.Sleep(4000);
-                        return;
+                        result = new BigoSMSTask { }.BigoSMSAuto(serial);
                     }
-                    TaskResult result = new BigoTask { phonenumber = numberphone }.BigoAutoRegister(serial);
+                    else
+                    {
+                        result = new BigoRegisterTask { }.BigoAutoRegister(serial);
+                    }
                     switch (result)
                     {
                         case TaskResult.Success:
                             {
-                                Common.SetStatus(serial, $"Bigo register {numberphone} done");
+                                Common.SetStatus(serial, $"Bigo register done");
                                 break;
                             }
                         case TaskResult.OtpError:
                             {
                                 timesChanged = timesChanged == 1 ? timesChanged : (timesChanged-1);
-                                Common.SetStatus(serial, $"Bigo OTP fail {numberphone}, run other phone!");
+                                Common.SetStatus(serial, $"Bigo OTP fail, run other phone!");
 
                                 continue;
                             }
                         case TaskResult.Failure:
                             {
-                                Common.SetStatus(serial, $"Bigo register {numberphone} fail, run other phone!");
+                                Common.SetStatus(serial, $"Bigo register fail, run other phone!");
                                 continue;
                             }
                         default:
@@ -1106,16 +1106,6 @@ namespace WinSubTrial
             try
             {
                 string[] info = MyFile.GetLine(filePath: "Data\\03-SnapchatForgotPassword.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
-                return info[0];
-            }
-            catch { return null; }
-        }
-
-        public string GetRandomBigoNumber()
-        {
-            try
-            {
-                string[] info = MyFile.GetLine(filePath: "Data\\05-BigoLoginSMS.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
                 return info[0];
             }
             catch { return null; }

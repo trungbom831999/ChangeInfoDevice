@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using WinSubTrial.Enum;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace WinSubTrial.ApionTask
@@ -157,6 +158,28 @@ namespace WinSubTrial.ApionTask
                 TextDump = Adb.Shell(serial, "cat sdcard/window_dump.xml");
             }
             return TextDump;
+        }
+        //Điền thông tin ban đầu vào app Get Code Api
+        public void FillInfoGetCodeAPINET1(string serial, string phonenumber, string brand)
+        {
+            OpenGetCodeApi(serial);
+            Common.Sleep(1000);
+            DumpUi(serial);
+            //Nhập lấy Code của Get Code Api
+            if (ContainsIgnoreCase(TextDump, "url") && !ContainsIgnoreCase(TextDump, EnumNET.NET1))
+            {
+                InputDynamic(serial, "editUrl", EnumNET.NET1);
+                Common.SetStatus(serial, "Enter url");
+
+                InputDynamic(serial, "editPhone", phonenumber);
+                Common.SetStatus(serial, "Enter phone number");
+
+                InputDynamic(serial, "editBrand", brand);
+                Common.SetStatus(serial, "Enter Brand");
+
+                TapDynamic(serial, "btnGetCode");
+                Common.SetStatus(serial, "tappeb btnGetCode");
+            }
         }
         //Đóng app
         protected void CloseApp(string serial, string appName)

@@ -55,6 +55,7 @@ namespace WinSubTrial
                 if(ContainsIgnoreCase(TextDump, "sg.bigo.live.lite:id/h_"))
                 {
                     TapDynamic(serial, "sg.bigo.live.lite:id/h_");
+                    phonenumber = GetRandomBigoLiteNumber();
                     Common.SetStatus(serial, "Tap confirm btn");
                     continue;
                 }
@@ -90,6 +91,19 @@ namespace WinSubTrial
             {
                 string[] info = MyFile.GetLine(filePath: "Data\\06-BigoIN.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
                 return info[0];
+                //var r = new Random();
+                //var randomLineNumber = r.Next(0, 200);
+                //string line = File.ReadLines("Data\\06-BigoIN.txt").Skip(randomLineNumber).Take(1).First();
+                //return line.Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries)[0];
+
+                //var lines = File.ReadAllLines("Data\\06-BigoIN.txt");
+                //var r = new Random();
+                //var randomLineNumber = r.Next(0, lines.Length - 1);
+                //var line = lines[randomLineNumber].Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
+                //return line[0];
+
+                //string line = MyFile.GetRandomLine("Data\\06-BigoIN.txt", true);
+                //return line.Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries)[0];
             }
             catch { return null; }
         }

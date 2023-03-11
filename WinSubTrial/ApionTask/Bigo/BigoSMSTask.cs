@@ -17,13 +17,18 @@ using WinSubTrial.Utilities;
 
 namespace WinSubTrial
 {
-    class BigoTask : BaseActivity
+    class BigoSMSTask : BaseActivity
     {
         public bool isStopAuto = false;
-        public string phonenumber { get; set; }
 
-        public TaskResult BigoAutoRegister(string serial)
+        public TaskResult BigoSMSAuto(string serial)
         {
+            string numberphone = GetRandomBigoNumber();
+            if (numberphone == null)
+            {
+                Common.SetStatus(serial, "Call API fail. Out of number");
+                return TaskResult.StopAuto;
+            }
             Adb.SendKey(serial, "KEYCODE_HOME");
             Common.SetStatus(serial, "Open get code API");
             OpenGetCodeApi(serial);
@@ -53,7 +58,7 @@ namespace WinSubTrial
                     Common.SetStatus(serial, "Enter url");
                     //Common.Sleep(500);
 
-                    InputDynamic(serial, "editPhone", phonenumber);
+                    InputDynamic(serial, "editPhone", numberphone);
                     Common.SetStatus(serial, "Enter phone number");
                     //Common.Sleep(500);
 
@@ -93,7 +98,7 @@ namespace WinSubTrial
                 //Màn điền sđt đầu tiên
                 if (ContainsIgnoreCase(TextDump, "et_phone") && ContainsIgnoreCase(TextDump, "tv_sign_or_login"))
                 {
-                    InputDynamic(serial, "et_phone", phonenumber);
+                    InputDynamic(serial, "et_phone", numberphone);
                     Common.SetStatus(serial, "Input phone number");
                     DumpUi(serial);
                     TapDynamic(serial, "tv_sign_or_login");
@@ -177,7 +182,15 @@ namespace WinSubTrial
                 
             }
         }
-
+        public string GetRandomBigoNumber()
+        {
+            try
+            {
+                string[] info = MyFile.GetLine(filePath: "Data\\05-BigoLoginSMS.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
+                return info[0];
+            }
+            catch { return null; }
+        }
         private void CloseAllApp(string serial)
         {
             CloseApp(serial, "bigo");
