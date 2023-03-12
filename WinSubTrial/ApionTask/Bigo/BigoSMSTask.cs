@@ -186,7 +186,7 @@ namespace WinSubTrial
         {
             try
             {
-                string[] info = MyFile.GetLine(filePath: "Data\\05-BigoLoginSMS.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
+                string[] info = MyFile.GetLine(filePath: "Data\\05-B1LoginSMS.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
                 return info[0];
             }
             catch { return null; }

@@ -1085,7 +1085,7 @@ namespace WinSubTrial
         {
             try
             {
-                string[] info = MyFile.GetLine(filePath: "Data\\04-Tinder.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
+                string[] info = MyFile.GetLine(filePath: "Data\\04-TI1.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
                 return info[0];
             }
             catch { return null; }
@@ -1095,7 +1095,7 @@ namespace WinSubTrial
         {
             try
             {
-                string[] info = MyFile.GetLine(filePath: "Data\\01-SnapchatIN.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
+                string[] info = MyFile.GetLine(filePath: "Data\\01-SN1IN.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
                 return info[0];
             }
             catch { return null; }
@@ -1105,7 +1105,7 @@ namespace WinSubTrial
         {
             try
             {
-                string[] info = MyFile.GetLine(filePath: "Data\\03-SnapchatForgotPassword.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
+                string[] info = MyFile.GetLine(filePath: "Data\\03-SN1ForgotPassword.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
                 return info[0];
             }
             catch { return null; }

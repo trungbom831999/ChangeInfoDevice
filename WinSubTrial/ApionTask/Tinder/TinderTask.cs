@@ -193,16 +193,6 @@ namespace WinSubTrial
             }
         }
 
-        public string GetRandomNumberPhone()
-        {
-            try
-            {
-                string[] info = MyFile.GetLine(filePath: "Data\\04-Tinder.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
-                return info[0];
-            }
-            catch { return null; }
-        }
-
         private void CloseAllApp(string serial)
         {
             CloseApp(serial, "tinder");

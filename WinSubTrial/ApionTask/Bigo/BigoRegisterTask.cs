@@ -94,7 +94,7 @@ namespace WinSubTrial
                     //Chuyển sang đăng nhập
                     else if (ContainsIgnoreCase(TextDump, "action_login"))
                     {
-                        TapDynamic(serial, "sg.bigo.live:id/action_login");
+                        TapDynamic(serial, "action_login");
                         Common.SetStatus(serial, "Switch Login");
                     }
                     continue;
@@ -104,6 +104,13 @@ namespace WinSubTrial
                 if (ContainsIgnoreCase(TextDump, "android:id/button1"))
                 {
                     TapDynamic(serial, "android:id/button1");
+                    Common.Sleep(1000);
+                    DumpUi(serial);
+                    if (ContainsIgnoreCase(TextDump, "action_login"))
+                    {
+                        TapDynamic(serial, "action_login");
+                        Common.SetStatus(serial, "Switch Login");
+                    }
                     continue;
                 }
 

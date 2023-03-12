@@ -89,7 +89,7 @@ namespace WinSubTrial
         {
             try
             {
-                string[] info = MyFile.GetLine(filePath: "Data\\06-BigoIN.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
+                string[] info = MyFile.GetLine(filePath: "Data\\06-B1IN.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
                 return info[0];
                 //var r = new Random();
                 //var randomLineNumber = r.Next(0, 200);
@@ -110,7 +110,7 @@ namespace WinSubTrial
 
         private void SavePhoneSuccess(string phone)
         {
-            File.AppendAllText("Data\\07-BigoSucess.txt", phone + "\n");
+            File.AppendAllText("Data\\07-B1Sucess.txt", phone + "\n");
         }
 
         private void CloseAllApp(string serial)
