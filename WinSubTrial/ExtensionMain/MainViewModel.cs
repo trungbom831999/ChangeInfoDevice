@@ -871,7 +871,7 @@ namespace WinSubTrial
             thread.Start();
         }
 
-        public void SnapchatPasswordRetrieval(string serial)
+        public void SnapchatPasswordRetrieval(string serial, string net)
         {
             if (IsDeviceInTask(serial))
             {
@@ -898,22 +898,13 @@ namespace WinSubTrial
                         new ChangeA1 { device = device }.WipeAppsData();
                         timesChanged += 1;
                     }
-
-                    string numberphone = GetRandomSnapchatPasswordNumber();
-                    Common.SetStatus(serial, $"Get snapchat phonenumber from file done: {numberphone}");
-                    //Common.Sleep(1000);
-                    if (numberphone == null)
-                    {
-                        Common.SetStatus(serial, "Call API fail. Out of number");
-                        Common.Sleep(4000);
-                        return;
-                    }
-                    TaskResult result = new SnapchatPasswordTask { phonenumber = numberphone }.SnapchatPasswordRetrieval(serial);
+                    
+                    TaskResult result = new SnapchatPasswordTask { }.SnapchatPasswordRetrieval(serial, net);
                     switch (result)
                     {
                         case TaskResult.Success:
                             {
-                                Common.SetStatus(serial, $"Password {numberphone} done");
+                                Common.SetStatus(serial, $"Password snapchat done");
                                 break;
                             }
                         case TaskResult.StopAuto:
@@ -923,12 +914,12 @@ namespace WinSubTrial
                         case TaskResult.OtpError:
                             {
                                 timesChanged = constTimesChanged;
-                                Common.SetStatus(serial, $"Password {numberphone} fail, run other phone!");
+                                Common.SetStatus(serial, $"Password snapchat fail, run other phone!");
                                 continue;
                             }
                         case TaskResult.Failure:
                             {
-                                Common.SetStatus(serial, $"Password {numberphone} fail, run other phone!");
+                                Common.SetStatus(serial, $"Password snapchat fail, run other phone!");
                                 continue;
                             }
                         default:
@@ -1101,15 +1092,6 @@ namespace WinSubTrial
             catch { return null; }
         }
 
-        public string GetRandomSnapchatPasswordNumber()
-        {
-            try
-            {
-                string[] info = MyFile.GetLine(filePath: "Data\\03-SN1ForgotPassword.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
-                return info[0];
-            }
-            catch { return null; }
-        }
 
         public Action OpenLinkForm(string serial)
         {

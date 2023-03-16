@@ -7,6 +7,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Security.Policy;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -21,14 +22,15 @@ namespace WinSubTrial
     class SnapchatPasswordTask : BaseActivity
     {
         public bool isStopAuto = false;
-        public string phonenumber { get; set; }
 
-        public TaskResult SnapchatPasswordRetrieval(string serial)
+        public TaskResult SnapchatPasswordRetrieval(string serial, string net)
         {
+            string numberphone = GetRandomSnapchatPasswordNumber(net); 
+            Common.SetStatus(serial, $"Get snapchat phonenumber: {numberphone}");
             Adb.SendKey(serial, "KEYCODE_HOME");
             Common.SetStatus(serial, "Open get code API");
-            OpenGetCodeApi(serial);
-            //OpenSnapchatApp(serial);
+            FillInfoGetCodeAPI(serial, numberphone, EnumBrandApp.snapchat, net, (net=="net2"?"84":""));
+            OpenSnapchatApp(serial);
             DateTime startTime = DateTime.Now;
             while (true)
             {
@@ -54,7 +56,7 @@ namespace WinSubTrial
                     Common.SetStatus(serial, "Enter url");
                     //Common.Sleep(500);
 
-                    InputDynamic(serial, "editPhone", phonenumber);
+                    InputDynamic(serial, "editPhone", numberphone);
                     Common.SetStatus(serial, "Enter phone number");
                     //Common.Sleep(500);
 
@@ -116,7 +118,7 @@ namespace WinSubTrial
                     {
                         return TaskResult.OtpError;
                     }
-                    InputDynamic(serial, "input_field_edit_text", phonenumber);
+                    InputDynamic(serial, "input_field_edit_text", numberphone);
                     Common.SetStatus(serial, "Tapped nhập sđt");
                     DumpUi(serial);
                     TapDynamic(serial, "recovery_phone_continue");
@@ -201,6 +203,25 @@ namespace WinSubTrial
         {
             CloseApp(serial, "snapchat");
             CloseApp(serial, "getcodeapi");
+        }
+
+        public string GetRandomSnapchatPasswordNumber(string net)
+        {
+            try
+            {
+                string[] info = new string[1];
+                switch (net)
+                {
+                    case "net1":
+                        info = MyFile.GetLine(filePath: "Data\\03-SN1ForgotPassword.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
+                        break;
+                    case "net2":
+                        info = MyFile.GetLine(filePath: "Data\\14-SN2ForgotPassword.txt", index: 1, remove: true).Split(new string[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
+                        break;
+                }
+                return info[0];
+            }
+            catch { return null; }
         }
 
     }

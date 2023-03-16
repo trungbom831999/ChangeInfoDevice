@@ -59,6 +59,8 @@ namespace WinSubTrial
             this.netAppToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageChange = new System.Windows.Forms.TabPage();
+            this.buttonSnapchatPasswordNET2 = new System.Windows.Forms.Button();
+            this.buttonBigoRegister = new System.Windows.Forms.Button();
             this.BigoLite = new System.Windows.Forms.Button();
             this.buttonBigoSMS = new System.Windows.Forms.Button();
             this.buttonSnapchatPassword = new System.Windows.Forms.Button();
@@ -151,7 +153,6 @@ namespace WinSubTrial
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.buttonBigoRegister = new System.Windows.Forms.Button();
             this.mnuTop.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageChange.SuspendLayout();
@@ -287,6 +288,7 @@ namespace WinSubTrial
             // 
             // tabPageChange
             // 
+            this.tabPageChange.Controls.Add(this.buttonSnapchatPasswordNET2);
             this.tabPageChange.Controls.Add(this.buttonBigoRegister);
             this.tabPageChange.Controls.Add(this.BigoLite);
             this.tabPageChange.Controls.Add(this.buttonBigoSMS);
@@ -345,6 +347,26 @@ namespace WinSubTrial
             this.tabPageChange.Text = "Main";
             this.tabPageChange.UseVisualStyleBackColor = true;
             // 
+            // buttonSnapchatPasswordNET2
+            // 
+            this.buttonSnapchatPasswordNET2.Location = new System.Drawing.Point(517, 737);
+            this.buttonSnapchatPasswordNET2.Name = "buttonSnapchatPasswordNET2";
+            this.buttonSnapchatPasswordNET2.Size = new System.Drawing.Size(138, 23);
+            this.buttonSnapchatPasswordNET2.TabIndex = 66;
+            this.buttonSnapchatPasswordNET2.Text = "Snapchat PasswordNET2";
+            this.buttonSnapchatPasswordNET2.UseVisualStyleBackColor = true;
+            this.buttonSnapchatPasswordNET2.Click += new System.EventHandler(this.snapchatPasswordNET2);
+            // 
+            // buttonBigoRegister
+            // 
+            this.buttonBigoRegister.Location = new System.Drawing.Point(805, 737);
+            this.buttonBigoRegister.Name = "buttonBigoRegister";
+            this.buttonBigoRegister.Size = new System.Drawing.Size(138, 23);
+            this.buttonBigoRegister.TabIndex = 65;
+            this.buttonBigoRegister.Text = "Bigo Register";
+            this.buttonBigoRegister.UseVisualStyleBackColor = true;
+            this.buttonBigoRegister.Click += new System.EventHandler(this.BigoButtonRegisterClick);
+            // 
             // BigoLite
             // 
             this.BigoLite.Location = new System.Drawing.Point(805, 708);
@@ -365,25 +387,15 @@ namespace WinSubTrial
             this.buttonBigoSMS.UseVisualStyleBackColor = true;
             this.buttonBigoSMS.Click += new System.EventHandler(this.BigoButtonSMSlick);
             // 
-            // buttonBigoRegister
-            // 
-            this.buttonBigoRegister.Location = new System.Drawing.Point(805, 737);
-            this.buttonBigoRegister.Name = "buttonBigoRegister";
-            this.buttonBigoRegister.Size = new System.Drawing.Size(138, 23);
-            this.buttonBigoRegister.TabIndex = 65;
-            this.buttonBigoRegister.Text = "Bigo Register";
-            this.buttonBigoRegister.UseVisualStyleBackColor = true;
-            this.buttonBigoRegister.Click += new System.EventHandler(this.BigoButtonRegisterClick);
-            // 
             // buttonSnapchatPassword
             // 
             this.buttonSnapchatPassword.Location = new System.Drawing.Point(517, 708);
             this.buttonSnapchatPassword.Name = "buttonSnapchatPassword";
             this.buttonSnapchatPassword.Size = new System.Drawing.Size(138, 23);
             this.buttonSnapchatPassword.TabIndex = 62;
-            this.buttonSnapchatPassword.Text = "Snapchat password";
+            this.buttonSnapchatPassword.Text = "Snapchat Password";
             this.buttonSnapchatPassword.UseVisualStyleBackColor = true;
-            this.buttonSnapchatPassword.Click += new System.EventHandler(this.snapchatPasswordRetrieval);
+            this.buttonSnapchatPassword.Click += new System.EventHandler(this.snapchatPasswordNET1);
             // 
             // buttonTinder
             // 
@@ -1638,6 +1650,7 @@ namespace WinSubTrial
         private System.Windows.Forms.Button buttonBigoSMS;
         private System.Windows.Forms.Button BigoLite;
         private System.Windows.Forms.Button buttonBigoRegister;
+        private System.Windows.Forms.Button buttonSnapchatPasswordNET2;
     }
 }
 

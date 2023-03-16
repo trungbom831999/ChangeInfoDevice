@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Utils;
 using WinSubTrial.Functions;
+using WinSubTrial.Globals;
 using WinSubTrial.Utilities;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify;
 
@@ -384,6 +385,7 @@ namespace WinSubTrial
         private void BigoLiteButtonClick(object sender, EventArgs e)
         {
             if (!viewModel.someDevicesSelected()) return;
+            GlobalVariable.isGetPhonenumber = false;
             viewModel.devicesModel.Where(x => x.isSelected == true).AsParallel().ForAll(device =>
             {
                 Task.Run(() =>
@@ -393,8 +395,15 @@ namespace WinSubTrial
                 });
             });
         }
-
-        private void snapchatPasswordRetrieval(object sender, EventArgs e)
+        private void snapchatPasswordNET1(object sender, EventArgs e)
+        {
+            snapchatPasswordRetrieval("net1");
+        }
+        private void snapchatPasswordNET2(object sender, EventArgs e)
+        {
+            snapchatPasswordRetrieval("net2");
+        }
+        private void snapchatPasswordRetrieval(string net)
         {
             if (!viewModel.someDevicesSelected()) return;
             viewModel.devicesModel.Where(x => x.isSelected == true).AsParallel().ForAll(device =>
@@ -402,7 +411,7 @@ namespace WinSubTrial
                 Task.Run(() =>
                 {
                     viewModel.deviceWaitForStop[device.Serial] = false;
-                    viewModel.SnapchatPasswordRetrieval(device.Serial);
+                    viewModel.SnapchatPasswordRetrieval(device.Serial, net);
                 });
             });
 

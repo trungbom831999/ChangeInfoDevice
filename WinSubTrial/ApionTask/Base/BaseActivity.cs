@@ -160,18 +160,31 @@ namespace WinSubTrial.ApionTask
             return TextDump;
         }
         //Điền thông tin ban đầu vào app Get Code Api
-        public void FillInfoGetCodeAPINET1(string serial, string phonenumber, string brand)
+        public void FillInfoGetCodeAPI(string serial, string phonenumber, string brand, string net, string prefix = "")
         {
+            string url = "";
+            switch (net)
+            {
+                case "net1":
+                    url = EnumNET.NET1;
+                    break;
+                case "net2":
+                    url = EnumNET.NET2;
+                    break;
+                default:
+                    url = EnumNET.NET1;
+                    break;
+            }
             OpenGetCodeApi(serial);
             Common.Sleep(1000);
             DumpUi(serial);
             //Nhập lấy Code của Get Code Api
-            if (ContainsIgnoreCase(TextDump, "url") && !ContainsIgnoreCase(TextDump, EnumNET.NET1))
+            if (ContainsIgnoreCase(TextDump, "url") && !ContainsIgnoreCase(TextDump, url))
             {
-                InputDynamic(serial, "editUrl", EnumNET.NET1);
+                InputDynamic(serial, "editUrl", url);
                 Common.SetStatus(serial, "Enter url");
 
-                InputDynamic(serial, "editPhone", phonenumber);
+                InputDynamic(serial, "editPhone", prefix+phonenumber);
                 Common.SetStatus(serial, "Enter phone number");
 
                 InputDynamic(serial, "editBrand", brand);

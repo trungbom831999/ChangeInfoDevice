@@ -15,6 +15,7 @@ namespace WinSubTrial.Enum
     static class EnumNET
     {
         public static string NET1 = "103.133.104.21";
+        public static string NET2 = "103.226.248.208:805";
     }
 
     static class EnumBrandApp
