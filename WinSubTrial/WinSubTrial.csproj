@@ -89,9 +89,11 @@
     <Compile Include="ApionTask\AutoClickTacTask.cs" />
     <Compile Include="ApionTask\Base\BaseActivity.cs" />
     <Compile Include="ApionTask\Bigo\BigoLiteTask.cs" />
+    <Compile Include="ApionTask\Bigo\BigoRegisterTask.cs" />
+    <Compile Include="ApionTask\Chamet\ChametTask.cs" />
     <Compile Include="ApionTask\EnumApp.cs" />
     <Compile Include="ApionTask\Snapchat\SnapchatPasswordTask.cs" />
-    <Compile Include="ApionTask\Bigo\BigoTask.cs" />
+    <Compile Include="ApionTask\Bigo\BigoSMSTask.cs" />
     <Compile Include="ApionTask\Tinder\TinderTask.cs" />
     <Compile Include="ApionTask\Snapchat\SnapchatTask.cs" />
     <Compile Include="ApionTask\SubscribeYoutubeTask.cs" />
@@ -194,6 +196,7 @@
     <Compile Include="Forms\TrafficInstall.Designer.cs">
       <DependentUpon>TrafficInstall.cs</DependentUpon>
     </Compile>
+    <Compile Include="Globals\GlobalVariable.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

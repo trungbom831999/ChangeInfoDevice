@@ -177,6 +177,7 @@ namespace WinSubTrial.ApionTask
             }
             OpenGetCodeApi(serial);
             Common.Sleep(1000);
+            Common.SetStatus(serial, "Open get code API");
             DumpUi(serial);
             //Nhập lấy Code của Get Code Api
             if (ContainsIgnoreCase(TextDump, "url") && !ContainsIgnoreCase(TextDump, url))
@@ -211,12 +212,40 @@ namespace WinSubTrial.ApionTask
                 case "bigolite":
                     Adb.Shell(serial, "pm clear sg.bigo.live.lite");
                     break;
+                case "chamet":
+                    Adb.Shell(serial, "pm clear com.hkfuliao.chamet");
+                    break;
                 case "getcodeapi":
                     Adb.Shell(serial, "pm clear com.example.getcodeapi");
                     break;
             }
         }
         //Mở app
+        protected void OpenApp(string serial, string appName)
+        {
+            switch (appName)
+            {
+                case "snapchat":
+                    Adb.Shell(serial, "am start -n com.snapchat.android/.LandingPageActivity");
+                    break;
+                case "tinder":
+                    Adb.Shell(serial, " am start -n com.tinder/.activities.LoginActivity");
+                    break;
+                case "bigo":
+                    Adb.Shell(serial, "am start -n sg.bigo.live/.home.MainActivity");
+                    break;
+                case "bigolite":
+                    Adb.Shell(serial, "am start -n sg.bigo.live.lite/.ui.main.SplashActivity");
+                    break;
+                case "chamet":
+                    Adb.Shell(serial, "am start -n com.hkfuliao.chamet/com.oversea.chat.splash.SplashActivity");
+                    break;
+                case "getcodeapi":
+                    Adb.Shell(serial, "am start -n com.example.getcodeapi/.MainActivity");
+                    break;
+            }
+        }
+
         protected void OpenGetCodeApi(string serial)
         {
             Adb.Shell(serial, "am start -n com.example.getcodeapi/.MainActivity");

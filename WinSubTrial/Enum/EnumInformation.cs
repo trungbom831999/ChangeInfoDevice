@@ -23,6 +23,7 @@ namespace WinSubTrial.Enum
         public static string snapchat = "SN";
         public static string bigo = "B";
         public static string tinder = "TI";
+        public static string chamet = "CH";
     }
 
     static class EnumPassword

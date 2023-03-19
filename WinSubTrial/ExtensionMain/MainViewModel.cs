@@ -238,7 +238,7 @@ namespace WinSubTrial
                     Gmail gmail = createMailTask.gmail;
                     #endregion CreateMailRegion
 
-                    
+
                     #region RemoveAccountTask
                     bool removeAccountOk = new RemoveAccountTask { gmail = gmail, mailTask = MailTask.createMail }.RemoveAccount(serial);
                     if (!removeAccountOk)
@@ -248,7 +248,7 @@ namespace WinSubTrial
                     }
                     Common.SetStatus(serial, $"Remove Account {gmail.Mail} Task done");
                     #endregion RemoveAccountTask
-                    
+
                     times -= 1;
                     if (deviceWaitForStop[serial] == true)
                     {
@@ -531,7 +531,6 @@ namespace WinSubTrial
             thread.Start();
         }
 
-
         public void TiktokApp(string serial)
         {
             if (IsDeviceInTask(serial))
@@ -545,7 +544,7 @@ namespace WinSubTrial
                 int times = 10000000;
                 while (times > 0)
                 {
-                    
+
                     #region Change Info
                     if (device == null)
                     {
@@ -571,8 +570,8 @@ namespace WinSubTrial
                     Common.SetStatus(serial, "Saving info done");
                     device.RequestOption = null;
                     #endregion RebootFast
-                    
-                    
+
+
 
                     //Adb.Shell(serial, "pm dump com.ss.android.ugc.trill | grep -A 1 MAIN");
 
@@ -627,11 +626,12 @@ namespace WinSubTrial
 
                 while (times > 0)
                 {
-                    if (timesChanged > (constTimesChanged-1)) // reboot
+                    if (timesChanged > (constTimesChanged - 1)) // reboot
                     {
                         RebootDevice(serial, device);
                         timesChanged = 0;
-                    } else
+                    }
+                    else
                     {
                         // wipe app /
                         new ChangeA1 { device = device }.WipeAppsData();
@@ -801,7 +801,7 @@ namespace WinSubTrial
                             }
                         case TaskResult.OtpError:
                             {
-                                timesChanged = timesChanged == 1 ? timesChanged : (timesChanged-1);
+                                timesChanged = timesChanged == 1 ? timesChanged : (timesChanged - 1);
                                 Common.SetStatus(serial, $"Bigo OTP fail, run other phone!");
 
                                 continue;
@@ -898,7 +898,7 @@ namespace WinSubTrial
                         new ChangeA1 { device = device }.WipeAppsData();
                         timesChanged += 1;
                     }
-                    
+
                     TaskResult result = new SnapchatPasswordTask { }.SnapchatPasswordRetrieval(serial, net);
                     switch (result)
                     {
@@ -917,6 +917,61 @@ namespace WinSubTrial
                                 Common.SetStatus(serial, $"Password snapchat fail, run other phone!");
                                 continue;
                             }
+                        case TaskResult.Failure:
+                            {
+                                Common.SetStatus(serial, $"Password snapchat fail, run other phone!");
+                                continue;
+                            }
+                        default:
+                            return;
+                    }
+                }
+            }))
+            { IsBackground = true };
+            deviceThreads[serial] = thread;
+            thread.Start();
+        }
+
+        public void ChametAutomation(string serial)
+        {
+            if (IsDeviceInTask(serial))
+            {
+                deviceThreads[serial].Abort();
+            }
+            Thread thread = new Thread(new ThreadStart(() =>
+            {
+                Device device = devicesModel.FirstOrDefault(x => x.Serial.Equals(serial));
+                int times = 10000000;
+                int timesChanged = constTimesChanged;
+
+                while (times > 0)
+                {
+                    if (timesChanged > (constTimesChanged - 1)) // reboot
+                    {
+                        //reboot khi quá số lần auto
+                        RebootDevice(serial, device);
+                        timesChanged = 0;
+                    }
+                    else
+                    {
+                        // wipe app /
+                        new ChangeA1 { device = device }.WipeAppsData();
+                        timesChanged += 1;
+                    }
+
+                    TaskResult result = new ChametTask { }.ChametRegister(serial);
+                    switch (result)
+                    {
+                        case TaskResult.Success:
+                            {
+                                Common.SetStatus(serial, $"Register chamet succeess");
+                                break;
+                            }
+                        case TaskResult.StopAuto:
+                            {
+                                return;
+                            }
+                        case TaskResult.OtpError:
                         case TaskResult.Failure:
                             {
                                 Common.SetStatus(serial, $"Password snapchat fail, run other phone!");
@@ -964,7 +1019,6 @@ namespace WinSubTrial
             #endregion RebootFast
         }
 
-
         public string UploadImage(string url, Bitmap bmp)
         {
             using (WebClient client = new WebClient())
@@ -984,7 +1038,6 @@ namespace WinSubTrial
             return new string(Enumerable.Repeat(chars, length)
               .Select(s => s[_rand.Next(s.Length)]).ToArray());
         }
-
 
         public bool selectedOneDevice()
         {
@@ -1052,11 +1105,12 @@ namespace WinSubTrial
                 if (info.Length < 3)
                 {
                     return new Gmail { Mail = info[0], Password = info[1], Recovery = "norecoveryemail@gmail.com" };
-                } else 
+                }
+                else
                 {
                     //if (info.Length >= 3)
                     return new Gmail { Mail = info[0], Password = info[1], Recovery = info[2] };
-                } 
+                }
             }
             catch { return null; }
         }
@@ -1111,7 +1165,7 @@ namespace WinSubTrial
                             Common.SetStatus(serial, "Checking api...");
                             string proxy = default;
                             string resultIpApi = Adb.Shell(serial, $"curl {proxy} http://ip-api.com/line");
-                            if (Common.ProxyHost.Length > 1) 
+                            if (Common.ProxyHost.Length > 1)
                                 proxy = $"--socks5 {Common.ProxyHost}:{Common.ProxyPort}";
                             Common.SetStatus(serial, "Check ip api done. See popup window");
                             break;
