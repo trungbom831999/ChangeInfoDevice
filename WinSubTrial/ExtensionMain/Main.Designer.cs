@@ -59,6 +59,7 @@ namespace WinSubTrial
             this.netAppToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageChange = new System.Windows.Forms.TabPage();
+            this.buttonCamScanner = new System.Windows.Forms.Button();
             this.buttonChamet = new System.Windows.Forms.Button();
             this.buttonSnapchatPasswordNET2 = new System.Windows.Forms.Button();
             this.buttonBigoRegister = new System.Windows.Forms.Button();
@@ -288,6 +289,7 @@ namespace WinSubTrial
             // 
             // tabPageChange
             // 
+            this.tabPageChange.Controls.Add(this.buttonCamScanner);
             this.tabPageChange.Controls.Add(this.buttonChamet);
             this.tabPageChange.Controls.Add(this.buttonSnapchatPasswordNET2);
             this.tabPageChange.Controls.Add(this.buttonBigoRegister);
@@ -349,11 +351,21 @@ namespace WinSubTrial
             this.tabPageChange.Text = "Main";
             this.tabPageChange.UseVisualStyleBackColor = true;
             // 
+            // buttonCamScanner
+            // 
+            this.buttonCamScanner.Location = new System.Drawing.Point(1073, 907);
+            this.buttonCamScanner.Name = "buttonCamScanner";
+            this.buttonCamScanner.Size = new System.Drawing.Size(185, 28);
+            this.buttonCamScanner.TabIndex = 68;
+            this.buttonCamScanner.Text = "CamScanner";
+            this.buttonCamScanner.UseVisualStyleBackColor = true;
+            this.buttonCamScanner.Click += new System.EventHandler(this.CamScannerButtonClick);
+            // 
             // buttonChamet
             // 
-            this.buttonChamet.Location = new System.Drawing.Point(1073, 578);
+            this.buttonChamet.Location = new System.Drawing.Point(1072, 871);
             this.buttonChamet.Name = "buttonChamet";
-            this.buttonChamet.Size = new System.Drawing.Size(185, 28);
+            this.buttonChamet.Size = new System.Drawing.Size(184, 28);
             this.buttonChamet.TabIndex = 67;
             this.buttonChamet.Text = "Chamet";
             this.buttonChamet.UseVisualStyleBackColor = true;
@@ -423,7 +435,7 @@ namespace WinSubTrial
             this.buttonTinder.TabIndex = 61;
             this.buttonTinder.Text = "Tinder Register";
             this.buttonTinder.UseVisualStyleBackColor = true;
-            this.buttonTinder.Click += new System.EventHandler(this.ChametButtonClick);
+            this.buttonTinder.Click += new System.EventHandler(this.TinderButtonClick);
             // 
             // buttonSnapchat
             // 
@@ -1736,6 +1748,7 @@ namespace WinSubTrial
         private System.Windows.Forms.Button buttonBigoRegister;
         private System.Windows.Forms.Button buttonSnapchatPasswordNET2;
         private System.Windows.Forms.Button buttonChamet;
+        private System.Windows.Forms.Button buttonCamScanner;
     }
 }
 

@@ -90,6 +90,7 @@
     <Compile Include="ApionTask\Base\BaseActivity.cs" />
     <Compile Include="ApionTask\Bigo\BigoLiteTask.cs" />
     <Compile Include="ApionTask\Bigo\BigoRegisterTask.cs" />
+    <Compile Include="ApionTask\CamScanner\CamScannerTask.cs" />
     <Compile Include="ApionTask\Chamet\ChametTask.cs" />
     <Compile Include="ApionTask\EnumApp.cs" />
     <Compile Include="ApionTask\Snapchat\SnapchatPasswordTask.cs" />

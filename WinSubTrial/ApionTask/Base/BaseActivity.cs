@@ -29,9 +29,15 @@ namespace WinSubTrial.ApionTask
             Adb.Shell(serial, $"input tap {point.X} {point.Y}");
         }
 
+        //Vuốt lên
         protected void SwipeUp(string serial)
         {
             Adb.Shell(serial, "input swipe 500 1700 50 50");
+        }
+        //Vuốt sang trái
+        protected void SwipeLeft(string serial)
+        {
+            Adb.Shell(serial, "input swipe 800 500 0 500");
         }
 
         protected void Enter(string serial)
@@ -200,6 +206,9 @@ namespace WinSubTrial.ApionTask
         {
             switch (appName)
             {
+                case "getcodeapi":
+                    Adb.Shell(serial, "pm clear com.example.getcodeapi");
+                    break;
                 case "snapchat":
                     Adb.Shell(serial, "pm clear com.snapchat.android");
                     break;
@@ -215,8 +224,8 @@ namespace WinSubTrial.ApionTask
                 case "chamet":
                     Adb.Shell(serial, "pm clear com.hkfuliao.chamet");
                     break;
-                case "getcodeapi":
-                    Adb.Shell(serial, "pm clear com.example.getcodeapi");
+                case "camscanner":
+                    Adb.Shell(serial, "pm clear com.intsig.camscanner");
                     break;
             }
         }
@@ -225,11 +234,14 @@ namespace WinSubTrial.ApionTask
         {
             switch (appName)
             {
+                case "getcodeapi":
+                    Adb.Shell(serial, "am start -n com.example.getcodeapi/.MainActivity");
+                    break;
                 case "snapchat":
                     Adb.Shell(serial, "am start -n com.snapchat.android/.LandingPageActivity");
                     break;
                 case "tinder":
-                    Adb.Shell(serial, " am start -n com.tinder/.activities.LoginActivity");
+                    Adb.Shell(serial, "am start -n com.tinder/.activities.LoginActivity");
                     break;
                 case "bigo":
                     Adb.Shell(serial, "am start -n sg.bigo.live/.home.MainActivity");
@@ -240,8 +252,8 @@ namespace WinSubTrial.ApionTask
                 case "chamet":
                     Adb.Shell(serial, "am start -n com.hkfuliao.chamet/com.oversea.chat.splash.SplashActivity");
                     break;
-                case "getcodeapi":
-                    Adb.Shell(serial, "am start -n com.example.getcodeapi/.MainActivity");
+                case "camscanner":
+                    Adb.Shell(serial, "am start -n com.intsig.camscanner/.mainmenu.mainactivity.MainActivity");
                     break;
             }
         }

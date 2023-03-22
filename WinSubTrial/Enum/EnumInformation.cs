@@ -24,10 +24,12 @@ namespace WinSubTrial.Enum
         public static string bigo = "B";
         public static string tinder = "TI";
         public static string chamet = "CH";
+        public static string camscanner = "CA";
     }
 
     static class EnumPassword
     {
+        public static string passwordDefault = "Zxcv123123";
         public static string bigoRegister = "Zxcv123123";
     }
 }
