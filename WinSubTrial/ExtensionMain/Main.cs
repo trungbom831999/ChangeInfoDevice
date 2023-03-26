@@ -11,6 +11,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Utils;
+using WinSubTrial.Forms.Popup;
 using WinSubTrial.Functions;
 using WinSubTrial.Globals;
 using WinSubTrial.Utilities;
@@ -449,20 +450,14 @@ namespace WinSubTrial
                     viewModel.SnapchatPasswordRetrieval(device.Serial, net);
                 });
             });
+        }
 
-            //Thread thread = new Thread(new ThreadStart(() =>
-            //{
-            //    foreach (Device device in viewModel.devicesModel.Where(x => x.isSelected == true))
-            //    {
-            //        Task.Run(() =>
-            //        {
-            //            viewModel.deviceWaitForStop[device.Serial] = false;
-            //            viewModel.SnapchatPasswordRetrieval(device.Serial);
-            //        });
-            //    }
-            //}))
-            //{ IsBackground = true };
-            //thread.Start();
+        private void buttonAutoPopup_Click(object sender, EventArgs e)
+        {
+            using (AutoPhonePopup form = new AutoPhonePopup { viewModel = viewModel})
+            {
+                form.ShowDialog();
+            }
         }
     }
 }

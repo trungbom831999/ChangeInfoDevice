@@ -148,7 +148,7 @@ namespace WinSubTrial
                     InputDynamic(serial, "et_setting_pwd_password", EnumPassword.passwordDefault);
                     Common.SetStatus(serial, "Input password, save numberphone.");
                     TapDynamic(serial, "btn_setting_pwd_start");
-                    Common.Sleep(1000);
+                    Common.Sleep(2000);
                     SavePhoneSuccess(numberphone);
                     CloseAllApp(serial);
                     return TaskResult.Success;

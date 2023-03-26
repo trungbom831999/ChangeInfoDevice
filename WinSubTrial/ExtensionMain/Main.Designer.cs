@@ -59,15 +59,7 @@ namespace WinSubTrial
             this.netAppToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageChange = new System.Windows.Forms.TabPage();
-            this.buttonCamScanner = new System.Windows.Forms.Button();
-            this.buttonChamet = new System.Windows.Forms.Button();
-            this.buttonSnapchatPasswordNET2 = new System.Windows.Forms.Button();
-            this.buttonBigoRegister = new System.Windows.Forms.Button();
-            this.BigoLite = new System.Windows.Forms.Button();
-            this.buttonBigoSMS = new System.Windows.Forms.Button();
-            this.buttonSnapchatPassword = new System.Windows.Forms.Button();
-            this.buttonTinder = new System.Windows.Forms.Button();
-            this.buttonSnapchat = new System.Windows.Forms.Button();
+            this.buttonAutoPopup = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -177,7 +169,7 @@ namespace WinSubTrial
             this.netAppConfigurationToolStripMenuItem});
             this.mnuTop.Location = new System.Drawing.Point(0, 0);
             this.mnuTop.Name = "mnuTop";
-            this.mnuTop.Size = new System.Drawing.Size(1384, 28);
+            this.mnuTop.Size = new System.Drawing.Size(1311, 28);
             this.mnuTop.TabIndex = 0;
             this.mnuTop.Text = "menuStrip1";
             // 
@@ -281,7 +273,7 @@ namespace WinSubTrial
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1384, 957);
+            this.tabControl1.Size = new System.Drawing.Size(1311, 957);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 2;
             this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
@@ -289,15 +281,7 @@ namespace WinSubTrial
             // 
             // tabPageChange
             // 
-            this.tabPageChange.Controls.Add(this.buttonCamScanner);
-            this.tabPageChange.Controls.Add(this.buttonChamet);
-            this.tabPageChange.Controls.Add(this.buttonSnapchatPasswordNET2);
-            this.tabPageChange.Controls.Add(this.buttonBigoRegister);
-            this.tabPageChange.Controls.Add(this.BigoLite);
-            this.tabPageChange.Controls.Add(this.buttonBigoSMS);
-            this.tabPageChange.Controls.Add(this.buttonSnapchatPassword);
-            this.tabPageChange.Controls.Add(this.buttonTinder);
-            this.tabPageChange.Controls.Add(this.buttonSnapchat);
+            this.tabPageChange.Controls.Add(this.buttonAutoPopup);
             this.tabPageChange.Controls.Add(this.button10);
             this.tabPageChange.Controls.Add(this.button9);
             this.tabPageChange.Controls.Add(this.button8);
@@ -346,107 +330,22 @@ namespace WinSubTrial
             this.tabPageChange.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageChange.Name = "tabPageChange";
             this.tabPageChange.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageChange.Size = new System.Drawing.Size(1320, 949);
+            this.tabPageChange.Size = new System.Drawing.Size(1247, 949);
             this.tabPageChange.TabIndex = 0;
             this.tabPageChange.Text = "Main";
             this.tabPageChange.UseVisualStyleBackColor = true;
             // 
-            // buttonCamScanner
+            // buttonAutoPopup
             // 
-            this.buttonCamScanner.Location = new System.Drawing.Point(1073, 907);
-            this.buttonCamScanner.Name = "buttonCamScanner";
-            this.buttonCamScanner.Size = new System.Drawing.Size(185, 28);
-            this.buttonCamScanner.TabIndex = 68;
-            this.buttonCamScanner.Text = "CamScanner";
-            this.buttonCamScanner.UseVisualStyleBackColor = true;
-            this.buttonCamScanner.Click += new System.EventHandler(this.CamScannerButtonClick);
-            // 
-            // buttonChamet
-            // 
-            this.buttonChamet.Location = new System.Drawing.Point(1072, 871);
-            this.buttonChamet.Name = "buttonChamet";
-            this.buttonChamet.Size = new System.Drawing.Size(184, 28);
-            this.buttonChamet.TabIndex = 67;
-            this.buttonChamet.Text = "Chamet";
-            this.buttonChamet.UseVisualStyleBackColor = true;
-            this.buttonChamet.Click += new System.EventHandler(this.ChametButtonClick);
-            // 
-            // buttonSnapchatPasswordNET2
-            // 
-            this.buttonSnapchatPasswordNET2.Location = new System.Drawing.Point(689, 907);
-            this.buttonSnapchatPasswordNET2.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonSnapchatPasswordNET2.Name = "buttonSnapchatPasswordNET2";
-            this.buttonSnapchatPasswordNET2.Size = new System.Drawing.Size(184, 28);
-            this.buttonSnapchatPasswordNET2.TabIndex = 66;
-            this.buttonSnapchatPasswordNET2.Text = "Snapchat PasswordNET2";
-            this.buttonSnapchatPasswordNET2.UseVisualStyleBackColor = true;
-            this.buttonSnapchatPasswordNET2.Click += new System.EventHandler(this.snapchatPasswordNET2);
-            // 
-            // buttonBigoRegister
-            // 
-            this.buttonBigoRegister.Location = new System.Drawing.Point(881, 907);
-            this.buttonBigoRegister.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonBigoRegister.Name = "buttonBigoRegister";
-            this.buttonBigoRegister.Size = new System.Drawing.Size(184, 28);
-            this.buttonBigoRegister.TabIndex = 65;
-            this.buttonBigoRegister.Text = "Bigo Register";
-            this.buttonBigoRegister.UseVisualStyleBackColor = true;
-            this.buttonBigoRegister.Click += new System.EventHandler(this.BigoButtonRegisterClick);
-            // 
-            // BigoLite
-            // 
-            this.BigoLite.Location = new System.Drawing.Point(881, 871);
-            this.BigoLite.Margin = new System.Windows.Forms.Padding(4);
-            this.BigoLite.Name = "BigoLite";
-            this.BigoLite.Size = new System.Drawing.Size(184, 28);
-            this.BigoLite.TabIndex = 64;
-            this.BigoLite.Text = "Bigo Lite";
-            this.BigoLite.UseVisualStyleBackColor = true;
-            this.BigoLite.Click += new System.EventHandler(this.BigoLiteButtonClick);
-            // 
-            // buttonBigoSMS
-            // 
-            this.buttonBigoSMS.Location = new System.Drawing.Point(881, 836);
-            this.buttonBigoSMS.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonBigoSMS.Name = "buttonBigoSMS";
-            this.buttonBigoSMS.Size = new System.Drawing.Size(184, 28);
-            this.buttonBigoSMS.TabIndex = 63;
-            this.buttonBigoSMS.Text = "Bigo Login SMS";
-            this.buttonBigoSMS.UseVisualStyleBackColor = true;
-            this.buttonBigoSMS.Click += new System.EventHandler(this.BigoButtonSMSlick);
-            // 
-            // buttonSnapchatPassword
-            // 
-            this.buttonSnapchatPassword.Location = new System.Drawing.Point(689, 871);
-            this.buttonSnapchatPassword.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonSnapchatPassword.Name = "buttonSnapchatPassword";
-            this.buttonSnapchatPassword.Size = new System.Drawing.Size(184, 28);
-            this.buttonSnapchatPassword.TabIndex = 62;
-            this.buttonSnapchatPassword.Text = "Snapchat Password";
-            this.buttonSnapchatPassword.UseVisualStyleBackColor = true;
-            this.buttonSnapchatPassword.Click += new System.EventHandler(this.snapchatPasswordNET1);
-            // 
-            // buttonTinder
-            // 
-            this.buttonTinder.Location = new System.Drawing.Point(1073, 836);
-            this.buttonTinder.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonTinder.Name = "buttonTinder";
-            this.buttonTinder.Size = new System.Drawing.Size(184, 28);
-            this.buttonTinder.TabIndex = 61;
-            this.buttonTinder.Text = "Tinder Register";
-            this.buttonTinder.UseVisualStyleBackColor = true;
-            this.buttonTinder.Click += new System.EventHandler(this.TinderButtonClick);
-            // 
-            // buttonSnapchat
-            // 
-            this.buttonSnapchat.Location = new System.Drawing.Point(689, 836);
-            this.buttonSnapchat.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonSnapchat.Name = "buttonSnapchat";
-            this.buttonSnapchat.Size = new System.Drawing.Size(184, 28);
-            this.buttonSnapchat.TabIndex = 60;
-            this.buttonSnapchat.Text = "Snapchat Register";
-            this.buttonSnapchat.UseVisualStyleBackColor = true;
-            this.buttonSnapchat.Click += new System.EventHandler(this.snapchatButtonTapped);
+            this.buttonAutoPopup.BackColor = System.Drawing.Color.Aquamarine;
+            this.buttonAutoPopup.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonAutoPopup.Location = new System.Drawing.Point(1094, 578);
+            this.buttonAutoPopup.Name = "buttonAutoPopup";
+            this.buttonAutoPopup.Size = new System.Drawing.Size(120, 28);
+            this.buttonAutoPopup.TabIndex = 69;
+            this.buttonAutoPopup.Text = "Auto Mobile";
+            this.buttonAutoPopup.UseVisualStyleBackColor = false;
+            this.buttonAutoPopup.Click += new System.EventHandler(this.buttonAutoPopup_Click);
             // 
             // button10
             // 
@@ -673,7 +572,7 @@ namespace WinSubTrial
             // 
             // btnBackupChange
             // 
-            this.btnBackupChange.Location = new System.Drawing.Point(881, 625);
+            this.btnBackupChange.Location = new System.Drawing.Point(880, 624);
             this.btnBackupChange.Margin = new System.Windows.Forms.Padding(4);
             this.btnBackupChange.Name = "btnBackupChange";
             this.btnBackupChange.Size = new System.Drawing.Size(184, 28);
@@ -685,7 +584,7 @@ namespace WinSubTrial
             // btnBackup
             // 
             this.btnBackup.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnBackup.Location = new System.Drawing.Point(689, 625);
+            this.btnBackup.Location = new System.Drawing.Point(689, 624);
             this.btnBackup.Margin = new System.Windows.Forms.Padding(4);
             this.btnBackup.Name = "btnBackup";
             this.btnBackup.Size = new System.Drawing.Size(184, 28);
@@ -995,7 +894,7 @@ namespace WinSubTrial
             this.dgvDevice.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvDevice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDevice.ShowEditingIcon = false;
-            this.dgvDevice.Size = new System.Drawing.Size(1281, 567);
+            this.dgvDevice.Size = new System.Drawing.Size(1231, 574);
             this.dgvDevice.TabIndex = 1;
             this.dgvDevice.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDevice_CellContentClick);
             this.dgvDevice.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDevice_MouseClick);
@@ -1607,7 +1506,7 @@ namespace WinSubTrial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1384, 985);
+            this.ClientSize = new System.Drawing.Size(1311, 985);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.mnuTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1740,15 +1639,7 @@ namespace WinSubTrial
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button buttonSnapchat;
-        private System.Windows.Forms.Button buttonTinder;
-        private System.Windows.Forms.Button buttonSnapchatPassword;
-        private System.Windows.Forms.Button buttonBigoSMS;
-        private System.Windows.Forms.Button BigoLite;
-        private System.Windows.Forms.Button buttonBigoRegister;
-        private System.Windows.Forms.Button buttonSnapchatPasswordNET2;
-        private System.Windows.Forms.Button buttonChamet;
-        private System.Windows.Forms.Button buttonCamScanner;
+        private System.Windows.Forms.Button buttonAutoPopup;
     }
 }
 

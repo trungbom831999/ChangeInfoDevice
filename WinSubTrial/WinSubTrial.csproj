@@ -130,6 +130,12 @@
     <Compile Include="Forms\DeviceTools.Designer.cs">
       <DependentUpon>DeviceTools.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Popup\AutoPhonePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Popup\AutoPhonePopup.Designer.cs">
+      <DependentUpon>AutoPhonePopup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RunScript.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OpenLink.resx">
       <DependentUpon>OpenLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Popup\AutoPhonePopup.resx">
+      <DependentUpon>AutoPhonePopup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RunScript.resx">
       <DependentUpon>RunScript.cs</DependentUpon>

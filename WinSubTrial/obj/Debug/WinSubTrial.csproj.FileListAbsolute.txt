@@ -633,3 +633,4 @@ E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\bin\
 E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.csproj.CopyComplete
 E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.exe
 E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.pdb
+E:\Job\Change Info Device\ToolChangeInfoDevice\ChangeInfoDevice\WinSubTrial\obj\Debug\WinSubTrial.Forms.Popup.AutoPhonePopup.resources
