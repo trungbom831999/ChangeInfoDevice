@@ -26,8 +26,8 @@ namespace WinSubTrial
         {
             Adb.SendKey(serial, "KEYCODE_HOME");
             Common.SetStatus(serial, "Open get code API");
-            OpenGetCodeApi(serial);
-            //OpenTinderApp(serial);
+            FillInfoGetCodeAPI(serial, phonenumber, EnumBrandApp.tinder, "net1");
+            OpenTinderApp(serial);
             DateTime startTime = DateTime.Now;
             while (true)
             {
@@ -46,29 +46,6 @@ namespace WinSubTrial
 
                 DumpUi(serial);
                 
-                //Nhập lấy Code của Get Code Api
-                if (ContainsIgnoreCase(TextDump, "url") && !ContainsIgnoreCase(TextDump, EnumInformation.urlGetCodeApi))
-                {
-                    InputDynamic(serial, "editUrl", EnumInformation.urlGetCodeApi);
-                    Common.SetStatus(serial, "Enter url");
-                    //Common.Sleep(500);
-
-                    InputDynamic(serial, "editPhone", phonenumber);
-                    Common.SetStatus(serial, "Enter phone number");
-                    //Common.Sleep(500);
-
-                    InputDynamic(serial, "editBrand", "ti");
-                    Common.SetStatus(serial, "Enter Brand");
-                    //Common.Sleep(500);
-
-                    TapDynamic(serial, "btnGetCode");
-                    Common.SetStatus(serial, "tappeb btnGetCode");
-                    //Common.Sleep(1000);
-                    OpenTinderApp(serial);
-                    Common.Sleep(2500);
-                    continue;
-                }
-
                 //Lỗi sđt quá nhiều
                 //Để lỗi lên đầu để nếu có lỗi sẽ Reboot luôn
                 if (ContainsIgnoreCase(TextDump, "phoneNumberInputErrorTextView"))

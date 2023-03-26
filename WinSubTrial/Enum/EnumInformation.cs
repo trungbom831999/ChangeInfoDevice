@@ -6,16 +6,10 @@ using System.Threading.Tasks;
 
 namespace WinSubTrial.Enum
 {
-    static class EnumInformation
-    {
-        public static string urlGetCodeApi = "103.133.104.21";
-
-    }
-
     static class EnumNET
     {
-        public static string NET1 = "103.133.104.21";
-        public static string NET2 = "103.226.248.208:805";
+        public static string NET1 = "103.114.107.7";
+        public static string NET2 = "103.226.248.208";
     }
 
     static class EnumBrandApp
@@ -30,6 +24,5 @@ namespace WinSubTrial.Enum
     static class EnumPassword
     {
         public static string passwordDefault = "Zxcv123123";
-        public static string bigoRegister = "Zxcv123123";
     }
 }

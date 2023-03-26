@@ -31,8 +31,8 @@ namespace WinSubTrial
             }
             Adb.SendKey(serial, "KEYCODE_HOME");
             Common.SetStatus(serial, "Open get code API");
-            OpenGetCodeApi(serial);
-            //OpenBigoApp(serial);
+            FillInfoGetCodeAPI(serial, numberphone, EnumBrandApp.bigo, "net1");
+            OpenBigoApp(serial);
             DateTime startTime = DateTime.Now;
             while (true)
             {
@@ -51,28 +51,6 @@ namespace WinSubTrial
 
                 DumpUi(serial);
                 
-                //Nhập lấy Code của Get Code Api
-                if (ContainsIgnoreCase(TextDump, "url") && !ContainsIgnoreCase(TextDump, EnumInformation.urlGetCodeApi))
-                {
-                    InputDynamic(serial, "editUrl", EnumInformation.urlGetCodeApi);
-                    Common.SetStatus(serial, "Enter url");
-                    //Common.Sleep(500);
-
-                    InputDynamic(serial, "editPhone", numberphone);
-                    Common.SetStatus(serial, "Enter phone number");
-                    //Common.Sleep(500);
-
-                    InputDynamic(serial, "editBrand", "B");
-                    Common.SetStatus(serial, "Enter Brand");
-                    //Common.Sleep(500);
-
-                    TapDynamic(serial, "btnGetCode");
-                    Common.SetStatus(serial, "tappeb btnGetCode");
-                    OpenBigoApp(serial);
-                    Common.Sleep(2000);
-                    continue;
-                }
-
                 //Truy cập vị trí
                 if (ContainsIgnoreCase(TextDump, "location_permission_guide_btn"))
                 {

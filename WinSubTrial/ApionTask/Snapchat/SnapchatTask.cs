@@ -31,11 +31,9 @@ namespace WinSubTrial
         {
             Adb.SendKey(serial, "KEYCODE_HOME");
             Common.SetStatus(serial, "Open Snapchat");
-            OpenGetCodeApi(serial);
-            //Common.Sleep(_rand.Next(3000, 4000));
-            //Common.Sleep(1000);
+            FillInfoGetCodeAPI(serial, phonenumber, EnumBrandApp.snapchat, "net1");
+            OpenSnapchatApp(serial);
             DateTime startTime = DateTime.Now;
-            // eslint-disable-next-line no-constant-condition
             while (true)
             {
                 if (isStopAuto)
@@ -53,29 +51,6 @@ namespace WinSubTrial
 
                 DumpUi(serial);
                 
-                //Nhập lấy Code của Get Code Api
-                if (ContainsIgnoreCase(TextDump, "url") && !ContainsIgnoreCase(TextDump, EnumInformation.urlGetCodeApi))
-                {
-                    InputDynamic(serial, "editUrl", EnumInformation.urlGetCodeApi);
-                    Common.SetStatus(serial, "Enter url");
-                    //Common.Sleep(500);
-
-                    InputDynamic(serial, "editPhone", phonenumber);
-                    Common.SetStatus(serial, "Enter phone number");
-                    //Common.Sleep(500);
-
-                    InputDynamic(serial, "editBrand", "sn");
-                    Common.SetStatus(serial, "Enter Brand");
-                    //Common.Sleep(500);
-
-                    TapDynamic(serial, "btnGetCode");
-                    Common.SetStatus(serial, "tappeb btnGetCode");
-                    //Common.Sleep(1000);
-                    OpenSnapchatApp(serial);
-                    Common.Sleep(1500);
-                    continue;
-                }
-
                 //Nhấn đăng ký
                 if (ContainsIgnoreCase(TextDump, "signup_button_horizontal"))
                 {

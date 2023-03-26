@@ -190,7 +190,7 @@ namespace WinSubTrial
 
                 if (ContainsIgnoreCase(TextDump, "et_password"))
                 {
-                    InputDynamic(serial, "et_password", EnumPassword.bigoRegister);
+                    InputDynamic(serial, "et_password", EnumPassword.passwordDefault);
                     Common.SetStatus(serial, "Input password");
                     DumpUi(serial);
                     TapDynamic(serial, "tv_next");
