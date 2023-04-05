@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinSubTrial.Enum;
 using WinSubTrial.Globals;
 
 namespace WinSubTrial.Forms.Popup
@@ -18,6 +20,21 @@ namespace WinSubTrial.Forms.Popup
         public AutoPhonePopup()
         {
             InitializeComponent();
+            setNet();
+        }
+
+        private void setNet()
+        {
+            this.textBoxNet1.Text = getNet(1);
+            EnumNET.NET1 = this.textBoxNet1.Text;
+            this.textBoxNet2.Text = getNet(2);
+            EnumNET.NET2 = this.textBoxNet2.Text;
+        }
+
+        private string getNet(int index)
+        {
+            string net = File.ReadLines("Data\\Net\\net.txt").Skip(index-1).Take(1).First();
+            return net;
         }
 
         private void snapchatButtonTapped(object sender, EventArgs e)
@@ -152,6 +169,32 @@ namespace WinSubTrial.Forms.Popup
                     viewModel.SnapchatPasswordRetrieval(device.Serial, net);
                 });
             });
+        }
+
+        private void buttonTelegramNet2_Click(object sender, EventArgs e)
+        {
+            TelegramRegister("net2");
+        }
+
+        private void TelegramRegister(string net)
+        {
+            if (!viewModel.someDevicesSelected()) return;
+            viewModel.devicesModel.Where(x => x.isSelected == true).AsParallel().ForAll(device =>
+            {
+                Task.Run(() =>
+                {
+                    viewModel.deviceWaitForStop[device.Serial] = false;
+                    viewModel.TelegramRegister(device.Serial, net);
+                });
+            });
+        }
+
+        private void buttonSaveNetClick(object sender, EventArgs e)
+        {
+            string net1 = this.textBoxNet1.Text;
+            string net2 = this.textBoxNet2.Text;
+            File.WriteAllText("Data\\Net\\net.txt", net1 + "\n" + net2);
+            setNet();
         }
     }
 }

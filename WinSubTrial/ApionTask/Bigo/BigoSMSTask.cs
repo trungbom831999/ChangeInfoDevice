@@ -103,10 +103,7 @@ namespace WinSubTrial
                     while (countgetdOTP > 0)
                     {
                         //lấy OTP
-                        OpenGetCodeApi(serial);
-                        Common.SetStatus(serial, "Enter 6-digit code");
-                        DumpUi(serial);
-                        TapDynamic(serial, "btnGetOtp");
+                        GetOTP(serial);
                         Common.SetStatus(serial, "Tapped button get otp");
                         //Quay lại điền
                         OpenBigoApp(serial);

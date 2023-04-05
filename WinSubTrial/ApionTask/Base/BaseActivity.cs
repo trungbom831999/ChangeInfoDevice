@@ -201,6 +201,17 @@ namespace WinSubTrial.ApionTask
                 Common.SetStatus(serial, "tappeb btnGetCode");
             }
         }
+
+        //Lấy OTP
+        public void GetOTP(string serial)
+        {
+            //lấy OTP
+            OpenGetCodeApi(serial);
+            DumpUi(serial);
+            TapDynamic(serial, "btnGetOtp");
+            Common.SetStatus(serial, "Tapped button get otp");
+        }
+
         //Đóng app
         protected void CloseApp(string serial, string appName)
         {
@@ -226,6 +237,9 @@ namespace WinSubTrial.ApionTask
                     break;
                 case "camscanner":
                     Adb.Shell(serial, "pm clear com.intsig.camscanner");
+                    break;
+                case "telegram":
+                    Adb.Shell(serial, "pm clear org.telegram.messenger");
                     break;
             }
         }
@@ -254,6 +268,9 @@ namespace WinSubTrial.ApionTask
                     break;
                 case "camscanner":
                     Adb.Shell(serial, "am start -n com.intsig.camscanner/.mainmenu.mainactivity.MainActivity");
+                    break;
+                case "telegram":
+                    Adb.Shell(serial, "am start -n org.telegram.messenger/.DefaultIcon");
                     break;
             }
         }

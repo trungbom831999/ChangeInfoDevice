@@ -103,10 +103,7 @@ namespace WinSubTrial
                 if(ContainsIgnoreCase(TextDump, "tv_verification_tip"))
                 {
                     //lấy OTP
-                    OpenGetCodeApi(serial);
-                    DumpUi(serial);
-                    TapDynamic(serial, "btnGetOtp");
-                    Common.SetStatus(serial, "Tapped button get otp");
+                    GetOTP(serial);
 
                     //Quay lại điền OTP
                     OpenApp(serial, "chamet");

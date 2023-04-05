@@ -209,13 +209,7 @@ namespace WinSubTrial
                         //Điền mã xác nhận
                         if (ContainsIgnoreCase(TextDump, "code_field"))
                         {
-                            OpenGetCodeApi(serial);
-                            Common.SetStatus(serial, "Enter 6-digit code");
-                            //Common.Sleep(1000);
-                            DumpUi(serial);
-
-                            TapDynamic(serial, "btnGetOtp");
-                            Common.SetStatus(serial, "Tapped button get otp");
+                            GetOTP(serial);
                             //Common.Sleep(5000);
                             OpenSnapchatApp(serial);
                             //Common.Sleep(2000);

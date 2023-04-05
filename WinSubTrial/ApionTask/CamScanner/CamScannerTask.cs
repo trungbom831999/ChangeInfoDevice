@@ -25,7 +25,7 @@ namespace WinSubTrial
 
         public TaskResult CamScannerRegister(string serial)
         {
-            string numberphone = GetRandomPhoneNumber();
+            string numberphone = GetRandomNumberPhone();
             Common.SetStatus(serial, $"Get CamScanner phonenumber: {numberphone}");
             Adb.SendKey(serial, "KEYCODE_HOME");
             FillInfoGetCodeAPI(serial, numberphone, EnumBrandApp.camscanner, "net1");
@@ -120,10 +120,7 @@ namespace WinSubTrial
                 if (ContainsIgnoreCase(TextDump, "tv_verify_code_register_account"))
                 {
                     //lấy OTP
-                    OpenGetCodeApi(serial);
-                    DumpUi(serial);
-                    TapDynamic(serial, "btnGetOtp");
-                    Common.SetStatus(serial, "Tapped button get otp");
+                    GetOTP(serial);
 
                     //Quay lại điền OTP
                     OpenApp(serial);
@@ -176,7 +173,7 @@ namespace WinSubTrial
             OpenApp(serial, "camscanner");
         }
 
-        public string GetRandomPhoneNumber()
+        public string GetRandomNumberPhone()
         {
             try
             {

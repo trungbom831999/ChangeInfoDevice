@@ -1040,6 +1040,61 @@ namespace WinSubTrial
             deviceThreads[serial] = thread;
             thread.Start();
         }
+        public void TelegramRegister(string serial, string net)
+        {
+            if (IsDeviceInTask(serial))
+            {
+                deviceThreads[serial].Abort();
+            }
+            Thread thread = new Thread(new ThreadStart(() =>
+            {
+                Device device = devicesModel.FirstOrDefault(x => x.Serial.Equals(serial));
+                int times = 10000000;
+                int timesChanged = constTimesChanged;
+                //int timesChanged = 1;
+
+                while (times > 0)
+                {
+                    if (timesChanged > (constTimesChanged - 1)) // reboot
+                    {
+                        //reboot khi quá số lần auto
+                        //RebootDevice(serial, device);
+                        timesChanged = 0;
+                    }
+                    else
+                    {
+                        // wipe app /
+                        new ChangeA1 { device = device }.WipeAppsData();
+                        timesChanged += 1;
+                    }
+
+                    TaskResult result = new TelegramTask { }.TelegramRegister(serial, net);
+                    switch (result)
+                    {
+                        case TaskResult.Success:
+                            {
+                                Common.SetStatus(serial, $"Password snapchat done");
+                                break;
+                            }
+                        case TaskResult.StopAuto:
+                            {
+                                return;
+                            }
+                        case TaskResult.OtpError:
+                        case TaskResult.Failure:
+                            {
+                                Common.SetStatus(serial, $"Password snapchat fail, run other phone!");
+                                continue;
+                            }
+                        default:
+                            return;
+                    }
+                }
+            }))
+            { IsBackground = true };
+            deviceThreads[serial] = thread;
+            thread.Start();
+        }
 
         public void RebootDevice(string serial, Device device)
         {

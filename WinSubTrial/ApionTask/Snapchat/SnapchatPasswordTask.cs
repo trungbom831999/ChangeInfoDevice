@@ -111,11 +111,7 @@ namespace WinSubTrial
                     while (countgetdOTP > 0)
                     {
                         //lấy OTP
-                        OpenGetCodeApi(serial);
-                        Common.SetStatus(serial, "Enter 6-digit code");
-                        DumpUi(serial);
-                        TapDynamic(serial, "btnGetOtp");
-                        Common.SetStatus(serial, "Tapped button get otp");
+                        GetOTP(serial);
                         //Quay lại điền
                         OpenSnapchatApp(serial);
                         DumpUi(serial);

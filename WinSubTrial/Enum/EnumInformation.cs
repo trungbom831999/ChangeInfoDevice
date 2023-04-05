@@ -8,8 +8,10 @@ namespace WinSubTrial.Enum
 {
     static class EnumNET
     {
-        public static string NET1 = "103.114.107.7";
-        public static string NET2 = "103.226.248.208";
+        public static string NET1 = "";
+        public static string NET2 = "";
+        //public static string NET1 = "103.189.202.180";
+        //public static string NET2 = "103.226.248.208:805";
     }
 
     static class EnumBrandApp
@@ -19,6 +21,7 @@ namespace WinSubTrial.Enum
         public static string tinder = "TI";
         public static string chamet = "CH";
         public static string camscanner = "CA";
+        public static string telegram = "TE";
     }
 
     static class EnumPassword
