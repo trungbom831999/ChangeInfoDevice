@@ -29,7 +29,7 @@ namespace WinSubTrial
             Common.SetStatus(serial, $"Get snapchat phonenumber: {numberphone}");
             Adb.SendKey(serial, "KEYCODE_HOME");
             Common.SetStatus(serial, "Open get code API");
-            FillInfoGetCodeAPI(serial, numberphone, EnumBrandApp.snapchat, net, (net=="net2"?"84":""));
+            FillInfoGetCodeAPI(serial, numberphone, EnumBrandApp.snapchat, net);
             OpenSnapchatApp(serial);
             DateTime startTime = DateTime.Now;
             while (true)
@@ -140,7 +140,7 @@ namespace WinSubTrial
                 //Nhập mật khẩu
                 if (ContainsIgnoreCase(TextDump, "reset_password_scroll_view"))
                 {
-                    string newPassword = RandomPasswordString();
+                    string newPassword = EnumPassword.passwordDefault;
                     InputDynamic(serial, "input_field_edit_text", newPassword);
                     Adb.SendKey(serial, "KEYCODE_DPAD_DOWN");
                     Input(serial, newPassword);
@@ -150,6 +150,7 @@ namespace WinSubTrial
                     DumpUi(serial);
                     if (ContainsIgnoreCase(TextDump, "forgot_password_button"))
                     {
+                        SavePhoneSuccess(numberphone, net);
                         CloseAllApp(serial);
                         return TaskResult.Success;
                     }
@@ -195,6 +196,20 @@ namespace WinSubTrial
                 return info[0];
             }
             catch { return null; }
+        }
+
+        //Lưu lại số
+        private void SavePhoneSuccess(string numberphone, string net)
+        {
+            switch (net)
+            {
+                case "net1":
+                    File.AppendAllText("Data\\03-SN1ForgotPasswordSuccess.txt", numberphone + "\n");
+                    break;
+                case "net2":
+                    File.AppendAllText("Data\\14-SN2ForgotPasswordSuccess.txt", numberphone + "\n");
+                    break;
+            }
         }
 
     }
