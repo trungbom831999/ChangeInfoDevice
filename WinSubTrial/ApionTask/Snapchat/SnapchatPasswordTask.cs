@@ -29,7 +29,7 @@ namespace WinSubTrial
             Common.SetStatus(serial, $"Get snapchat phonenumber: {numberphone}");
             Adb.SendKey(serial, "KEYCODE_HOME");
             Common.SetStatus(serial, "Open get code API");
-            FillInfoGetCodeAPI(serial, numberphone, EnumBrandApp.snapchat, net);
+            FillInfoGetCodeAPI(serial, numberphone, EnumBrandApp.snapchat, net, net == "net2" ? "63" : "");
             OpenSnapchatApp(serial);
             DateTime startTime = DateTime.Now;
             while (true)
@@ -75,7 +75,8 @@ namespace WinSubTrial
 
                 if (ContainsIgnoreCase(TextDump, "button_text")&&ContainsIgnoreCase(TextDump, "alert_dialog_description"))
                 {
-                    TapDynamicNotIgnore(serial, "Tho");
+                    //TapDynamicNotIgnore(serial, "Tho");
+                    TapPosition(serial, new Point(x: 600, y: 1250));
                     Common.SetStatus(serial, "Tapped qua đt");
                     continue;
                 }
@@ -91,15 +92,29 @@ namespace WinSubTrial
                 //Điền sđt
                 if (ContainsIgnoreCase(TextDump, "input_field_edit_text") && ContainsIgnoreCase(TextDump, "recovery_phone_continue"))
                 {
-                    if (ContainsIgnoreCase(TextDump, "recovery_phone_error_message") && ContainsIgnoreCase(TextDump, "Vui"))
+                    //Net2 đổi khu vực
+                    if (net == "net2")
                     {
-                        return TaskResult.OtpError;
+                        TapDynamic(serial, "input_field_country_code");
+                        Common.Sleep(300);
+                        DumpUi(serial);
+                        InputDynamic(serial, "input_field_edit_text", "Phi");
+                        DumpUi(serial);
+                        TapDynamic(serial, "country_code_cell");
+                        DumpUi(serial);
                     }
                     InputDynamic(serial, "input_field_edit_text", numberphone);
                     Common.SetStatus(serial, "Tapped nhập sđt");
                     DumpUi(serial);
                     TapDynamic(serial, "recovery_phone_continue");
-                    Common.Sleep(2000);
+                    DumpUi(serial);
+                    //if (ContainsIgnoreCase(TextDump, "recovery_phone_error_message") && ContainsIgnoreCase(TextDump, "Vui"))
+                    if (ContainsIgnoreCase(TextDump, "input_field_edit_text") && ContainsIgnoreCase(TextDump, "recovery_phone_continue"))
+                    {
+                        CloseAllApp(serial);
+                        return TaskResult.OtpError;
+                    }
+                    Common.Sleep(1000);
                     continue;
                 }
 
