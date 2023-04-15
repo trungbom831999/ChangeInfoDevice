@@ -22,6 +22,7 @@ namespace WinSubTrial.Enum
         public static string chamet = "CH";
         public static string camscanner = "CA";
         public static string telegram = "TE";
+        public static string globalsmart = "RD";
     }
 
     static class EnumPassword

@@ -29,7 +29,7 @@ namespace WinSubTrial
             //string numberphone = "824879499";
             Common.SetStatus(serial, $"Get chamet phonenumber: {numberphone}");
             Adb.SendKey(serial, "KEYCODE_HOME");
-            FillInfoGetCodeAPI(serial, numberphone, EnumBrandApp.chamet, "net1");
+            FillInfoGetCodeAPI(serial, numberphone, EnumBrandApp.chamet);
             OpenApp(serial, "chamet");
             DateTime startTime = DateTime.Now;
             while (true)

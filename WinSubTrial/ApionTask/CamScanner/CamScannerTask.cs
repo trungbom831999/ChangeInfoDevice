@@ -28,7 +28,7 @@ namespace WinSubTrial
             string numberphone = GetRandomNumberPhone();
             Common.SetStatus(serial, $"Get CamScanner phonenumber: {numberphone}");
             Adb.SendKey(serial, "KEYCODE_HOME");
-            FillInfoGetCodeAPI(serial, numberphone, EnumBrandApp.camscanner, "net1");
+            FillInfoGetCodeAPI(serial, numberphone, EnumBrandApp.camscanner);
             OpenApp(serial);
             DateTime startTime = DateTime.Now;
             while (true)

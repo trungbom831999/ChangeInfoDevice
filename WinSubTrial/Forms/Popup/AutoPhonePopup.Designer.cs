@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelAutoPopup = new System.Windows.Forms.Panel();
+            this.buttonSaveNet = new System.Windows.Forms.Button();
             this.labelNet2 = new System.Windows.Forms.Label();
             this.labelNet1 = new System.Windows.Forms.Label();
             this.textBoxNet2 = new System.Windows.Forms.TextBox();
@@ -43,12 +44,13 @@
             this.buttonSnapchatPassword = new System.Windows.Forms.Button();
             this.buttonTinder = new System.Windows.Forms.Button();
             this.buttonSnapchat = new System.Windows.Forms.Button();
-            this.buttonSaveNet = new System.Windows.Forms.Button();
+            this.buttonGlobalSmart = new System.Windows.Forms.Button();
             this.panelAutoPopup.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelAutoPopup
             // 
+            this.panelAutoPopup.Controls.Add(this.buttonGlobalSmart);
             this.panelAutoPopup.Controls.Add(this.buttonSaveNet);
             this.panelAutoPopup.Controls.Add(this.labelNet2);
             this.panelAutoPopup.Controls.Add(this.labelNet1);
@@ -69,6 +71,16 @@
             this.panelAutoPopup.Name = "panelAutoPopup";
             this.panelAutoPopup.Size = new System.Drawing.Size(599, 176);
             this.panelAutoPopup.TabIndex = 0;
+            // 
+            // buttonSaveNet
+            // 
+            this.buttonSaveNet.Location = new System.Drawing.Point(290, 27);
+            this.buttonSaveNet.Name = "buttonSaveNet";
+            this.buttonSaveNet.Size = new System.Drawing.Size(61, 20);
+            this.buttonSaveNet.TabIndex = 83;
+            this.buttonSaveNet.Text = "Lưu NET";
+            this.buttonSaveNet.UseVisualStyleBackColor = true;
+            this.buttonSaveNet.Click += new System.EventHandler(this.buttonSaveNetClick);
             // 
             // labelNet2
             // 
@@ -205,15 +217,15 @@
             this.buttonSnapchat.UseVisualStyleBackColor = true;
             this.buttonSnapchat.Click += new System.EventHandler(this.snapchatButtonTapped);
             // 
-            // buttonSaveNet
+            // buttonGlobalSmart
             // 
-            this.buttonSaveNet.Location = new System.Drawing.Point(290, 27);
-            this.buttonSaveNet.Name = "buttonSaveNet";
-            this.buttonSaveNet.Size = new System.Drawing.Size(61, 20);
-            this.buttonSaveNet.TabIndex = 83;
-            this.buttonSaveNet.Text = "Lưu NET";
-            this.buttonSaveNet.UseVisualStyleBackColor = true;
-            this.buttonSaveNet.Click += new System.EventHandler(this.buttonSaveNetClick);
+            this.buttonGlobalSmart.Location = new System.Drawing.Point(433, 82);
+            this.buttonGlobalSmart.Name = "buttonGlobalSmart";
+            this.buttonGlobalSmart.Size = new System.Drawing.Size(139, 23);
+            this.buttonGlobalSmart.TabIndex = 84;
+            this.buttonGlobalSmart.Text = "Global Smart";
+            this.buttonGlobalSmart.UseVisualStyleBackColor = true;
+            this.buttonGlobalSmart.Click += new System.EventHandler(this.buttonGlobalSmart_Click);
             // 
             // AutoPhonePopup
             // 
@@ -249,5 +261,6 @@
         private System.Windows.Forms.TextBox textBoxNet2;
         private System.Windows.Forms.TextBox textBoxNet1;
         private System.Windows.Forms.Button buttonSaveNet;
+        private System.Windows.Forms.Button buttonGlobalSmart;
     }
 }

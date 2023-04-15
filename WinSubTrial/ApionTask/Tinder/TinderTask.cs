@@ -26,7 +26,7 @@ namespace WinSubTrial
         {
             Adb.SendKey(serial, "KEYCODE_HOME");
             Common.SetStatus(serial, "Open get code API");
-            FillInfoGetCodeAPI(serial, phonenumber, EnumBrandApp.tinder, "net1");
+            FillInfoGetCodeAPI(serial, phonenumber, EnumBrandApp.tinder);
             OpenTinderApp(serial);
             DateTime startTime = DateTime.Now;
             while (true)

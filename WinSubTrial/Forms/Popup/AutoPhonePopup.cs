@@ -37,6 +37,14 @@ namespace WinSubTrial.Forms.Popup
             return net;
         }
 
+        private void buttonSaveNetClick(object sender, EventArgs e)
+        {
+            string net1 = this.textBoxNet1.Text;
+            string net2 = this.textBoxNet2.Text;
+            File.WriteAllText("Data\\Net\\net.txt", net1 + "\n" + net2);
+            setNet();
+        }
+
         private void snapchatButtonTapped(object sender, EventArgs e)
         {
             if (!viewModel.someDevicesSelected()) return;
@@ -189,12 +197,17 @@ namespace WinSubTrial.Forms.Popup
             });
         }
 
-        private void buttonSaveNetClick(object sender, EventArgs e)
+        private void buttonGlobalSmart_Click(object sender, EventArgs e)
         {
-            string net1 = this.textBoxNet1.Text;
-            string net2 = this.textBoxNet2.Text;
-            File.WriteAllText("Data\\Net\\net.txt", net1 + "\n" + net2);
-            setNet();
+            if (!viewModel.someDevicesSelected()) return;
+            viewModel.devicesModel.Where(x => x.isSelected == true).AsParallel().ForAll(device =>
+            {
+                Task.Run(() =>
+                {
+                    viewModel.deviceWaitForStop[device.Serial] = false;
+                    viewModel.GlobalSmartRegister(device.Serial);
+                });
+            });
         }
     }
 }

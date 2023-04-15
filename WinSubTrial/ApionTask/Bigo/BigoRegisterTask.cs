@@ -32,7 +32,7 @@ namespace WinSubTrial
             }
             Adb.SendKey(serial, "KEYCODE_HOME");
             Common.SetStatus(serial, "Open get code API");
-            FillInfoGetCodeAPI(serial, numberphone, EnumBrandApp.bigo, "net1");
+            FillInfoGetCodeAPI(serial, numberphone, EnumBrandApp.bigo);
             OpenBigoApp(serial);
             Common.Sleep(2000);
             DateTime startTime = DateTime.Now;

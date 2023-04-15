@@ -22,11 +22,18 @@ namespace WinSubTrial.ApionTask
               .Select(s => s[_rand.Next(s.Length)]).ToArray());
         }
 
+        //Ấn 1 point
         protected void TapPosition(string serial, Point point)
         {
             point.X += _rand.Next(5, 20);
             point.Y += _rand.Next(5, 20);
             Adb.Shell(serial, $"input tap {point.X} {point.Y}");
+        }
+
+        //Giữ 1 điểm
+        protected void HoldPosition(string serial, Point point)
+        {
+            Adb.Shell(serial, $"input swipe {point.X} {point.Y} {point.X} {point.Y} 2500");
         }
 
         //Vuốt lên
@@ -166,7 +173,7 @@ namespace WinSubTrial.ApionTask
             return TextDump;
         }
         //Điền thông tin ban đầu vào app Get Code Api
-        public void FillInfoGetCodeAPI(string serial, string phonenumber, string brand, string net, string prefix = "")
+        public void FillInfoGetCodeAPI(string serial, string phonenumber, string brand, string net = "net1", string prefix = "")
         {
             string url = "";
             switch (net)
@@ -241,6 +248,9 @@ namespace WinSubTrial.ApionTask
                 case "telegram":
                     Adb.Shell(serial, "pm clear org.telegram.messenger");
                     break;
+                case "globalsmart":
+                    Adb.Shell(serial, "pm clear huupham.global/com.smart.TuyaSplashActivity");
+                    break;
             }
         }
         //Mở app
@@ -272,6 +282,10 @@ namespace WinSubTrial.ApionTask
                 case "telegram":
                     Adb.Shell(serial, "am start -n org.telegram.messenger/.DefaultIcon");
                     break;
+                case "globalsmart":
+                    Adb.Shell(serial, "am start -n huupham.global/com.smart.TuyaSplashActivity");
+                    break;
+
             }
         }
 

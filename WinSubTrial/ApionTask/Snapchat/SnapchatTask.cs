@@ -31,7 +31,7 @@ namespace WinSubTrial
         {
             Adb.SendKey(serial, "KEYCODE_HOME");
             Common.SetStatus(serial, "Open Snapchat");
-            FillInfoGetCodeAPI(serial, phonenumber, EnumBrandApp.snapchat, "net1");
+            FillInfoGetCodeAPI(serial, phonenumber, EnumBrandApp.snapchat);
             OpenSnapchatApp(serial);
             DateTime startTime = DateTime.Now;
             while (true)
@@ -107,14 +107,14 @@ namespace WinSubTrial
                 }
 
                 //Ngày tháng năm sinh
-                if (ContainsIgnoreCase(TextDump, "thg 2"))
+                if (ContainsIgnoreCase(TextDump, "thg"))
                 {
-                    InputDynamic(serial, "thg 2", months[_rand.Next(0, months.Length)]);
+                    InputDynamic(serial, "thg", months[_rand.Next(0, months.Length)]);
                     Common.SetStatus(serial, "Enter birthday");
                     //Common.Sleep(500);
                     DumpUi(serial);
                     //Common.Sleep(500);
-                    InputDynamic(serial, "2005", years[_rand.Next(0, years.Length)]);
+                    //InputDynamic(serial, "2005", years[_rand.Next(0, years.Length)]);
                     //Common.Sleep(500);
                     //DumpUi(serial);
                     if (ContainsIgnoreCase(TextDump, "continue_button"))
