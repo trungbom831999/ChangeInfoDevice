@@ -103,6 +103,7 @@
     <Compile Include="ApionTask\TikTokTask.cs" />
     <Compile Include="ApionTask\TouchPositionTask.cs" />
     <Compile Include="ApionTask\WifiProxyTask.cs" />
+    <Compile Include="ApionTask\Xbank\Xbank.cs" />
     <Compile Include="Data\CaptchaPoint.cs" />
     <Compile Include="Enum\EnumInformation.cs" />
     <Compile Include="ExtensionMain\MainViewModel.cs" />

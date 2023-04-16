@@ -249,7 +249,10 @@ namespace WinSubTrial.ApionTask
                     Adb.Shell(serial, "pm clear org.telegram.messenger");
                     break;
                 case "globalsmart":
-                    Adb.Shell(serial, "pm clear huupham.global/com.smart.TuyaSplashActivity");
+                    Adb.Shell(serial, "pm clear huupham.global");
+                    break;
+                case "xbank":
+                    Adb.Shell(serial, "pm clear com.xbank_rn");
                     break;
             }
         }
@@ -284,6 +287,9 @@ namespace WinSubTrial.ApionTask
                     break;
                 case "globalsmart":
                     Adb.Shell(serial, "am start -n huupham.global/com.smart.TuyaSplashActivity");
+                    break;
+                case "xbank":
+                    Adb.Shell(serial, "am start -n com.xbank_rn/.MainActivity");
                     break;
 
             }
