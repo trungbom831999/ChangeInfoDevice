@@ -107,7 +107,7 @@ namespace WinSubTrial
                 //}
 
 
-                if (ContainsIgnoreCase(TextDump, "abcxyz")){}
+                //if (ContainsIgnoreCase(TextDump, "abcxyz")){}
             }
         }
 
@@ -147,7 +147,7 @@ namespace WinSubTrial
                 case "net1":
                     break;
                 case "net2":
-                    File.AppendAllText("Data\\13-TE2Sucess.txt", phone + "\n");
+                    MyFile.WriteAllText("Data\\13-TE2Sucess.txt", phone, true);
                     break;
             }
         }
@@ -159,7 +159,7 @@ namespace WinSubTrial
                 case "net1":
                     break;
                 case "net2":
-                    File.AppendAllText("Data\\12-TE2IN.txt", phone);
+                    MyFile.WriteAllText("Data\\12-TE2IN.txt", phone, true);
                     break;
             }
         }

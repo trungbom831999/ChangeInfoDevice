@@ -246,7 +246,7 @@ namespace WinSubTrial
                             }
                             else
                             {
-                                File.AppendAllText("Data\\02-SN2Sucess.txt", phonenumber + "\n");
+                                MyFile.WriteAllText("Data\\02-SN2Sucess.txt", phonenumber, true);
                                 return TaskResult.Success;
                             }
                         }

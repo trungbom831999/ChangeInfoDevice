@@ -185,7 +185,7 @@ namespace WinSubTrial
         }
         private void SavePhoneSuccess(string phone)
         {
-            File.AppendAllText("Data\\16-CH1Sucess.txt", phone + "\n");
+            MyFile.WriteAllText("Data\\16-CH1Sucess.txt", phone, true);
         }
 
     }

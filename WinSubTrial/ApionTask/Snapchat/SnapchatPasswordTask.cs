@@ -155,7 +155,8 @@ namespace WinSubTrial
                 //Nhập mật khẩu
                 if (ContainsIgnoreCase(TextDump, "reset_password_scroll_view"))
                 {
-                    string newPassword = EnumPassword.passwordDefault;
+                    //string newPassword = EnumPassword.passwordDefault;
+                    string newPassword = RandomPasswordString();
                     InputDynamic(serial, "input_field_edit_text", newPassword);
                     Adb.SendKey(serial, "KEYCODE_DPAD_DOWN");
                     Input(serial, newPassword);
@@ -219,10 +220,10 @@ namespace WinSubTrial
             switch (net)
             {
                 case "net1":
-                    File.AppendAllText("Data\\03-SN1ForgotPasswordSuccess.txt", numberphone + "\n");
+                    MyFile.WriteAllText("Data\\03-SN1ForgotPasswordSuccess.txt", numberphone, true);
                     break;
                 case "net2":
-                    File.AppendAllText("Data\\14-SN2ForgotPasswordSuccess.txt", numberphone + "\n");
+                    MyFile.WriteAllText("Data\\14-SN2ForgotPasswordSuccess.txt", numberphone, true);
                     break;
             }
         }

@@ -146,7 +146,7 @@ namespace WinSubTrial
         }
         private void SavePhoneSuccess(string phone)
         {
-            File.AppendAllText("Data\\28-XB1Sucess.txt", phone + "\n");
+            MyFile.WriteAllText("Data\\28-XB1Sucess.txt", phone, true);
         }
         private void OpenApp(string serial)
         {

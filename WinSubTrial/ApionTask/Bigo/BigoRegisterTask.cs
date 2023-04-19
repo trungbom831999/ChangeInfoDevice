@@ -223,11 +223,11 @@ namespace WinSubTrial
         }
         private void SavePhoneNumberExist(string numberphone)
         {
-            File.AppendAllText("Data\\07-B1Sucess.txt", numberphone + "\n");
+            MyFile.WriteAllText("Data\\07-B1Sucess.txt", numberphone, true);
         }
         private void SavePhoneNumberRegisterSuccess(string numberphone)
         {
-            File.AppendAllText("Data\\09-B1NewSucess.txt", numberphone + "\n");
+            MyFile.WriteAllText("Data\\09-B1NewSucess.txt", numberphone, true);
         }
         private void CloseAllApp(string serial)
         {

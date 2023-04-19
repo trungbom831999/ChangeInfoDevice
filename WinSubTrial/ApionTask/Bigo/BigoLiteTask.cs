@@ -110,7 +110,7 @@ namespace WinSubTrial
 
         private void SavePhoneSuccess(string phone)
         {
-            File.AppendAllText("Data\\07-B1Sucess.txt", phone + "\n");
+            MyFile.WriteAllText("Data\\07-B1Sucess.txt", phone, true);
         }
 
         private void CloseAllApp(string serial)
