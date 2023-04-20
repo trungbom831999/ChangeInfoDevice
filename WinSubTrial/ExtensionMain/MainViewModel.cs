@@ -1232,6 +1232,32 @@ namespace WinSubTrial
             //Remove changed info
             device.RequestOption = null;
             #endregion RebootFast
+            if (!checkWifiConnect(serial))
+            {
+                RebootDevice(serial, device);
+            }
+        }
+
+        //Check wifi
+        private bool checkWifiConnect(string serial)
+        {
+            Common.Sleep(Rand.Next(5000, 8000));
+            var checkNetworkId = getNetworkId(serial);
+            int i = 0;
+            while (string.IsNullOrEmpty(checkNetworkId) && i<3)
+            {
+                Adb.Shell(serial, "svc wifi disable");
+                Adb.Shell(serial, "svc wifi enable");
+                Common.Sleep(Rand.Next(12000, 15000));
+                checkNetworkId = getNetworkId(serial);
+                i++;
+            }
+            return string.IsNullOrEmpty(checkNetworkId) ? false : true;
+        }
+
+        private string getNetworkId(string serial)
+        {
+            return Adb.Shell(serial, "dumpsys netstats | grep -E 'iface=wlan.*networkId'");
         }
 
         public string UploadImage(string url, Bitmap bmp)

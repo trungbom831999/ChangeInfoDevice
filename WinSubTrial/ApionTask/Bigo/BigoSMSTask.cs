@@ -32,7 +32,7 @@ namespace WinSubTrial
             Adb.SendKey(serial, "KEYCODE_HOME");
             Common.SetStatus(serial, "Open get code API");
             FillInfoGetCodeAPI(serial, numberphone, EnumBrandApp.bigo);
-            OpenBigoApp(serial);
+            OpenApp(serial);
             DateTime startTime = DateTime.Now;
             while (true)
             {
@@ -106,7 +106,7 @@ namespace WinSubTrial
                         GetOTP(serial);
                         Common.SetStatus(serial, "Tapped button get otp");
                         //Quay lại điền
-                        OpenBigoApp(serial);
+                        OpenApp(serial);
                         DumpUi(serial);
                         TapDynamic(serial, "et_pin");
                         InputClipboard(serial);
@@ -165,6 +165,10 @@ namespace WinSubTrial
                 return info[0];
             }
             catch { return null; }
+        }
+        private void OpenApp(string serial)
+        {
+            OpenApp(serial, "bigo");
         }
         private void CloseAllApp(string serial)
         {

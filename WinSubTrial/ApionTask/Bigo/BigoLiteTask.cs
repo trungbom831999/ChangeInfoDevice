@@ -26,7 +26,7 @@ namespace WinSubTrial
         {
             phonenumber = GetRandomBigoLiteNumber();
             Adb.SendKey(serial, "KEYCODE_HOME");
-            OpenBigoLiteApp(serial);
+            OpenApp(serial, "bigolite");
             Common.Sleep(3000);
             while (true)
             {

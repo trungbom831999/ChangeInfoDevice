@@ -188,7 +188,7 @@ namespace WinSubTrial.ApionTask
                     url = EnumNET.NET1;
                     break;
             }
-            OpenGetCodeApi(serial);
+            OpenApp(serial, "getcodeapi");
             Common.Sleep(1000);
             Common.SetStatus(serial, "Open get code API");
             DumpUi(serial);
@@ -213,7 +213,7 @@ namespace WinSubTrial.ApionTask
         public void GetOTP(string serial)
         {
             //lấy OTP
-            OpenGetCodeApi(serial);
+            OpenApp(serial, "getcodeapi");
             DumpUi(serial);
             TapDynamic(serial, "btnGetOtp");
             Common.SetStatus(serial, "Tapped button get otp");
@@ -293,31 +293,6 @@ namespace WinSubTrial.ApionTask
                     break;
 
             }
-        }
-
-        protected void OpenGetCodeApi(string serial)
-        {
-            Adb.Shell(serial, "am start -n com.example.getcodeapi/.MainActivity");
-        }
-
-        protected void OpenTinderApp(string serial)
-        {
-            Adb.Shell(serial, " am start -n com.tinder/.activities.LoginActivity");
-        }
-
-        protected void OpenSnapchatApp(string serial)
-        {
-            Adb.Shell(serial, "am start -n com.snapchat.android/.LandingPageActivity");
-        }
-
-        protected void OpenBigoApp(string serial)
-        {
-            Adb.Shell(serial, "am start -n sg.bigo.live/.home.MainActivity");
-        }
-
-        protected void OpenBigoLiteApp(string serial)
-        {
-            Adb.Shell(serial, "am start -n sg.bigo.live.lite/.ui.main.SplashActivity");
         }
     }
 }

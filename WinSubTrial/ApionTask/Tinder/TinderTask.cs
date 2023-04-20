@@ -27,7 +27,7 @@ namespace WinSubTrial
             Adb.SendKey(serial, "KEYCODE_HOME");
             Common.SetStatus(serial, "Open get code API");
             FillInfoGetCodeAPI(serial, phonenumber, EnumBrandApp.tinder);
-            OpenTinderApp(serial);
+            OpenApp(serial);
             DateTime startTime = DateTime.Now;
             while (true)
             {
@@ -97,7 +97,7 @@ namespace WinSubTrial
                         //Lấy mã OTP
                         GetOTP(serial);
                         //Quay lại Tinder điền OTP
-                        OpenTinderApp(serial);
+                        OpenApp(serial);
                         DumpUi(serial);
                         TapDynamic(serial, "NAF");
                         InputClipboard(serial);
@@ -164,7 +164,10 @@ namespace WinSubTrial
                 //}
             }
         }
-
+        private void OpenApp(string serial)
+        {
+            OpenApp(serial, "tinder");
+        }
         private void CloseAllApp(string serial)
         {
             CloseApp(serial, "tinder");

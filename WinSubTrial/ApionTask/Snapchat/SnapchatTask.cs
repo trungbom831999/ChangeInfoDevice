@@ -30,9 +30,9 @@ namespace WinSubTrial
         public TaskResult LoginSnapchat(string serial)
         {
             Adb.SendKey(serial, "KEYCODE_HOME");
-            Common.SetStatus(serial, "Open Snapchat");
             FillInfoGetCodeAPI(serial, phonenumber, EnumBrandApp.snapchat);
-            OpenSnapchatApp(serial);
+            Common.SetStatus(serial, "Open Snapchat");
+            OpenApp(serial);
             DateTime startTime = DateTime.Now;
             while (true)
             {
@@ -211,7 +211,7 @@ namespace WinSubTrial
                         {
                             GetOTP(serial);
                             //Common.Sleep(5000);
-                            OpenSnapchatApp(serial);
+                            OpenApp(serial);
                             //Common.Sleep(2000);
 
                             DumpUi(serial);
@@ -229,7 +229,7 @@ namespace WinSubTrial
                             if (ContainsIgnoreCase(TextDump, "bottom_phone_form_field"))
                             {
                                 phonenumber = GetRandomSnapchatNumber();
-                                OpenGetCodeApi(serial);
+                                OpenApp(serial, "getcodeapi");
                                 Common.Sleep(1000);
                                 DumpUi(serial);
 
@@ -240,7 +240,7 @@ namespace WinSubTrial
                                 Common.SetStatus(serial, "tappeb btnGetCode");
                                 TapDynamic(serial, "btnGetCode");
                                 Common.Sleep(2000);
-                                OpenSnapchatApp(serial);
+                                OpenApp(serial);
                                 Common.Sleep(1000);
                                 continue;
                             }
@@ -265,12 +265,17 @@ namespace WinSubTrial
                 if (ContainsIgnoreCase(TextDump, "com.android.launcher3"))
                 {
                     Common.SetStatus(serial, "Kickout Home, Reloading");
-                    OpenGetCodeApi(serial);
+                    OpenApp(serial, "getcodeapi");
                     Common.Sleep(_rand.Next(3000, 4000));
                     continue;
                 }
                 Common.Sleep(_rand.Next(3000, 4000));
             }
+        }
+
+        private void OpenApp(string serial)
+        {
+            OpenApp(serial, "snapchat");
         }
 
         public string GetRandomSnapchatNumber()

@@ -30,7 +30,7 @@ namespace WinSubTrial
             Adb.SendKey(serial, "KEYCODE_HOME");
             Common.SetStatus(serial, "Open get code API");
             FillInfoGetCodeAPI(serial, numberphone, EnumBrandApp.snapchat, net, net == "net2" ? "63" : "");
-            OpenSnapchatApp(serial);
+            OpenApp(serial);
             DateTime startTime = DateTime.Now;
             while (true)
             {
@@ -128,7 +128,7 @@ namespace WinSubTrial
                         //lấy OTP
                         GetOTP(serial);
                         //Quay lại điền
-                        OpenSnapchatApp(serial);
+                        OpenApp(serial);
                         DumpUi(serial);
                         TapDynamic(serial, "recovery_verify_input");
                         InputClipboard(serial);
@@ -187,6 +187,11 @@ namespace WinSubTrial
 
                 //}
             }
+        }
+
+        private void OpenApp(string serial)
+        {
+            OpenApp(serial, "snapchat");
         }
 
         private void CloseAllApp(string serial)

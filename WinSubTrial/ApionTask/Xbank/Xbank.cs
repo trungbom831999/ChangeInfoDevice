@@ -128,8 +128,16 @@ namespace WinSubTrial
                     }
                         continue;
                 }
+                
+                //Thông báo update thì tắt
+                if (ContainsIgnoreCase(TextDump, "Not yet") && ContainsIgnoreCase(TextDump, "New version"))
+                {
+                    TapDynamic(serial, "Not yet");
+                    Common.SetStatus(serial, "Tap Not update");
+                    continue;
+                }
 
-                    if (ContainsIgnoreCase(TextDump, "abcxyz")){}
+                //if (ContainsIgnoreCase(TextDump, "abcxyz")){}
 
             }
         }
