@@ -107,9 +107,10 @@ namespace WinSubTrial
                     Common.SetStatus(serial, "Tapped nhập sđt");
                     DumpUi(serial);
                     TapDynamic(serial, "recovery_phone_continue");
+                    Common.Sleep(3000);
                     DumpUi(serial);
                     //if (ContainsIgnoreCase(TextDump, "recovery_phone_error_message") && ContainsIgnoreCase(TextDump, "Vui"))
-                    if (ContainsIgnoreCase(TextDump, "input_field_edit_text") && ContainsIgnoreCase(TextDump, "recovery_phone_continue"))
+                    if (ContainsIgnoreCase(TextDump, "recovery_phone_error_message") && ContainsIgnoreCase(TextDump, "recovery_phone_continue"))
                     {
                         CloseAllApp(serial);
                         return TaskResult.OtpError;
@@ -122,35 +123,24 @@ namespace WinSubTrial
                 if (ContainsIgnoreCase(TextDump, "recovery_verify_input"))
                 {
                     //lấy otp ko đc thì làm lại từ đầu
-                    int countgetdOTP = 1;
-                    while (countgetdOTP > 0)
-                    {
-                        //lấy OTP
-                        GetOTP(serial);
-                        //Quay lại điền
-                        OpenApp(serial);
-                        DumpUi(serial);
-                        TapDynamic(serial, "recovery_verify_input");
-                        InputClipboard(serial);
-                        Common.SetStatus(serial, "Input OTP");
-                        Common.Sleep(3000);
-                        DumpUi(serial);
+                    //lấy OTP
+                    GetOTP(serial);
+                    //Quay lại điền
+                    OpenApp(serial);
+                    DumpUi(serial);
+                    TapDynamic(serial, "recovery_verify_input");
+                    InputClipboard(serial);
+                    Common.SetStatus(serial, "Input OTP");
+                    Common.Sleep(3500);
+                    DumpUi(serial);
 
-                        //nếu sang màn nhập mk thì thoát vòng lặp
-                        if (ContainsIgnoreCase(TextDump, "reset_password_scroll_view"))
-                        {
-                            break;
-                        }
-                        countgetdOTP--;
-                        if (countgetdOTP <= 0)
-                        {
-                            CloseAllApp(serial);
-                            return TaskResult.Failure;
-                        }
-                        continue;
+                    if (ContainsIgnoreCase(TextDump, "recovery_verify_input"))
+                    {
+                        CloseAllApp(serial);
+                        return TaskResult.Failure;
                     }
-                    
-                }
+                    continue;
+                    }
 
                 //Nhập mật khẩu
                 if (ContainsIgnoreCase(TextDump, "reset_password_scroll_view"))

@@ -1241,17 +1241,27 @@ namespace WinSubTrial
         //Check wifi
         private bool checkWifiConnect(string serial)
         {
-            Common.Sleep(Rand.Next(5000, 8000));
+            Common.Sleep(Rand.Next(8000, 10000));
             var checkNetworkId = getNetworkId(serial);
-            int i = 0;
-            while (string.IsNullOrEmpty(checkNetworkId) && i<3)
+            if (string.IsNullOrEmpty(checkNetworkId))
             {
-                Adb.Shell(serial, "svc wifi disable");
-                Adb.Shell(serial, "svc wifi enable");
-                Common.Sleep(Rand.Next(12000, 15000));
+                Adb.Shell(serial, "am start -a android.settings.WIRELESS_SETTINGS");
+                Common.Sleep(2000);
+                Adb.Shell(serial, $"input tap 300 400");
+                Common.Sleep(5500);
+                Adb.Shell(serial, $"input tap 300 600");
+                Common.Sleep(Rand.Next(10000, 12000));
                 checkNetworkId = getNetworkId(serial);
-                i++;
             }
+            //int i = 0;
+            //while (string.IsNullOrEmpty(checkNetworkId) && i<3)
+            //{
+            //    Adb.Shell(serial, "svc wifi disable");
+            //    Adb.Shell(serial, "svc wifi enable");
+            //    Common.Sleep(Rand.Next(12000, 15000));
+            //    checkNetworkId = getNetworkId(serial);
+            //    i++;
+            //}
             return string.IsNullOrEmpty(checkNetworkId) ? false : true;
         }
 
