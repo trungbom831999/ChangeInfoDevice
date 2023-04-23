@@ -154,7 +154,12 @@ namespace WinSubTrial
                     TapDynamic(serial, "reset_password_continue");
                     Common.Sleep(3000);
                     DumpUi(serial);
-                    if (ContainsIgnoreCase(TextDump, "forgot_password_button"))
+                    if(ContainsIgnoreCase(TextDump, "result_text"))
+                    {
+                        CloseAllApp(serial);
+                        return TaskResult.Failure;
+                    }
+                    else if (ContainsIgnoreCase(TextDump, "forgot_password_button"))
                     {
                         SavePhoneSuccess(numberphone, net);
                         CloseAllApp(serial);
