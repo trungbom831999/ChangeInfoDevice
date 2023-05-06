@@ -77,7 +77,7 @@ namespace WinSubTrial
             }
         }
 
-
+        public static List<string> WipePackages;
 
         public static void LoadInfo()
         {
@@ -110,6 +110,11 @@ namespace WinSubTrial
         {
             string[] temp = MyFile.ReadAllLines("Data\\WipePackages.txt");
             FullWipePackages = temp.ToList();
+            if (temp.Length < 1)
+            {
+                temp = DefaultWipePackages;
+            }
+            WipePackages = temp.ToList();
         }
 
         public static void LoadGlobalSettings(bool notify = true)
@@ -160,18 +165,21 @@ namespace WinSubTrial
             FileInfo fileInfo;
             foreach (string folder in folders)
             {
-                foreach(string file in Directory.GetFiles(folder))
+                foreach (string file in Directory.GetFiles(folder))
                 {
-                    backupData = new BackupData 
+                    if (file.Contains(".wbk"))
                     {
-                        Folder = folder.Substring(folder.LastIndexOf("\\") + 1),
-                        Name = Path.GetFileName(file)
-                    };
-                    fileInfo = new FileInfo(file);
-                    backupData.Date = fileInfo.CreationTime.ToString("dd:MM HH:mm");
-                    backupData.Size = Math.Round((double)fileInfo.Length / 1048576).ToString();
+                        backupData = new BackupData
+                        {
+                            Folder = folder.Substring(folder.LastIndexOf("\\") + 1),
+                            Name = Path.GetFileName(file)
+                        };
+                        fileInfo = new FileInfo(file);
+                        backupData.Date = fileInfo.CreationTime.ToString("dd:MM HH:mm");
+                        backupData.Size = Math.Round((double)fileInfo.Length / 1048576).ToString();
 
-                    ListBackups.Add(backupData);
+                        ListBackups.Add(backupData);
+                    }
                 }
             }
         }

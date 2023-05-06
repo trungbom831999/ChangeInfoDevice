@@ -227,7 +227,7 @@ namespace WinSubTrial
             Shell(serial, $"pm install -r {apkPath}");
         }
 
-        public static string RunCmd(string serial, string cmdCommand, int timeout = 900)
+        public static string RunCmd(string serial, string cmdCommand, int timeout = 15)
         {
             Common.Log(cmdCommand);
             string result;

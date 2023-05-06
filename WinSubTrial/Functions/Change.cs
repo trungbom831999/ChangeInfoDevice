@@ -50,11 +50,8 @@ namespace WinSubTrial.Functions
 
         public void WipeApps()
         {
-            foreach (string pack in Common.FullWipePackages)
-            {
-                Adb.UninstallApp(device.Serial, pack);
-            }
-            string wipePackages = "pm clear " + string.Join(";pm clear ", Common.DefaultWipePackages);
+            Common.SetStatus(device.Serial, "Wiping...");
+            string wipePackages = "pm clear " + string.Join(";pm clear ", Common.WipePackages);
             Adb.Shell(device.Serial, wipePackages.TrimStart(';'));
         }
 

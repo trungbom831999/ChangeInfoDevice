@@ -29,11 +29,11 @@ namespace WinSubTrial
         private void btnBackup_Click(object sender, EventArgs e)
         {
             SaveDir = cboFolder.Text;
-            if(!Regex.IsMatch(SaveDir, "^\\[a-zA-Z0-9]+]$"))
-            {
-                Common.Info("Định dạng folder không đúng. VD chuẩn: \\NewBackup123");
-                return;
-            }
+            // if(!Regex.IsMatch(SaveDir, "^\\[a-zA-Z0-9]+]$"))
+            // {
+            //    Common.Info("Định dạng folder không đúng. VD chuẩn: \\NewBackup123");
+            //    return;
+            // }
             if (!Directory.Exists($@"C:\WINALL\winbackup{SaveDir}"))
             {
                 Directory.CreateDirectory($@"C:\WINALL\winbackup{SaveDir}");

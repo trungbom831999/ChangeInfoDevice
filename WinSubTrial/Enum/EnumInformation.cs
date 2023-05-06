@@ -10,7 +10,7 @@ namespace WinSubTrial.Enum
     {
         public static string NET1 = "";
         public static string NET2 = "";
-        //public static string NET1 = "103.189.202.180";
+        //public static string NET1 = "103.167.91.190";
         //public static string NET2 = "103.226.248.208:805";
     }
 
@@ -30,4 +30,8 @@ namespace WinSubTrial.Enum
     {
         public static string passwordDefault = "Zxcv123123";
     }
+
+    static class EnumWinAllFolder {
+        public static string disk = "C:\\";
+        }
 }

@@ -146,6 +146,8 @@ namespace WinSubTrial
         #region Backup span
         private void btnBackup_Click(object sender, EventArgs e)
         {
+            string bk_packages = Common.Settings.AppBackup;
+
             if (!viewModel.selectedOneDevice()) return;
             string serial = serial = viewModel.devicesModel.FirstOrDefault(x => x.isSelected == true).Serial;
 
@@ -171,7 +173,9 @@ namespace WinSubTrial
             {
                 Device device = viewModel.devicesModel.FirstOrDefault(x => x.Serial.Equals(serial));
                 Common.SetStatus(device.Serial, "Backuping...");
-                Common.SetStatus(device.Serial, "Backup " + (new Functions.Backup { device = device }.Save(saveDir) ? "done" : "fail"));
+                Common.SetStatus(device.Serial, "Backup " + (new Functions.Backup { device = device }.Save(saveDir, bk_packages) ? "done" : "fail"));
+                //SaveGGSystem
+                //SaveApp
             }))
             { IsBackground = true };
             viewModel.deviceThreads[serial] = thread;
@@ -180,6 +184,7 @@ namespace WinSubTrial
 
         private void btnBackupChange_Click(object sender, EventArgs e)
         {
+            string bk_packages = Common.Settings.AppBackup;
             if (!viewModel.selectedOneDevice()) return;
             string serial = serial = viewModel.devicesModel.FirstOrDefault(x => x.isSelected == true).Serial;
             if (viewModel.IsDeviceInTask(serial))
@@ -187,8 +192,8 @@ namespace WinSubTrial
                 Common.SetStatus(serial, "Please wait current task completed");
                 return;
             }
-            Thread thread = new Thread(new ThreadStart(() =>
-            {
+
+            Thread thread = new Thread(new ThreadStart(() => {
                 Device device = viewModel.devicesModel.FirstOrDefault(x => x.Serial.Equals(serial));
                 if (device.RequestOption == null)
                 {
@@ -209,10 +214,16 @@ namespace WinSubTrial
 
                     saveDir = @"C:\WINALL\WinBackup" + saveDir;
                 }
+
+                //SaveGGSystem
+                //SaveApp
+
                 Common.SetStatus(device.Serial, "Saving backup...");
-                new Functions.Backup { device = device }.Save(saveDir);
+                new Functions.Backup { device = device }.Save(saveDir, bk_packages);
+
                 Common.SetStatus(device.Serial, "Saving info...");
                 new Change { device = device }.SaveInfo();
+
                 Common.SetStatus(device.Serial, "Backup & Change done");
 
                 //Remove changed info
@@ -264,7 +275,7 @@ namespace WinSubTrial
             switch (e.ColumnIndex)
             {
                 case 6:
-                    
+
                     string serial = viewModel.devicesModel.FirstOrDefault(x => x.isSelected == true).Serial;
                     if (viewModel.IsDeviceInTask(serial))
                     {
@@ -276,9 +287,10 @@ namespace WinSubTrial
                     {
                         try
                         {
+                            string bk_packages = Common.Settings.AppBackup;
                             row.Cells[5].Value = "Restoring...";
                             Device device = viewModel.devicesModel.First(x => x.Serial.Equals(serial));
-                            bool ok = new Functions.Backup { device = device }.Restore($@"C:\WINALL\winbackup\{file.Folder}\{file.Name}");
+                            bool ok = new Functions.Backup { device = device }.Restore($@"C:\WINALL\winbackup\{file.Folder}\{file.Name}", bk_packages);
                             row.Cells[5].Value = "Restore " + (ok ? "done" : "fail");
                         }
                         catch (Exception ex)

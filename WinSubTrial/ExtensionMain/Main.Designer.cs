@@ -169,7 +169,8 @@ namespace WinSubTrial
             this.netAppConfigurationToolStripMenuItem});
             this.mnuTop.Location = new System.Drawing.Point(0, 0);
             this.mnuTop.Name = "mnuTop";
-            this.mnuTop.Size = new System.Drawing.Size(1311, 28);
+            this.mnuTop.Padding = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.mnuTop.Size = new System.Drawing.Size(983, 24);
             this.mnuTop.TabIndex = 0;
             this.mnuTop.Text = "menuStrip1";
             // 
@@ -181,34 +182,34 @@ namespace WinSubTrial
             this.saveSettingsToolStripMenuItem,
             this.loadSettingsToolStripMenuItem});
             this.toolToolStripMenuItem.Name = "toolToolStripMenuItem";
-            this.toolToolStripMenuItem.Size = new System.Drawing.Size(52, 24);
+            this.toolToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.toolToolStripMenuItem.Text = "Tool";
             // 
             // configurationToolStripMenuItem
             // 
             this.configurationToolStripMenuItem.Name = "configurationToolStripMenuItem";
-            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
+            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.configurationToolStripMenuItem.Text = "Configuration";
             this.configurationToolStripMenuItem.Click += new System.EventHandler(this.configurationToolStripMenuItem_Click);
             // 
             // checkFileBackupToolStripMenuItem
             // 
             this.checkFileBackupToolStripMenuItem.Name = "checkFileBackupToolStripMenuItem";
-            this.checkFileBackupToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
+            this.checkFileBackupToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.checkFileBackupToolStripMenuItem.Text = "Check File Backup";
             this.checkFileBackupToolStripMenuItem.Click += new System.EventHandler(this.checkFileBackupToolStripMenuItem_Click);
             // 
             // saveSettingsToolStripMenuItem
             // 
             this.saveSettingsToolStripMenuItem.Name = "saveSettingsToolStripMenuItem";
-            this.saveSettingsToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
+            this.saveSettingsToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.saveSettingsToolStripMenuItem.Text = "Save Settings";
             this.saveSettingsToolStripMenuItem.Click += new System.EventHandler(this.saveSettingsToolStripMenuItem_Click);
             // 
             // loadSettingsToolStripMenuItem
             // 
             this.loadSettingsToolStripMenuItem.Name = "loadSettingsToolStripMenuItem";
-            this.loadSettingsToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
+            this.loadSettingsToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.loadSettingsToolStripMenuItem.Text = "Load Settings";
             this.loadSettingsToolStripMenuItem.Click += new System.EventHandler(this.loadSettingsToolStripMenuItem_Click);
             // 
@@ -219,27 +220,27 @@ namespace WinSubTrial
             this.installPackagesToolStripMenuItem,
             this.systemPackagesToolStripMenuItem});
             this.packageManagerToolStripMenuItem.Name = "packageManagerToolStripMenuItem";
-            this.packageManagerToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
+            this.packageManagerToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
             this.packageManagerToolStripMenuItem.Text = "PackageManager";
             // 
             // wipePackagesToolStripMenuItem
             // 
             this.wipePackagesToolStripMenuItem.Name = "wipePackagesToolStripMenuItem";
-            this.wipePackagesToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.wipePackagesToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.wipePackagesToolStripMenuItem.Text = "Wipe Packages";
             this.wipePackagesToolStripMenuItem.Click += new System.EventHandler(this.wipePackagesToolStripMenuItem_Click);
             // 
             // installPackagesToolStripMenuItem
             // 
             this.installPackagesToolStripMenuItem.Name = "installPackagesToolStripMenuItem";
-            this.installPackagesToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.installPackagesToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.installPackagesToolStripMenuItem.Text = "Installed Packages";
             this.installPackagesToolStripMenuItem.Click += new System.EventHandler(this.installPackagesToolStripMenuItem_Click);
             // 
             // systemPackagesToolStripMenuItem
             // 
             this.systemPackagesToolStripMenuItem.Name = "systemPackagesToolStripMenuItem";
-            this.systemPackagesToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.systemPackagesToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.systemPackagesToolStripMenuItem.Text = "System Packages";
             this.systemPackagesToolStripMenuItem.Click += new System.EventHandler(this.systemPackagesToolStripMenuItem_Click);
             // 
@@ -248,14 +249,14 @@ namespace WinSubTrial
             this.netAppConfigurationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.netAppToolStripMenuItem});
             this.netAppConfigurationToolStripMenuItem.Name = "netAppConfigurationToolStripMenuItem";
-            this.netAppConfigurationToolStripMenuItem.Size = new System.Drawing.Size(174, 24);
+            this.netAppConfigurationToolStripMenuItem.Size = new System.Drawing.Size(140, 20);
             this.netAppConfigurationToolStripMenuItem.Text = "Net App Configuration";
             this.netAppConfigurationToolStripMenuItem.Visible = false;
             // 
             // netAppToolStripMenuItem
             // 
             this.netAppToolStripMenuItem.Name = "netAppToolStripMenuItem";
-            this.netAppToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
+            this.netAppToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.netAppToolStripMenuItem.Text = "Net App";
             // 
             // tabControl1
@@ -268,12 +269,12 @@ namespace WinSubTrial
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabControl1.ItemSize = new System.Drawing.Size(50, 56);
-            this.tabControl1.Location = new System.Drawing.Point(0, 28);
+            this.tabControl1.Location = new System.Drawing.Point(0, 24);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1311, 957);
+            this.tabControl1.Size = new System.Drawing.Size(983, 776);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 2;
             this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
@@ -327,10 +328,9 @@ namespace WinSubTrial
             this.tabPageChange.Controls.Add(this.label1);
             this.tabPageChange.Controls.Add(this.dgvDevice);
             this.tabPageChange.Location = new System.Drawing.Point(60, 4);
-            this.tabPageChange.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageChange.Name = "tabPageChange";
-            this.tabPageChange.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageChange.Size = new System.Drawing.Size(1247, 949);
+            this.tabPageChange.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageChange.Size = new System.Drawing.Size(919, 768);
             this.tabPageChange.TabIndex = 0;
             this.tabPageChange.Text = "Main";
             this.tabPageChange.UseVisualStyleBackColor = true;
@@ -339,9 +339,10 @@ namespace WinSubTrial
             // 
             this.buttonAutoPopup.BackColor = System.Drawing.Color.Aquamarine;
             this.buttonAutoPopup.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonAutoPopup.Location = new System.Drawing.Point(1094, 578);
+            this.buttonAutoPopup.Location = new System.Drawing.Point(820, 470);
+            this.buttonAutoPopup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAutoPopup.Name = "buttonAutoPopup";
-            this.buttonAutoPopup.Size = new System.Drawing.Size(120, 28);
+            this.buttonAutoPopup.Size = new System.Drawing.Size(90, 23);
             this.buttonAutoPopup.TabIndex = 69;
             this.buttonAutoPopup.Text = "Auto Mobile";
             this.buttonAutoPopup.UseVisualStyleBackColor = false;
@@ -349,10 +350,9 @@ namespace WinSubTrial
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(472, 839);
-            this.button10.Margin = new System.Windows.Forms.Padding(4);
+            this.button10.Location = new System.Drawing.Point(354, 682);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(184, 28);
+            this.button10.Size = new System.Drawing.Size(138, 23);
             this.button10.TabIndex = 59;
             this.button10.Text = "Tiktok script";
             this.button10.UseVisualStyleBackColor = true;
@@ -360,10 +360,9 @@ namespace WinSubTrial
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(280, 839);
-            this.button9.Margin = new System.Windows.Forms.Padding(4);
+            this.button9.Location = new System.Drawing.Point(210, 682);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(184, 28);
+            this.button9.Size = new System.Drawing.Size(138, 23);
             this.button9.TabIndex = 58;
             this.button9.Text = "Subscribe youtube";
             this.button9.UseVisualStyleBackColor = true;
@@ -371,10 +370,9 @@ namespace WinSubTrial
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(88, 839);
-            this.button8.Margin = new System.Windows.Forms.Padding(4);
+            this.button8.Location = new System.Drawing.Point(66, 682);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(184, 28);
+            this.button8.Size = new System.Drawing.Size(138, 23);
             this.button8.TabIndex = 57;
             this.button8.Text = "Auto click tac";
             this.button8.UseVisualStyleBackColor = true;
@@ -382,10 +380,9 @@ namespace WinSubTrial
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(472, 624);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Location = new System.Drawing.Point(354, 507);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(184, 28);
+            this.button7.Size = new System.Drawing.Size(138, 23);
             this.button7.TabIndex = 56;
             this.button7.Text = "Manual proxy On";
             this.button7.UseVisualStyleBackColor = true;
@@ -393,10 +390,9 @@ namespace WinSubTrial
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(280, 802);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Location = new System.Drawing.Point(210, 652);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(184, 28);
+            this.button6.Size = new System.Drawing.Size(138, 23);
             this.button6.TabIndex = 55;
             this.button6.Text = "Airplane Mode";
             this.button6.UseVisualStyleBackColor = true;
@@ -404,10 +400,9 @@ namespace WinSubTrial
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(472, 804);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Location = new System.Drawing.Point(354, 653);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(184, 28);
+            this.button3.Size = new System.Drawing.Size(138, 23);
             this.button3.TabIndex = 54;
             this.button3.Text = "Power off all";
             this.button3.UseVisualStyleBackColor = true;
@@ -415,10 +410,9 @@ namespace WinSubTrial
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(280, 731);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(210, 594);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 28);
+            this.button1.Size = new System.Drawing.Size(138, 23);
             this.button1.TabIndex = 53;
             this.button1.Text = "Run";
             this.button1.UseVisualStyleBackColor = true;
@@ -426,10 +420,9 @@ namespace WinSubTrial
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(472, 767);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Location = new System.Drawing.Point(354, 623);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(184, 28);
+            this.button5.Size = new System.Drawing.Size(138, 23);
             this.button5.TabIndex = 50;
             this.button5.Text = "Reboot all";
             this.button5.UseVisualStyleBackColor = true;
@@ -437,10 +430,9 @@ namespace WinSubTrial
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(280, 767);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Location = new System.Drawing.Point(210, 623);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(184, 28);
+            this.button4.Size = new System.Drawing.Size(138, 23);
             this.button4.TabIndex = 49;
             this.button4.Text = "Run last all";
             this.button4.UseVisualStyleBackColor = true;
@@ -448,10 +440,9 @@ namespace WinSubTrial
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(472, 731);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(354, 594);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(184, 28);
+            this.button2.Size = new System.Drawing.Size(138, 23);
             this.button2.TabIndex = 47;
             this.button2.Text = "Create mail";
             this.button2.UseVisualStyleBackColor = true;
@@ -460,10 +451,9 @@ namespace WinSubTrial
             // chkSelectAll
             // 
             this.chkSelectAll.AutoSize = true;
-            this.chkSelectAll.Location = new System.Drawing.Point(24, 17);
-            this.chkSelectAll.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSelectAll.Location = new System.Drawing.Point(18, 14);
             this.chkSelectAll.Name = "chkSelectAll";
-            this.chkSelectAll.Size = new System.Drawing.Size(18, 17);
+            this.chkSelectAll.Size = new System.Drawing.Size(15, 14);
             this.chkSelectAll.TabIndex = 44;
             this.chkSelectAll.UseVisualStyleBackColor = true;
             this.chkSelectAll.CheckedChanged += new System.EventHandler(this.chkSelectAll_CheckedChanged);
@@ -473,19 +463,17 @@ namespace WinSubTrial
             this.cboBackupFiles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBackupFiles.DropDownWidth = 186;
             this.cboBackupFiles.FormattingEnabled = true;
-            this.cboBackupFiles.Location = new System.Drawing.Point(800, 801);
-            this.cboBackupFiles.Margin = new System.Windows.Forms.Padding(4);
+            this.cboBackupFiles.Location = new System.Drawing.Point(517, 546);
             this.cboBackupFiles.Name = "cboBackupFiles";
-            this.cboBackupFiles.Size = new System.Drawing.Size(264, 24);
+            this.cboBackupFiles.Size = new System.Drawing.Size(281, 21);
             this.cboBackupFiles.TabIndex = 42;
             this.cboBackupFiles.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cboBackupFiles_MouseClick);
             // 
             // txtSearchBackup
             // 
-            this.txtSearchBackup.Location = new System.Drawing.Point(689, 802);
-            this.txtSearchBackup.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearchBackup.Location = new System.Drawing.Point(517, 684);
             this.txtSearchBackup.Name = "txtSearchBackup";
-            this.txtSearchBackup.Size = new System.Drawing.Size(99, 22);
+            this.txtSearchBackup.Size = new System.Drawing.Size(138, 20);
             this.txtSearchBackup.TabIndex = 41;
             this.txtSearchBackup.Text = "Search";
             this.txtSearchBackup.Enter += new System.EventHandler(this.txtSearchBackup_Enter);
@@ -493,10 +481,9 @@ namespace WinSubTrial
             // 
             // btnRestore
             // 
-            this.btnRestore.Location = new System.Drawing.Point(949, 759);
-            this.btnRestore.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRestore.Location = new System.Drawing.Point(820, 544);
             this.btnRestore.Name = "btnRestore";
-            this.btnRestore.Size = new System.Drawing.Size(116, 28);
+            this.btnRestore.Size = new System.Drawing.Size(90, 23);
             this.btnRestore.TabIndex = 39;
             this.btnRestore.Text = "Restore";
             this.btnRestore.UseVisualStyleBackColor = true;
@@ -504,10 +491,9 @@ namespace WinSubTrial
             // 
             // btnRunScript
             // 
-            this.btnRunScript.Location = new System.Drawing.Point(813, 759);
-            this.btnRunScript.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRunScript.Location = new System.Drawing.Point(661, 652);
             this.btnRunScript.Name = "btnRunScript";
-            this.btnRunScript.Size = new System.Drawing.Size(128, 28);
+            this.btnRunScript.Size = new System.Drawing.Size(138, 23);
             this.btnRunScript.TabIndex = 38;
             this.btnRunScript.Text = "Run Script";
             this.btnRunScript.UseVisualStyleBackColor = true;
@@ -516,10 +502,9 @@ namespace WinSubTrial
             // btnCreateScript
             // 
             this.btnCreateScript.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnCreateScript.Location = new System.Drawing.Point(689, 759);
-            this.btnCreateScript.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCreateScript.Location = new System.Drawing.Point(517, 652);
             this.btnCreateScript.Name = "btnCreateScript";
-            this.btnCreateScript.Size = new System.Drawing.Size(120, 28);
+            this.btnCreateScript.Size = new System.Drawing.Size(137, 23);
             this.btnCreateScript.TabIndex = 36;
             this.btnCreateScript.Text = "Create Script";
             this.btnCreateScript.UseVisualStyleBackColor = true;
@@ -527,10 +512,9 @@ namespace WinSubTrial
             // 
             // btnHomeAll
             // 
-            this.btnHomeAll.Location = new System.Drawing.Point(881, 714);
-            this.btnHomeAll.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHomeAll.Location = new System.Drawing.Point(661, 623);
             this.btnHomeAll.Name = "btnHomeAll";
-            this.btnHomeAll.Size = new System.Drawing.Size(184, 28);
+            this.btnHomeAll.Size = new System.Drawing.Size(138, 23);
             this.btnHomeAll.TabIndex = 35;
             this.btnHomeAll.Text = "Home Screen All";
             this.btnHomeAll.UseVisualStyleBackColor = true;
@@ -538,10 +522,9 @@ namespace WinSubTrial
             // 
             // btnWipeMailAll
             // 
-            this.btnWipeMailAll.Location = new System.Drawing.Point(881, 668);
-            this.btnWipeMailAll.Margin = new System.Windows.Forms.Padding(4);
+            this.btnWipeMailAll.Location = new System.Drawing.Point(660, 594);
             this.btnWipeMailAll.Name = "btnWipeMailAll";
-            this.btnWipeMailAll.Size = new System.Drawing.Size(184, 28);
+            this.btnWipeMailAll.Size = new System.Drawing.Size(138, 23);
             this.btnWipeMailAll.TabIndex = 34;
             this.btnWipeMailAll.Text = "Wipe Mail All";
             this.btnWipeMailAll.UseVisualStyleBackColor = true;
@@ -549,10 +532,9 @@ namespace WinSubTrial
             // 
             // btnOffProxyAll
             // 
-            this.btnOffProxyAll.Location = new System.Drawing.Point(689, 714);
-            this.btnOffProxyAll.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOffProxyAll.Location = new System.Drawing.Point(516, 623);
             this.btnOffProxyAll.Name = "btnOffProxyAll";
-            this.btnOffProxyAll.Size = new System.Drawing.Size(184, 28);
+            this.btnOffProxyAll.Size = new System.Drawing.Size(138, 23);
             this.btnOffProxyAll.TabIndex = 33;
             this.btnOffProxyAll.Text = "Off Proxy All";
             this.btnOffProxyAll.UseVisualStyleBackColor = true;
@@ -561,10 +543,9 @@ namespace WinSubTrial
             // btnWipePackageAll
             // 
             this.btnWipePackageAll.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnWipePackageAll.Location = new System.Drawing.Point(689, 668);
-            this.btnWipePackageAll.Margin = new System.Windows.Forms.Padding(4);
+            this.btnWipePackageAll.Location = new System.Drawing.Point(516, 594);
             this.btnWipePackageAll.Name = "btnWipePackageAll";
-            this.btnWipePackageAll.Size = new System.Drawing.Size(184, 28);
+            this.btnWipePackageAll.Size = new System.Drawing.Size(138, 23);
             this.btnWipePackageAll.TabIndex = 32;
             this.btnWipePackageAll.Text = "Wipe Packages All";
             this.btnWipePackageAll.UseVisualStyleBackColor = true;
@@ -572,10 +553,9 @@ namespace WinSubTrial
             // 
             // btnBackupChange
             // 
-            this.btnBackupChange.Location = new System.Drawing.Point(880, 624);
-            this.btnBackupChange.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBackupChange.Location = new System.Drawing.Point(660, 507);
             this.btnBackupChange.Name = "btnBackupChange";
-            this.btnBackupChange.Size = new System.Drawing.Size(184, 28);
+            this.btnBackupChange.Size = new System.Drawing.Size(138, 23);
             this.btnBackupChange.TabIndex = 30;
             this.btnBackupChange.Text = "Backup && Change";
             this.btnBackupChange.UseVisualStyleBackColor = true;
@@ -584,10 +564,9 @@ namespace WinSubTrial
             // btnBackup
             // 
             this.btnBackup.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnBackup.Location = new System.Drawing.Point(689, 624);
-            this.btnBackup.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBackup.Location = new System.Drawing.Point(517, 507);
             this.btnBackup.Name = "btnBackup";
-            this.btnBackup.Size = new System.Drawing.Size(184, 28);
+            this.btnBackup.Size = new System.Drawing.Size(138, 23);
             this.btnBackup.TabIndex = 28;
             this.btnBackup.Text = "Backup";
             this.btnBackup.UseVisualStyleBackColor = true;
@@ -595,10 +574,9 @@ namespace WinSubTrial
             // 
             // btnSaveInfoAll
             // 
-            this.btnSaveInfoAll.Location = new System.Drawing.Point(881, 578);
-            this.btnSaveInfoAll.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSaveInfoAll.Location = new System.Drawing.Point(661, 470);
             this.btnSaveInfoAll.Name = "btnSaveInfoAll";
-            this.btnSaveInfoAll.Size = new System.Drawing.Size(184, 28);
+            this.btnSaveInfoAll.Size = new System.Drawing.Size(138, 23);
             this.btnSaveInfoAll.TabIndex = 27;
             this.btnSaveInfoAll.Text = "Save Info All";
             this.btnSaveInfoAll.UseVisualStyleBackColor = true;
@@ -606,10 +584,9 @@ namespace WinSubTrial
             // 
             // btnRandomInfoAll
             // 
-            this.btnRandomInfoAll.Location = new System.Drawing.Point(689, 578);
-            this.btnRandomInfoAll.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRandomInfoAll.Location = new System.Drawing.Point(517, 470);
             this.btnRandomInfoAll.Name = "btnRandomInfoAll";
-            this.btnRandomInfoAll.Size = new System.Drawing.Size(184, 28);
+            this.btnRandomInfoAll.Size = new System.Drawing.Size(138, 23);
             this.btnRandomInfoAll.TabIndex = 25;
             this.btnRandomInfoAll.Text = "Random Info All";
             this.btnRandomInfoAll.UseVisualStyleBackColor = true;
@@ -618,49 +595,44 @@ namespace WinSubTrial
             // lblReportChange
             // 
             this.lblReportChange.AutoSize = true;
-            this.lblReportChange.Location = new System.Drawing.Point(387, 690);
-            this.lblReportChange.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblReportChange.Location = new System.Drawing.Point(290, 561);
             this.lblReportChange.Name = "lblReportChange";
-            this.lblReportChange.Size = new System.Drawing.Size(23, 16);
+            this.lblReportChange.Size = new System.Drawing.Size(24, 13);
             this.lblReportChange.TabIndex = 23;
             this.lblReportChange.Text = "../..";
             // 
             // lblDevicesCount
             // 
             this.lblDevicesCount.AutoSize = true;
-            this.lblDevicesCount.Location = new System.Drawing.Point(387, 663);
-            this.lblDevicesCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDevicesCount.Location = new System.Drawing.Point(290, 539);
             this.lblDevicesCount.Name = "lblDevicesCount";
-            this.lblDevicesCount.Size = new System.Drawing.Size(14, 16);
+            this.lblDevicesCount.Size = new System.Drawing.Size(13, 13);
             this.lblDevicesCount.TabIndex = 22;
             this.lblDevicesCount.Text = "0";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(276, 690);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(207, 561);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 16);
+            this.label8.Size = new System.Drawing.Size(82, 13);
             this.label8.TabIndex = 21;
             this.label8.Text = "Report Change:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(276, 663);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(207, 539);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 16);
+            this.label7.Size = new System.Drawing.Size(79, 13);
             this.label7.TabIndex = 20;
             this.label7.Text = "Devices count:";
             // 
             // btnLoginGmailAll
             // 
-            this.btnLoginGmailAll.Location = new System.Drawing.Point(280, 624);
-            this.btnLoginGmailAll.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLoginGmailAll.Location = new System.Drawing.Point(210, 507);
             this.btnLoginGmailAll.Name = "btnLoginGmailAll";
-            this.btnLoginGmailAll.Size = new System.Drawing.Size(184, 28);
+            this.btnLoginGmailAll.Size = new System.Drawing.Size(138, 23);
             this.btnLoginGmailAll.TabIndex = 19;
             this.btnLoginGmailAll.Text = "Login Gmail All";
             this.btnLoginGmailAll.UseVisualStyleBackColor = true;
@@ -668,10 +640,9 @@ namespace WinSubTrial
             // 
             // btnGoPaymentMethod
             // 
-            this.btnGoPaymentMethod.Location = new System.Drawing.Point(472, 578);
-            this.btnGoPaymentMethod.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGoPaymentMethod.Location = new System.Drawing.Point(354, 470);
             this.btnGoPaymentMethod.Name = "btnGoPaymentMethod";
-            this.btnGoPaymentMethod.Size = new System.Drawing.Size(184, 28);
+            this.btnGoPaymentMethod.Size = new System.Drawing.Size(138, 23);
             this.btnGoPaymentMethod.TabIndex = 18;
             this.btnGoPaymentMethod.Text = "Open Payments Method";
             this.btnGoPaymentMethod.UseVisualStyleBackColor = true;
@@ -680,10 +651,9 @@ namespace WinSubTrial
             // btnResetDPI
             // 
             this.btnResetDPI.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnResetDPI.Location = new System.Drawing.Point(280, 578);
-            this.btnResetDPI.Margin = new System.Windows.Forms.Padding(4);
+            this.btnResetDPI.Location = new System.Drawing.Point(210, 470);
             this.btnResetDPI.Name = "btnResetDPI";
-            this.btnResetDPI.Size = new System.Drawing.Size(184, 28);
+            this.btnResetDPI.Size = new System.Drawing.Size(138, 23);
             this.btnResetDPI.TabIndex = 16;
             this.btnResetDPI.Text = "Reset DPI";
             this.btnResetDPI.UseVisualStyleBackColor = true;
@@ -691,27 +661,24 @@ namespace WinSubTrial
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(85, 807);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(64, 656);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(160, 22);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(121, 20);
             this.txtPhoneNumber.TabIndex = 15;
             // 
             // txtModel
             // 
-            this.txtModel.Location = new System.Drawing.Point(85, 624);
-            this.txtModel.Margin = new System.Windows.Forms.Padding(4);
+            this.txtModel.Location = new System.Drawing.Point(64, 507);
             this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(160, 22);
+            this.txtModel.Size = new System.Drawing.Size(121, 20);
             this.txtModel.TabIndex = 14;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 811);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(7, 659);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 16);
+            this.label6.Size = new System.Drawing.Size(38, 13);
             this.label6.TabIndex = 12;
             this.label6.Text = "Phone";
             // 
@@ -722,20 +689,18 @@ namespace WinSubTrial
             this.cboOperator.Items.AddRange(new object[] {
             "Viettel Telecom",
             "Mobifone"});
-            this.cboOperator.Location = new System.Drawing.Point(85, 759);
-            this.cboOperator.Margin = new System.Windows.Forms.Padding(4);
+            this.cboOperator.Location = new System.Drawing.Point(64, 617);
             this.cboOperator.Name = "cboOperator";
-            this.cboOperator.Size = new System.Drawing.Size(160, 24);
+            this.cboOperator.Size = new System.Drawing.Size(121, 21);
             this.cboOperator.TabIndex = 11;
             this.cboOperator.SelectedIndexChanged += new System.EventHandler(this.networkSelectedIndexChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 762);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(7, 619);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 16);
+            this.label5.Size = new System.Drawing.Size(47, 13);
             this.label5.TabIndex = 10;
             this.label5.Text = "Network";
             // 
@@ -746,20 +711,18 @@ namespace WinSubTrial
             this.cboCountry.Items.AddRange(new object[] {
             "VN",
             "US"});
-            this.cboCountry.Location = new System.Drawing.Point(85, 714);
-            this.cboCountry.Margin = new System.Windows.Forms.Padding(4);
+            this.cboCountry.Location = new System.Drawing.Point(64, 580);
             this.cboCountry.Name = "cboCountry";
-            this.cboCountry.Size = new System.Drawing.Size(160, 24);
+            this.cboCountry.Size = new System.Drawing.Size(121, 21);
             this.cboCountry.TabIndex = 9;
             this.cboCountry.SelectedIndexChanged += new System.EventHandler(this.cboCountry_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 718);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(7, 583);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 16);
+            this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "Country";
             // 
@@ -773,29 +736,26 @@ namespace WinSubTrial
             "9",
             "8.1",
             "8.0"});
-            this.cboSDK.Location = new System.Drawing.Point(85, 668);
-            this.cboSDK.Margin = new System.Windows.Forms.Padding(4);
+            this.cboSDK.Location = new System.Drawing.Point(64, 543);
             this.cboSDK.Name = "cboSDK";
-            this.cboSDK.Size = new System.Drawing.Size(160, 24);
+            this.cboSDK.Size = new System.Drawing.Size(121, 21);
             this.cboSDK.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 672);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(7, 546);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 16);
+            this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "SDK";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 628);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(7, 510);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 16);
+            this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Model";
             // 
@@ -809,20 +769,18 @@ namespace WinSubTrial
             "LGE",
             "samsung",
             "Sony"});
-            this.cboBrand.Location = new System.Drawing.Point(85, 578);
-            this.cboBrand.Margin = new System.Windows.Forms.Padding(4);
+            this.cboBrand.Location = new System.Drawing.Point(64, 470);
             this.cboBrand.Name = "cboBrand";
-            this.cboBrand.Size = new System.Drawing.Size(160, 24);
+            this.cboBrand.Size = new System.Drawing.Size(121, 21);
             this.cboBrand.TabIndex = 3;
             this.cboBrand.SelectedIndexChanged += new System.EventHandler(this.cboBrandSelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 582);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(7, 473);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 16);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Brand";
             // 
@@ -870,7 +828,7 @@ namespace WinSubTrial
             this.dgvDevice.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvDevice.EnableHeadersVisualStyles = false;
             this.dgvDevice.GridColor = System.Drawing.Color.Salmon;
-            this.dgvDevice.Location = new System.Drawing.Point(4, 0);
+            this.dgvDevice.Location = new System.Drawing.Point(3, 0);
             this.dgvDevice.Margin = new System.Windows.Forms.Padding(0);
             this.dgvDevice.MultiSelect = false;
             this.dgvDevice.Name = "dgvDevice";
@@ -894,7 +852,7 @@ namespace WinSubTrial
             this.dgvDevice.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvDevice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDevice.ShowEditingIcon = false;
-            this.dgvDevice.Size = new System.Drawing.Size(1231, 574);
+            this.dgvDevice.Size = new System.Drawing.Size(923, 466);
             this.dgvDevice.TabIndex = 1;
             this.dgvDevice.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDevice_CellContentClick);
             this.dgvDevice.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDevice_MouseClick);
@@ -961,10 +919,9 @@ namespace WinSubTrial
             this.tabPageBackup.Controls.Add(this.cboBackupFolder);
             this.tabPageBackup.Controls.Add(this.label11);
             this.tabPageBackup.Location = new System.Drawing.Point(60, 4);
-            this.tabPageBackup.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageBackup.Name = "tabPageBackup";
-            this.tabPageBackup.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageBackup.Size = new System.Drawing.Size(1320, 949);
+            this.tabPageBackup.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageBackup.Size = new System.Drawing.Size(919, 770);
             this.tabPageBackup.TabIndex = 1;
             this.tabPageBackup.Text = "Backup";
             this.tabPageBackup.UseVisualStyleBackColor = true;
@@ -972,10 +929,9 @@ namespace WinSubTrial
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(24, 76);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox2.Location = new System.Drawing.Point(18, 62);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(18, 17);
+            this.checkBox2.Size = new System.Drawing.Size(15, 14);
             this.checkBox2.TabIndex = 46;
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
@@ -985,10 +941,9 @@ namespace WinSubTrial
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(244)))));
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.DimGray;
-            this.label10.Location = new System.Drawing.Point(1009, 75);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(757, 61);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 18);
+            this.label10.Size = new System.Drawing.Size(53, 15);
             this.label10.TabIndex = 45;
             this.label10.Text = "Actions";
             // 
@@ -1035,7 +990,7 @@ namespace WinSubTrial
             this.dgvBackupFiles.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvBackupFiles.EnableHeadersVisualStyles = false;
             this.dgvBackupFiles.GridColor = System.Drawing.Color.Salmon;
-            this.dgvBackupFiles.Location = new System.Drawing.Point(4, 59);
+            this.dgvBackupFiles.Location = new System.Drawing.Point(3, 48);
             this.dgvBackupFiles.Margin = new System.Windows.Forms.Padding(0);
             this.dgvBackupFiles.MultiSelect = false;
             this.dgvBackupFiles.Name = "dgvBackupFiles";
@@ -1059,7 +1014,7 @@ namespace WinSubTrial
             this.dgvBackupFiles.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvBackupFiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBackupFiles.ShowEditingIcon = false;
-            this.dgvBackupFiles.Size = new System.Drawing.Size(1113, 623);
+            this.dgvBackupFiles.Size = new System.Drawing.Size(835, 506);
             this.dgvBackupFiles.TabIndex = 37;
             this.dgvBackupFiles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBackupFiles_CellContentClick);
             this.dgvBackupFiles.SelectionChanged += new System.EventHandler(this.dgvBackupFiles_SelectionChanged);
@@ -1120,10 +1075,9 @@ namespace WinSubTrial
             this.btnToolsDevice1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToolsDevice1.Font = new System.Drawing.Font("Segoe UI", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnToolsDevice1.ForeColor = System.Drawing.Color.White;
-            this.btnToolsDevice1.Location = new System.Drawing.Point(1047, 7);
-            this.btnToolsDevice1.Margin = new System.Windows.Forms.Padding(4);
+            this.btnToolsDevice1.Location = new System.Drawing.Point(785, 6);
             this.btnToolsDevice1.Name = "btnToolsDevice1";
-            this.btnToolsDevice1.Size = new System.Drawing.Size(71, 44);
+            this.btnToolsDevice1.Size = new System.Drawing.Size(53, 36);
             this.btnToolsDevice1.TabIndex = 36;
             this.btnToolsDevice1.Text = "Tools";
             this.btnToolsDevice1.UseVisualStyleBackColor = false;
@@ -1132,10 +1086,9 @@ namespace WinSubTrial
             // chkMoveToRestore
             // 
             this.chkMoveToRestore.AutoSize = true;
-            this.chkMoveToRestore.Location = new System.Drawing.Point(837, 21);
-            this.chkMoveToRestore.Margin = new System.Windows.Forms.Padding(4);
+            this.chkMoveToRestore.Location = new System.Drawing.Point(628, 17);
             this.chkMoveToRestore.Name = "chkMoveToRestore";
-            this.chkMoveToRestore.Size = new System.Drawing.Size(141, 20);
+            this.chkMoveToRestore.Size = new System.Drawing.Size(116, 17);
             this.chkMoveToRestore.TabIndex = 35;
             this.chkMoveToRestore.Text = "Move to winrestore";
             this.chkMoveToRestore.UseVisualStyleBackColor = true;
@@ -1146,10 +1099,9 @@ namespace WinSubTrial
             this.btnSearchBackup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearchBackup.Font = new System.Drawing.Font("Segoe UI", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchBackup.ForeColor = System.Drawing.Color.White;
-            this.btnSearchBackup.Location = new System.Drawing.Point(724, 10);
-            this.btnSearchBackup.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearchBackup.Location = new System.Drawing.Point(543, 8);
             this.btnSearchBackup.Name = "btnSearchBackup";
-            this.btnSearchBackup.Size = new System.Drawing.Size(93, 38);
+            this.btnSearchBackup.Size = new System.Drawing.Size(70, 31);
             this.btnSearchBackup.TabIndex = 34;
             this.btnSearchBackup.Text = "Search";
             this.btnSearchBackup.UseVisualStyleBackColor = false;
@@ -1157,19 +1109,17 @@ namespace WinSubTrial
             // 
             // txtBackupSearch
             // 
-            this.txtBackupSearch.Location = new System.Drawing.Point(432, 17);
-            this.txtBackupSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBackupSearch.Location = new System.Drawing.Point(324, 14);
             this.txtBackupSearch.Name = "txtBackupSearch";
-            this.txtBackupSearch.Size = new System.Drawing.Size(283, 22);
+            this.txtBackupSearch.Size = new System.Drawing.Size(213, 20);
             this.txtBackupSearch.TabIndex = 32;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(355, 21);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(266, 17);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(66, 16);
+            this.label12.Size = new System.Drawing.Size(52, 13);
             this.label12.TabIndex = 31;
             this.label12.Text = "File name";
             // 
@@ -1181,19 +1131,17 @@ namespace WinSubTrial
             "Manual",
             "NordVPN",
             "Key Tinsoft"});
-            this.cboBackupFolder.Location = new System.Drawing.Point(64, 16);
-            this.cboBackupFolder.Margin = new System.Windows.Forms.Padding(4);
+            this.cboBackupFolder.Location = new System.Drawing.Point(48, 13);
             this.cboBackupFolder.Name = "cboBackupFolder";
-            this.cboBackupFolder.Size = new System.Drawing.Size(264, 24);
+            this.cboBackupFolder.Size = new System.Drawing.Size(199, 21);
             this.cboBackupFolder.TabIndex = 29;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(8, 22);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(6, 18);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 16);
+            this.label11.Size = new System.Drawing.Size(36, 13);
             this.label11.TabIndex = 28;
             this.label11.Text = "Folder";
             // 
@@ -1209,9 +1157,8 @@ namespace WinSubTrial
             this.tabPageRestore.Controls.Add(this.cboRestoreFolder);
             this.tabPageRestore.Controls.Add(this.label14);
             this.tabPageRestore.Location = new System.Drawing.Point(60, 4);
-            this.tabPageRestore.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageRestore.Name = "tabPageRestore";
-            this.tabPageRestore.Size = new System.Drawing.Size(1320, 949);
+            this.tabPageRestore.Size = new System.Drawing.Size(919, 770);
             this.tabPageRestore.TabIndex = 2;
             this.tabPageRestore.Text = "Restore";
             this.tabPageRestore.UseVisualStyleBackColor = true;
@@ -1219,10 +1166,9 @@ namespace WinSubTrial
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(24, 79);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox3.Location = new System.Drawing.Point(18, 64);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(18, 17);
+            this.checkBox3.Size = new System.Drawing.Size(15, 14);
             this.checkBox3.TabIndex = 49;
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
@@ -1232,10 +1178,9 @@ namespace WinSubTrial
             this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(243)))), ((int)(((byte)(244)))));
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold);
             this.label15.ForeColor = System.Drawing.Color.DimGray;
-            this.label15.Location = new System.Drawing.Point(1005, 78);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(754, 63);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(64, 18);
+            this.label15.Size = new System.Drawing.Size(53, 15);
             this.label15.TabIndex = 48;
             this.label15.Text = "Actions";
             // 
@@ -1283,7 +1228,7 @@ namespace WinSubTrial
             this.dgvRestoreFiles.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvRestoreFiles.EnableHeadersVisualStyles = false;
             this.dgvRestoreFiles.GridColor = System.Drawing.Color.Salmon;
-            this.dgvRestoreFiles.Location = new System.Drawing.Point(4, 59);
+            this.dgvRestoreFiles.Location = new System.Drawing.Point(3, 48);
             this.dgvRestoreFiles.Margin = new System.Windows.Forms.Padding(0);
             this.dgvRestoreFiles.MultiSelect = false;
             this.dgvRestoreFiles.Name = "dgvRestoreFiles";
@@ -1307,7 +1252,7 @@ namespace WinSubTrial
             this.dgvRestoreFiles.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvRestoreFiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRestoreFiles.ShowEditingIcon = false;
-            this.dgvRestoreFiles.Size = new System.Drawing.Size(1113, 623);
+            this.dgvRestoreFiles.Size = new System.Drawing.Size(835, 506);
             this.dgvRestoreFiles.TabIndex = 47;
             this.dgvRestoreFiles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRestoreFiles_CellContentClick);
             this.dgvRestoreFiles.SelectionChanged += new System.EventHandler(this.dgvRestoreFiles_SelectionChanged);
@@ -1373,10 +1318,9 @@ namespace WinSubTrial
             this.btnToolsDevice2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToolsDevice2.Font = new System.Drawing.Font("Segoe UI", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnToolsDevice2.ForeColor = System.Drawing.Color.White;
-            this.btnToolsDevice2.Location = new System.Drawing.Point(1047, 7);
-            this.btnToolsDevice2.Margin = new System.Windows.Forms.Padding(4);
+            this.btnToolsDevice2.Location = new System.Drawing.Point(785, 6);
             this.btnToolsDevice2.Name = "btnToolsDevice2";
-            this.btnToolsDevice2.Size = new System.Drawing.Size(71, 44);
+            this.btnToolsDevice2.Size = new System.Drawing.Size(53, 36);
             this.btnToolsDevice2.TabIndex = 43;
             this.btnToolsDevice2.Text = "Tools";
             this.btnToolsDevice2.UseVisualStyleBackColor = false;
@@ -1388,10 +1332,9 @@ namespace WinSubTrial
             this.btnSearchRestoreFiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearchRestoreFiles.Font = new System.Drawing.Font("Segoe UI", 9.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchRestoreFiles.ForeColor = System.Drawing.Color.White;
-            this.btnSearchRestoreFiles.Location = new System.Drawing.Point(724, 10);
-            this.btnSearchRestoreFiles.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearchRestoreFiles.Location = new System.Drawing.Point(543, 8);
             this.btnSearchRestoreFiles.Name = "btnSearchRestoreFiles";
-            this.btnSearchRestoreFiles.Size = new System.Drawing.Size(93, 38);
+            this.btnSearchRestoreFiles.Size = new System.Drawing.Size(70, 31);
             this.btnSearchRestoreFiles.TabIndex = 42;
             this.btnSearchRestoreFiles.Text = "Search";
             this.btnSearchRestoreFiles.UseVisualStyleBackColor = false;
@@ -1399,19 +1342,17 @@ namespace WinSubTrial
             // 
             // txtSearchRestoreFiles
             // 
-            this.txtSearchRestoreFiles.Location = new System.Drawing.Point(432, 17);
-            this.txtSearchRestoreFiles.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearchRestoreFiles.Location = new System.Drawing.Point(324, 14);
             this.txtSearchRestoreFiles.Name = "txtSearchRestoreFiles";
-            this.txtSearchRestoreFiles.Size = new System.Drawing.Size(283, 22);
+            this.txtSearchRestoreFiles.Size = new System.Drawing.Size(213, 20);
             this.txtSearchRestoreFiles.TabIndex = 41;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(355, 21);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(266, 17);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(66, 16);
+            this.label13.Size = new System.Drawing.Size(52, 13);
             this.label13.TabIndex = 40;
             this.label13.Text = "File name";
             // 
@@ -1423,19 +1364,17 @@ namespace WinSubTrial
             "Manual",
             "NordVPN",
             "Key Tinsoft"});
-            this.cboRestoreFolder.Location = new System.Drawing.Point(64, 16);
-            this.cboRestoreFolder.Margin = new System.Windows.Forms.Padding(4);
+            this.cboRestoreFolder.Location = new System.Drawing.Point(48, 13);
             this.cboRestoreFolder.Name = "cboRestoreFolder";
-            this.cboRestoreFolder.Size = new System.Drawing.Size(264, 24);
+            this.cboRestoreFolder.Size = new System.Drawing.Size(199, 21);
             this.cboRestoreFolder.TabIndex = 39;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(8, 22);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(6, 18);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(46, 16);
+            this.label14.Size = new System.Drawing.Size(36, 13);
             this.label14.TabIndex = 38;
             this.label14.Text = "Folder";
             // 
@@ -1443,9 +1382,8 @@ namespace WinSubTrial
             // 
             this.tabPageLicense.Controls.Add(this.dgvLicense);
             this.tabPageLicense.Location = new System.Drawing.Point(60, 4);
-            this.tabPageLicense.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageLicense.Name = "tabPageLicense";
-            this.tabPageLicense.Size = new System.Drawing.Size(1320, 949);
+            this.tabPageLicense.Size = new System.Drawing.Size(919, 770);
             this.tabPageLicense.TabIndex = 3;
             this.tabPageLicense.Text = "License";
             this.tabPageLicense.UseVisualStyleBackColor = true;
@@ -1464,8 +1402,7 @@ namespace WinSubTrial
             this.dataGridViewTextBoxColumn9});
             this.dgvLicense.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvLicense.GridColor = System.Drawing.Color.White;
-            this.dgvLicense.Location = new System.Drawing.Point(4, 1);
-            this.dgvLicense.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvLicense.Location = new System.Drawing.Point(3, 1);
             this.dgvLicense.Name = "dgvLicense";
             this.dgvLicense.ReadOnly = true;
             this.dgvLicense.RowHeadersWidth = 51;
@@ -1473,7 +1410,7 @@ namespace WinSubTrial
             this.dgvLicense.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvLicense.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLicense.ShowEditingIcon = false;
-            this.dgvLicense.Size = new System.Drawing.Size(1113, 681);
+            this.dgvLicense.Size = new System.Drawing.Size(835, 553);
             this.dgvLicense.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn8
@@ -1504,14 +1441,13 @@ namespace WinSubTrial
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1311, 985);
+            this.ClientSize = new System.Drawing.Size(983, 800);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.mnuTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mnuTop;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sub Trial Pro";

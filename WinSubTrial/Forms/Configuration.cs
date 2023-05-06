@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Utils;
+using WinSubTrial.Enum;
 
 namespace WinSubTrial
 {
@@ -36,7 +37,7 @@ namespace WinSubTrial
             chkRandomSdk.Checked = Common.Settings.RandomSDK;
             chkBypassSatetyNet.Checked = Common.Settings.BypassSafetyNet;
 
-            txtWinAllFolder.Text = "C:\\";
+            txtWinAllFolder.Text = EnumWinAllFolder.disk;
 
             txtPackage.Text = Common.Settings.AppBackup;
             chkRemovePackageAfterChange.Checked = Common.Settings.ChangeRemoveApp;
@@ -53,7 +54,7 @@ namespace WinSubTrial
             Common.Settings.RandomSDK = chkRandomSdk.Checked;
             Common.Settings.BypassSafetyNet = chkBypassSatetyNet.Checked;
 
-            txtWinAllFolder.Text = "C:\\";
+            txtWinAllFolder.Text = EnumWinAllFolder.disk;
 
             Common.Settings.AppBackup = txtPackage.Text;
             Common.Settings.ChangeRemoveApp = chkRemovePackageAfterChange.Checked;
