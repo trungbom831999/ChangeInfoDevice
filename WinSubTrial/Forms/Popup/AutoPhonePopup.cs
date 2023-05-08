@@ -22,6 +22,12 @@ namespace WinSubTrial.Forms.Popup
             InitializeComponent();
             setNet();
         }
+        public string SaveDir { get; internal set; }
+        
+        private void AutoMobile_Load(object sender, EventArgs e)
+        {
+            comboBoxFolderBackup.Text = Common.GlobalSettings["prevBackupDir"].ToString();
+        }
 
         private void setNet()
         {
@@ -221,6 +227,36 @@ namespace WinSubTrial.Forms.Popup
                     viewModel.XbankRegister(device.Serial);
                 });
             });
+        }
+
+        private void buttonSnapchatLoginBackup_Click(object sender, EventArgs e)
+        {
+            if (!viewModel.someDevicesSelected()) return;
+            CreateFolderBackup();
+            viewModel.devicesModel.Where(x => x.isSelected == true).AsParallel().ForAll(device =>
+            {
+                Task.Run(() =>
+                {
+                    viewModel.deviceWaitForStop[device.Serial] = false;
+                    viewModel.SnapchatLoginBackup(device.Serial);
+                });
+            });
+        }
+
+        private void comboBoxFolderBackup_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CreateFolderBackup();
+        }
+
+        private void CreateFolderBackup()
+        {
+            SaveDir = comboBoxFolderBackup.Text;
+            if (!Directory.Exists($@"C:\WINALL\winbackup{SaveDir}"))
+            {
+                Directory.CreateDirectory($@"C:\WINALL\winbackup{SaveDir}");
+            }
+
+            Common.GlobalSettings["prevBackupDir"] = SaveDir;
         }
     }
 }

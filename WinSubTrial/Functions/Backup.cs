@@ -66,7 +66,7 @@ namespace WinSubTrial.Functions
 
             Console.WriteLine("list Path: " + pathAppbk);
 
-            Adb.ShellCmd(device.Serial, $"su -c tar -czvf /sdcard/{fileName} {pathAppbk}", 9);
+            Adb.ShellCmd(device.Serial, $"su -c tar -czvf /sdcard/{fileName} {pathAppbk}", 10);
             bool isSuccess = Adb.GetFile(device.Serial, $"/sdcard/{fileName}", saveDir);
             if (isSuccess)
             {
@@ -77,7 +77,7 @@ namespace WinSubTrial.Functions
             return false;
         }
 
-        public bool Restore(string filePath, string bk_packages)
+        public bool Restore(string filePath, string bk_packages, bool isReboot = true)
         {
             string appRestorepath = "";
             if (bk_packages != "")
@@ -257,7 +257,10 @@ namespace WinSubTrial.Functions
 
             Common.SetStatus(device.Serial, "Restored, rebooting...");
 
-            Adb.RebootFast(device.Serial);
+            if (isReboot)
+            {
+                Adb.RebootFast(device.Serial);
+            }
 
             Adb.Shell(device.Serial, "pm enable com.google.android.gms");
 

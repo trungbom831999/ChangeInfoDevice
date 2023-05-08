@@ -301,6 +301,7 @@ namespace WinSubTrial
         private void btnRestore_Click(object sender, EventArgs e)
         {
             string bk_packages = Common.Settings.AppBackup;
+            bool isReboot = checkBoxRebootAfterRestore.Checked;
             if (!viewModel.selectedOneDevice()) return;
             string serial = serial = viewModel.devicesModel.FirstOrDefault(x => x.isSelected == true).Serial;
             if (viewModel.IsDeviceInTask(serial))
@@ -319,7 +320,7 @@ namespace WinSubTrial
             {
                 Device device = viewModel.devicesModel.FirstOrDefault(x => x.Serial.Equals(serial));
                 Common.SetStatus(device.Serial, $"Restoring...");
-                bool ok = new Functions.Backup { device = device }.Restore($@"C:\WINALL\winbackup\{backup.Folder}\{backup.Name}", bk_packages);
+                bool ok = new Functions.Backup { device = device }.Restore($@"C:\WINALL\winbackup\{backup.Folder}\{backup.Name}", bk_packages, isReboot);
                 Common.SetStatus(device.Serial, $"Restore " + (ok ? "done" : "fail"));
             }))
             { IsBackground = true };

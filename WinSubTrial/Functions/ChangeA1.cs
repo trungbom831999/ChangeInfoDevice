@@ -23,10 +23,10 @@ namespace WinSubTrial.Functions
             wipingTimer.Enabled = true;
             WipeAppsData();
 
-            if (Common.Settings.ChangeRemoveApp && Common.Settings.AppBackup.Length > 0)
-            {
-                Adb.UninstallApp(device.Serial, Common.GlobalSettings["backup-app"].ToString());
-            }
+            //if (Common.Settings.ChangeRemoveApp && Common.Settings.AppBackup.Length > 0)
+            //{
+            //    Adb.UninstallApp(device.Serial, Common.GlobalSettings["backup-app"].ToString());
+            //}
             if (Common.Settings.ChangeLogoutMail)
             {
                 Funcs.WipeMail(device.Serial);

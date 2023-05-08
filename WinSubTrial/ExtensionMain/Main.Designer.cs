@@ -147,6 +147,7 @@ namespace WinSubTrial
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.checkBoxRebootAfterRestore = new System.Windows.Forms.CheckBox();
             this.mnuTop.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageChange.SuspendLayout();
@@ -282,6 +283,7 @@ namespace WinSubTrial
             // 
             // tabPageChange
             // 
+            this.tabPageChange.Controls.Add(this.checkBoxRebootAfterRestore);
             this.tabPageChange.Controls.Add(this.buttonAutoPopup);
             this.tabPageChange.Controls.Add(this.button10);
             this.tabPageChange.Controls.Add(this.button9);
@@ -329,7 +331,7 @@ namespace WinSubTrial
             this.tabPageChange.Controls.Add(this.dgvDevice);
             this.tabPageChange.Location = new System.Drawing.Point(60, 4);
             this.tabPageChange.Name = "tabPageChange";
-            this.tabPageChange.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageChange.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageChange.Size = new System.Drawing.Size(919, 768);
             this.tabPageChange.TabIndex = 0;
             this.tabPageChange.Text = "Main";
@@ -340,7 +342,7 @@ namespace WinSubTrial
             this.buttonAutoPopup.BackColor = System.Drawing.Color.Aquamarine;
             this.buttonAutoPopup.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonAutoPopup.Location = new System.Drawing.Point(820, 470);
-            this.buttonAutoPopup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAutoPopup.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAutoPopup.Name = "buttonAutoPopup";
             this.buttonAutoPopup.Size = new System.Drawing.Size(90, 23);
             this.buttonAutoPopup.TabIndex = 69;
@@ -920,8 +922,8 @@ namespace WinSubTrial
             this.tabPageBackup.Controls.Add(this.label11);
             this.tabPageBackup.Location = new System.Drawing.Point(60, 4);
             this.tabPageBackup.Name = "tabPageBackup";
-            this.tabPageBackup.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPageBackup.Size = new System.Drawing.Size(919, 770);
+            this.tabPageBackup.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageBackup.Size = new System.Drawing.Size(919, 768);
             this.tabPageBackup.TabIndex = 1;
             this.tabPageBackup.Text = "Backup";
             this.tabPageBackup.UseVisualStyleBackColor = true;
@@ -1158,7 +1160,7 @@ namespace WinSubTrial
             this.tabPageRestore.Controls.Add(this.label14);
             this.tabPageRestore.Location = new System.Drawing.Point(60, 4);
             this.tabPageRestore.Name = "tabPageRestore";
-            this.tabPageRestore.Size = new System.Drawing.Size(919, 770);
+            this.tabPageRestore.Size = new System.Drawing.Size(919, 768);
             this.tabPageRestore.TabIndex = 2;
             this.tabPageRestore.Text = "Restore";
             this.tabPageRestore.UseVisualStyleBackColor = true;
@@ -1383,7 +1385,7 @@ namespace WinSubTrial
             this.tabPageLicense.Controls.Add(this.dgvLicense);
             this.tabPageLicense.Location = new System.Drawing.Point(60, 4);
             this.tabPageLicense.Name = "tabPageLicense";
-            this.tabPageLicense.Size = new System.Drawing.Size(919, 770);
+            this.tabPageLicense.Size = new System.Drawing.Size(919, 768);
             this.tabPageLicense.TabIndex = 3;
             this.tabPageLicense.Text = "License";
             this.tabPageLicense.UseVisualStyleBackColor = true;
@@ -1438,6 +1440,18 @@ namespace WinSubTrial
             this.select.ToolTipText = "Select device";
             this.select.TrueValue = "1";
             this.select.Width = 125;
+            // 
+            // checkBoxRebootAfterRestore
+            // 
+            this.checkBoxRebootAfterRestore.AutoSize = true;
+            this.checkBoxRebootAfterRestore.Checked = true;
+            this.checkBoxRebootAfterRestore.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxRebootAfterRestore.Location = new System.Drawing.Point(820, 573);
+            this.checkBoxRebootAfterRestore.Name = "checkBoxRebootAfterRestore";
+            this.checkBoxRebootAfterRestore.Size = new System.Drawing.Size(87, 30);
+            this.checkBoxRebootAfterRestore.TabIndex = 70;
+            this.checkBoxRebootAfterRestore.Text = "Reboot \r\nafter Restore";
+            this.checkBoxRebootAfterRestore.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -1576,6 +1590,7 @@ namespace WinSubTrial
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button buttonAutoPopup;
+        private System.Windows.Forms.CheckBox checkBoxRebootAfterRestore;
     }
 }
 

@@ -47,11 +47,15 @@
             this.buttonSnapchatPassword = new System.Windows.Forms.Button();
             this.buttonTinder = new System.Windows.Forms.Button();
             this.buttonSnapchat = new System.Windows.Forms.Button();
+            this.buttonSnapchatLoginBackup = new System.Windows.Forms.Button();
+            this.comboBoxFolderBackup = new System.Windows.Forms.ComboBox();
             this.panelAutoPopup.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelAutoPopup
             // 
+            this.panelAutoPopup.Controls.Add(this.comboBoxFolderBackup);
+            this.panelAutoPopup.Controls.Add(this.buttonSnapchatLoginBackup);
             this.panelAutoPopup.Controls.Add(this.buttonXbank);
             this.panelAutoPopup.Controls.Add(this.buttonRangDong);
             this.panelAutoPopup.Controls.Add(this.buttonGlobalSmart);
@@ -70,17 +74,18 @@
             this.panelAutoPopup.Controls.Add(this.buttonSnapchatPassword);
             this.panelAutoPopup.Controls.Add(this.buttonTinder);
             this.panelAutoPopup.Controls.Add(this.buttonSnapchat);
-            this.panelAutoPopup.Location = new System.Drawing.Point(4, 6);
-            this.panelAutoPopup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelAutoPopup.Location = new System.Drawing.Point(3, 5);
+            this.panelAutoPopup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelAutoPopup.Name = "panelAutoPopup";
-            this.panelAutoPopup.Size = new System.Drawing.Size(1047, 217);
+            this.panelAutoPopup.Size = new System.Drawing.Size(785, 243);
             this.panelAutoPopup.TabIndex = 0;
             // 
             // buttonXbank
             // 
-            this.buttonXbank.Location = new System.Drawing.Point(768, 65);
+            this.buttonXbank.Location = new System.Drawing.Point(576, 53);
+            this.buttonXbank.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonXbank.Name = "buttonXbank";
-            this.buttonXbank.Size = new System.Drawing.Size(185, 28);
+            this.buttonXbank.Size = new System.Drawing.Size(139, 23);
             this.buttonXbank.TabIndex = 86;
             this.buttonXbank.Text = "xBank";
             this.buttonXbank.UseVisualStyleBackColor = true;
@@ -88,19 +93,19 @@
             // 
             // buttonRangDong
             // 
-            this.buttonRangDong.Location = new System.Drawing.Point(577, 137);
+            this.buttonRangDong.Location = new System.Drawing.Point(433, 111);
+            this.buttonRangDong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonRangDong.Name = "buttonRangDong";
-            this.buttonRangDong.Size = new System.Drawing.Size(185, 28);
+            this.buttonRangDong.Size = new System.Drawing.Size(139, 23);
             this.buttonRangDong.TabIndex = 85;
             this.buttonRangDong.Text = "Rang Dong";
             this.buttonRangDong.UseVisualStyleBackColor = true;
             // 
             // buttonGlobalSmart
             // 
-            this.buttonGlobalSmart.Location = new System.Drawing.Point(577, 101);
-            this.buttonGlobalSmart.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonGlobalSmart.Location = new System.Drawing.Point(433, 82);
             this.buttonGlobalSmart.Name = "buttonGlobalSmart";
-            this.buttonGlobalSmart.Size = new System.Drawing.Size(185, 28);
+            this.buttonGlobalSmart.Size = new System.Drawing.Size(139, 23);
             this.buttonGlobalSmart.TabIndex = 84;
             this.buttonGlobalSmart.Text = "Global Smart";
             this.buttonGlobalSmart.UseVisualStyleBackColor = true;
@@ -108,10 +113,9 @@
             // 
             // buttonSaveNet
             // 
-            this.buttonSaveNet.Location = new System.Drawing.Point(387, 33);
-            this.buttonSaveNet.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSaveNet.Location = new System.Drawing.Point(290, 27);
             this.buttonSaveNet.Name = "buttonSaveNet";
-            this.buttonSaveNet.Size = new System.Drawing.Size(81, 25);
+            this.buttonSaveNet.Size = new System.Drawing.Size(61, 20);
             this.buttonSaveNet.TabIndex = 83;
             this.buttonSaveNet.Text = "Lưu NET";
             this.buttonSaveNet.UseVisualStyleBackColor = true;
@@ -120,45 +124,41 @@
             // labelNet2
             // 
             this.labelNet2.AutoSize = true;
-            this.labelNet2.Location = new System.Drawing.Point(203, 14);
-            this.labelNet2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelNet2.Location = new System.Drawing.Point(152, 11);
             this.labelNet2.Name = "labelNet2";
-            this.labelNet2.Size = new System.Drawing.Size(45, 16);
+            this.labelNet2.Size = new System.Drawing.Size(38, 13);
             this.labelNet2.TabIndex = 82;
             this.labelNet2.Text = "NET 2";
             // 
             // labelNet1
             // 
             this.labelNet1.AutoSize = true;
-            this.labelNet1.Location = new System.Drawing.Point(4, 14);
-            this.labelNet1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelNet1.Location = new System.Drawing.Point(3, 11);
             this.labelNet1.Name = "labelNet1";
-            this.labelNet1.Size = new System.Drawing.Size(45, 16);
+            this.labelNet1.Size = new System.Drawing.Size(38, 13);
             this.labelNet1.TabIndex = 81;
             this.labelNet1.Text = "NET 1";
             // 
             // textBoxNet2
             // 
-            this.textBoxNet2.Location = new System.Drawing.Point(193, 33);
-            this.textBoxNet2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxNet2.Location = new System.Drawing.Point(145, 27);
             this.textBoxNet2.Name = "textBoxNet2";
-            this.textBoxNet2.Size = new System.Drawing.Size(183, 22);
+            this.textBoxNet2.Size = new System.Drawing.Size(138, 20);
             this.textBoxNet2.TabIndex = 80;
             // 
             // textBoxNet1
             // 
-            this.textBoxNet1.Location = new System.Drawing.Point(1, 33);
-            this.textBoxNet1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxNet1.Location = new System.Drawing.Point(1, 27);
             this.textBoxNet1.Name = "textBoxNet1";
-            this.textBoxNet1.Size = new System.Drawing.Size(183, 22);
+            this.textBoxNet1.Size = new System.Drawing.Size(138, 20);
             this.textBoxNet1.TabIndex = 79;
             // 
             // buttonTelegramNet2
             // 
-            this.buttonTelegramNet2.Location = new System.Drawing.Point(577, 65);
-            this.buttonTelegramNet2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonTelegramNet2.Location = new System.Drawing.Point(433, 53);
+            this.buttonTelegramNet2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonTelegramNet2.Name = "buttonTelegramNet2";
-            this.buttonTelegramNet2.Size = new System.Drawing.Size(185, 28);
+            this.buttonTelegramNet2.Size = new System.Drawing.Size(139, 23);
             this.buttonTelegramNet2.TabIndex = 78;
             this.buttonTelegramNet2.Text = "Telegram Net2";
             this.buttonTelegramNet2.UseVisualStyleBackColor = true;
@@ -166,10 +166,10 @@
             // 
             // buttonCamScanner
             // 
-            this.buttonCamScanner.Location = new System.Drawing.Point(385, 137);
-            this.buttonCamScanner.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCamScanner.Location = new System.Drawing.Point(289, 111);
+            this.buttonCamScanner.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCamScanner.Name = "buttonCamScanner";
-            this.buttonCamScanner.Size = new System.Drawing.Size(185, 28);
+            this.buttonCamScanner.Size = new System.Drawing.Size(139, 23);
             this.buttonCamScanner.TabIndex = 77;
             this.buttonCamScanner.Text = "Cam Scanner";
             this.buttonCamScanner.UseVisualStyleBackColor = true;
@@ -177,10 +177,10 @@
             // 
             // buttonChamet
             // 
-            this.buttonChamet.Location = new System.Drawing.Point(387, 101);
-            this.buttonChamet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonChamet.Location = new System.Drawing.Point(290, 82);
+            this.buttonChamet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonChamet.Name = "buttonChamet";
-            this.buttonChamet.Size = new System.Drawing.Size(184, 28);
+            this.buttonChamet.Size = new System.Drawing.Size(138, 23);
             this.buttonChamet.TabIndex = 76;
             this.buttonChamet.Text = "Chamet";
             this.buttonChamet.UseVisualStyleBackColor = true;
@@ -188,10 +188,9 @@
             // 
             // buttonSnapchatPasswordNET2
             // 
-            this.buttonSnapchatPasswordNET2.Location = new System.Drawing.Point(1, 137);
-            this.buttonSnapchatPasswordNET2.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSnapchatPasswordNET2.Location = new System.Drawing.Point(1, 111);
             this.buttonSnapchatPasswordNET2.Name = "buttonSnapchatPasswordNET2";
-            this.buttonSnapchatPasswordNET2.Size = new System.Drawing.Size(184, 28);
+            this.buttonSnapchatPasswordNET2.Size = new System.Drawing.Size(138, 23);
             this.buttonSnapchatPasswordNET2.TabIndex = 75;
             this.buttonSnapchatPasswordNET2.Text = "Snapchat PasswordNet2";
             this.buttonSnapchatPasswordNET2.UseVisualStyleBackColor = true;
@@ -199,10 +198,9 @@
             // 
             // buttonBigoRegister
             // 
-            this.buttonBigoRegister.Location = new System.Drawing.Point(193, 137);
-            this.buttonBigoRegister.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonBigoRegister.Location = new System.Drawing.Point(145, 111);
             this.buttonBigoRegister.Name = "buttonBigoRegister";
-            this.buttonBigoRegister.Size = new System.Drawing.Size(184, 28);
+            this.buttonBigoRegister.Size = new System.Drawing.Size(138, 23);
             this.buttonBigoRegister.TabIndex = 74;
             this.buttonBigoRegister.Text = "Bigo Register";
             this.buttonBigoRegister.UseVisualStyleBackColor = true;
@@ -210,10 +208,9 @@
             // 
             // BigoLite
             // 
-            this.BigoLite.Location = new System.Drawing.Point(193, 101);
-            this.BigoLite.Margin = new System.Windows.Forms.Padding(4);
+            this.BigoLite.Location = new System.Drawing.Point(145, 82);
             this.BigoLite.Name = "BigoLite";
-            this.BigoLite.Size = new System.Drawing.Size(184, 28);
+            this.BigoLite.Size = new System.Drawing.Size(138, 23);
             this.BigoLite.TabIndex = 73;
             this.BigoLite.Text = "Bigo Lite";
             this.BigoLite.UseVisualStyleBackColor = true;
@@ -221,10 +218,9 @@
             // 
             // buttonBigoSMS
             // 
-            this.buttonBigoSMS.Location = new System.Drawing.Point(193, 65);
-            this.buttonBigoSMS.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonBigoSMS.Location = new System.Drawing.Point(145, 53);
             this.buttonBigoSMS.Name = "buttonBigoSMS";
-            this.buttonBigoSMS.Size = new System.Drawing.Size(184, 28);
+            this.buttonBigoSMS.Size = new System.Drawing.Size(138, 23);
             this.buttonBigoSMS.TabIndex = 72;
             this.buttonBigoSMS.Text = "Bigo Login SMS";
             this.buttonBigoSMS.UseVisualStyleBackColor = true;
@@ -232,10 +228,9 @@
             // 
             // buttonSnapchatPassword
             // 
-            this.buttonSnapchatPassword.Location = new System.Drawing.Point(1, 101);
-            this.buttonSnapchatPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSnapchatPassword.Location = new System.Drawing.Point(1, 82);
             this.buttonSnapchatPassword.Name = "buttonSnapchatPassword";
-            this.buttonSnapchatPassword.Size = new System.Drawing.Size(184, 28);
+            this.buttonSnapchatPassword.Size = new System.Drawing.Size(138, 23);
             this.buttonSnapchatPassword.TabIndex = 71;
             this.buttonSnapchatPassword.Text = "Snapchat Password";
             this.buttonSnapchatPassword.UseVisualStyleBackColor = true;
@@ -243,10 +238,9 @@
             // 
             // buttonTinder
             // 
-            this.buttonTinder.Location = new System.Drawing.Point(387, 65);
-            this.buttonTinder.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonTinder.Location = new System.Drawing.Point(290, 53);
             this.buttonTinder.Name = "buttonTinder";
-            this.buttonTinder.Size = new System.Drawing.Size(184, 28);
+            this.buttonTinder.Size = new System.Drawing.Size(138, 23);
             this.buttonTinder.TabIndex = 70;
             this.buttonTinder.Text = "Tinder Register";
             this.buttonTinder.UseVisualStyleBackColor = true;
@@ -254,29 +248,48 @@
             // 
             // buttonSnapchat
             // 
-            this.buttonSnapchat.Location = new System.Drawing.Point(1, 65);
-            this.buttonSnapchat.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSnapchat.Location = new System.Drawing.Point(1, 53);
             this.buttonSnapchat.Name = "buttonSnapchat";
-            this.buttonSnapchat.Size = new System.Drawing.Size(184, 28);
+            this.buttonSnapchat.Size = new System.Drawing.Size(138, 23);
             this.buttonSnapchat.TabIndex = 69;
             this.buttonSnapchat.Text = "Snapchat Register";
             this.buttonSnapchat.UseVisualStyleBackColor = true;
             this.buttonSnapchat.Click += new System.EventHandler(this.snapchatButtonTapped);
             // 
+            // buttonSnapchatLoginBackup
+            // 
+            this.buttonSnapchatLoginBackup.Location = new System.Drawing.Point(1, 167);
+            this.buttonSnapchatLoginBackup.Name = "buttonSnapchatLoginBackup";
+            this.buttonSnapchatLoginBackup.Size = new System.Drawing.Size(138, 23);
+            this.buttonSnapchatLoginBackup.TabIndex = 87;
+            this.buttonSnapchatLoginBackup.Text = "Snapchat Login Backup";
+            this.buttonSnapchatLoginBackup.UseVisualStyleBackColor = true;
+            this.buttonSnapchatLoginBackup.Click += new System.EventHandler(this.buttonSnapchatLoginBackup_Click);
+            // 
+            // comboBoxFolderBackup
+            // 
+            this.comboBoxFolderBackup.FormattingEnabled = true;
+            this.comboBoxFolderBackup.Location = new System.Drawing.Point(1, 140);
+            this.comboBoxFolderBackup.Name = "comboBoxFolderBackup";
+            this.comboBoxFolderBackup.Size = new System.Drawing.Size(138, 21);
+            this.comboBoxFolderBackup.TabIndex = 88;
+            this.comboBoxFolderBackup.Items.AddRange(new object[] {});
+            this.comboBoxFolderBackup.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxFolderBackup_KeyPress);
+            // 
             // AutoPhonePopup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1054, 226);
+            this.ClientSize = new System.Drawing.Size(790, 249);
             this.Controls.Add(this.panelAutoPopup);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AutoPhonePopup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Auto Cho App Điện thoại";
             this.panelAutoPopup.ResumeLayout(false);
             this.panelAutoPopup.PerformLayout();
             this.ResumeLayout(false);
-
+            this.Load += new System.EventHandler(this.AutoMobile_Load);
         }
 
         #endregion
@@ -300,5 +313,7 @@
         private System.Windows.Forms.Button buttonGlobalSmart;
         private System.Windows.Forms.Button buttonXbank;
         private System.Windows.Forms.Button buttonRangDong;
+        private System.Windows.Forms.Button buttonSnapchatLoginBackup;
+        private System.Windows.Forms.ComboBox comboBoxFolderBackup;
     }
 }
