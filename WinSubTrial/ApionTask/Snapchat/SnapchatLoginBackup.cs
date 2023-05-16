@@ -86,7 +86,8 @@ namespace WinSubTrial
                     }
                     DumpUi(serial);
                     TapDynamic(serial, "button_text");
-                    Common.Sleep(3000);
+                    Common.SetStatus(serial, "Waiting login");
+                    Common.Sleep(12000);
                     continue;
                 }
 
@@ -98,7 +99,7 @@ namespace WinSubTrial
                     DumpUi(serial);
                     TapDynamic(serial, "button_text");
                     Common.SetStatus(serial, "SMS xac minh");
-                    Common.Sleep(1000);
+                    Common.Sleep(7000);
                     continue;
                 }
 
@@ -112,14 +113,19 @@ namespace WinSubTrial
                     InputClipboard(serial);
                     DumpUi(serial);
                     TapDynamic(serial, "button_text");
-                    Common.Sleep(5000);
+                    Common.Sleep(6000);
+                    DumpUi(serial);
+                    if (ContainsIgnoreCase(TextDump, "odlv_verifying_page_title"))
+                    {
+                        return TaskResult.OtpError;
+                    }
                     continue;
                 }
                 
                 //Vào màn hình đăng nhập => Backup
                 if (ContainsIgnoreCase(TextDump, "camera_and_storage_permission_text"))
                 {
-                    string saveDir = @"C:\WINALL\WinBackup" + (string)Common.GlobalSettings["prevBackupDir"];
+                    string saveDir = (string)Common.GlobalSettings["folderBackup"];
                     string bk_packages = Common.Settings.AppBackup;
                     Common.SetStatus(serial, "Backuping...");
                     var resultBackup = new Functions.Backup { device = device }.Save(saveDir, bk_packages);

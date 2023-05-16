@@ -1216,19 +1216,6 @@ namespace WinSubTrial
 
                 while (times > 0)
                 {
-                    //if (timesChanged > (constTimesChanged - 1)) // reboot
-                    //{
-                    //    //reboot khi quá số lần auto
-                    //    RebootDevice(serial, device);
-                    //    timesChanged = 0;
-                    //}
-                    //else
-                    //{
-                    //    // wipe app /
-                    //    new ChangeA1 { device = device }.WipeAppsData();
-                    //    timesChanged += 1;
-                    //}
-
                     RebootDevice(serial, device);
                     TaskResult result = new SnapchatLoginBackup { }.LoginBackup(serial, device);
                     switch (result)
@@ -1256,6 +1243,84 @@ namespace WinSubTrial
             { IsBackground = true };
             deviceThreads[serial] = thread;
             thread.Start();
+        }
+
+        public void SnapchatChangePhone(string serial)
+        {
+            if (IsDeviceInTask(serial))
+            {
+                deviceThreads[serial].Abort();
+            }
+            Thread thread = new Thread(new ThreadStart(() =>
+            {
+                Device device = devicesModel.FirstOrDefault(x => x.Serial.Equals(serial));
+                int times = 10000000;
+
+                while (times > 0)
+                {
+                    //RebootDevice(serial, device);
+                    //Restore file
+                    string bk_packages = Common.Settings.AppBackup;
+                    BackupData backup = getRandomFileBackup();
+                    if (backup == default)
+                    {
+                        return;
+                    }
+                    Common.SetStatus(serial, $"Restoring...");
+                    string dirFileBackup = $@"{Common.GlobalSettings["folderRestore"]}\{backup.Name}";
+                    bool resultRestore = new Functions.Backup { device = device }.Restore(dirFileBackup, bk_packages, true, false);
+                    Common.SetStatus(serial, $"Restore " + (resultRestore ? "done" : "fail"));
+                    //Restore thành công thì change phone
+                    if (resultRestore)
+                    {
+                        //Xóa file backup
+                        Common.ListBackups.Remove(backup);
+                        File.Delete(dirFileBackup);
+                        TaskResult result = new SnapchatChangePhone { }.ChangePhone(serial, device);
+                        switch (result)
+                        {
+                            case TaskResult.Success:
+                                {
+                                    Common.SetStatus(serial, $"Change phone snapchat done");
+                                    break;
+                                }
+                            case TaskResult.StopAuto:
+                                {
+                                    return;
+                                }
+                            case TaskResult.OtpError:
+                            case TaskResult.Failure:
+                                {
+                                    Common.SetStatus(serial, $"Change phone snapchat fail!");
+                                    continue;
+                                }
+                            default:
+                                return;
+                        }
+                    }
+                }
+            }))
+            { IsBackground = true };
+            deviceThreads[serial] = thread;
+            thread.Start();
+        }
+
+        //Lấy random file backup
+        private BackupData getRandomFileBackup(bool updateRunning = true)
+        {
+            BackupData backup = new BackupData();;
+            for (int i = 0; i < 10; i++)
+            {
+                var random = new Random();
+                int index = random.Next(Common.ListBackups.Count);
+                if (!Common.ListBackups[index].isRunning)
+                {
+                    Common.ListBackups[index].isRunning = updateRunning;
+                    backup = Common.ListBackups[index];
+                    break;
+                }
+            }
+            return backup;
         }
 
         public void RebootDevice(string serial, Device device)

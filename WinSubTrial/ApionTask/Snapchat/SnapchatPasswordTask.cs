@@ -110,8 +110,13 @@ namespace WinSubTrial
                     Common.Sleep(3000);
                     DumpUi(serial);
                     //if (ContainsIgnoreCase(TextDump, "recovery_phone_error_message") && ContainsIgnoreCase(TextDump, "Vui"))
+                    //Lỗi ip hoặc lỗi mất mạng
                     if (ContainsIgnoreCase(TextDump, "recovery_phone_error_message") && ContainsIgnoreCase(TextDump, "recovery_phone_continue"))
                     {
+                        if(ContainsIgnoreCase(TextDump, "email")) //Số điện thoại ko hợp lệ
+                        {
+                            SavePhoneFail(numberphone, net);
+                        }
                         CloseAllApp(serial);
                         return TaskResult.OtpError;
                     }
@@ -145,8 +150,8 @@ namespace WinSubTrial
                 //Nhập mật khẩu
                 if (ContainsIgnoreCase(TextDump, "reset_password_scroll_view"))
                 {
-                    //string newPassword = EnumPassword.passwordDefault;
-                    string newPassword = RandomPasswordString();
+                    string newPassword = EnumPassword.passwordDefault;
+                    //string newPassword = RandomPasswordString();
                     InputDynamic(serial, "input_field_edit_text", newPassword);
                     Adb.SendKey(serial, "KEYCODE_DPAD_DOWN");
                     Input(serial, newPassword);
@@ -224,6 +229,19 @@ namespace WinSubTrial
                     break;
                 case "net2":
                     MyFile.WriteAllText("Data\\14-SN2ForgotPasswordSuccess.txt", numberphone, true);
+                    break;
+            }
+        }
+
+        //Lưu lại số bị lỗi
+        private void SavePhoneFail(string numberphone, string net)
+        {
+            switch (net)
+            {
+                case "net1":
+                    MyFile.WriteAllText("Data\\03-SN1ForgotPasswordFail.txt", numberphone, true);
+                    break;
+                case "net2":
                     break;
             }
         }

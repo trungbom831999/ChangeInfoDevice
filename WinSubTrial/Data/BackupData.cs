@@ -6,5 +6,6 @@
         public string Size { get; set; }
         public string Folder { get; set; }
         public string Date { get; set; }
+        public bool isRunning { get; set; }
     }
 }

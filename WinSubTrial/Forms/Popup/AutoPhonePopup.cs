@@ -26,7 +26,8 @@ namespace WinSubTrial.Forms.Popup
         
         private void AutoMobile_Load(object sender, EventArgs e)
         {
-            comboBoxFolderBackup.Text = Common.GlobalSettings["prevBackupDir"].ToString();
+            textBoxFolderBackup.Text = (string)Common.GlobalSettings["folderBackup"];
+            textBoxFolderRestore.Text = (string)Common.GlobalSettings["folderRestore"];
         }
 
         private void setNet()
@@ -232,7 +233,12 @@ namespace WinSubTrial.Forms.Popup
         private void buttonSnapchatLoginBackup_Click(object sender, EventArgs e)
         {
             if (!viewModel.someDevicesSelected()) return;
-            CreateFolderBackup();
+            if (string.IsNullOrEmpty(textBoxFolderBackup.Text))
+            {
+                Common.Info("Please choose a folder backup");
+                return;
+            }
+            Common.GlobalSettings["folderBackup"] = textBoxFolderBackup.Text;
             viewModel.devicesModel.Where(x => x.isSelected == true).AsParallel().ForAll(device =>
             {
                 Task.Run(() =>
@@ -243,20 +249,84 @@ namespace WinSubTrial.Forms.Popup
             });
         }
 
-        private void comboBoxFolderBackup_KeyPress(object sender, KeyPressEventArgs e)
+        private void buttonChooseFolderBackup_Click(object sender, EventArgs e)
         {
-            CreateFolderBackup();
-        }
-
-        private void CreateFolderBackup()
-        {
-            SaveDir = comboBoxFolderBackup.Text;
-            if (!Directory.Exists($@"C:\WINALL\winbackup{SaveDir}"))
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            if (dialog.ShowDialog() == DialogResult.OK)
             {
-                Directory.CreateDirectory($@"C:\WINALL\winbackup{SaveDir}");
+                textBoxFolderBackup.Text = dialog.SelectedPath;
+                Common.GlobalSettings["folderBackup"] = dialog.SelectedPath;
             }
-
-            Common.GlobalSettings["prevBackupDir"] = SaveDir;
+            else
+            {
+                textBoxFolderBackup.Text = "";
+            }
         }
+
+        private void buttonSnapchatChangePhone_Click(object sender, EventArgs e)
+        {
+            if (!viewModel.someDevicesSelected()) return;
+            string folderRestore = textBoxFolderRestore.Text;
+            if (string.IsNullOrEmpty(folderRestore)) {
+                Common.Info("Please choose a folder restore");
+                return;
+            }
+            Common.GlobalSettings["folderRestore"] = folderRestore;
+            Common.ListBackups = LoadBackupFileList(folderRestore);
+            if (Common.ListBackups.Count == 0)
+            {
+                Common.Info("Folder is empty!");
+                return;
+            }
+            viewModel.devicesModel.Where(x => x.isSelected == true).AsParallel().ForAll(device =>
+            {
+                Task.Run(() =>
+                {
+                    viewModel.deviceWaitForStop[device.Serial] = false;
+                    viewModel.SnapchatChangePhone(device.Serial);
+                });
+            });
+        }
+        //Load danh sách các file backup (wbk) trong folder đã chọn
+        internal static List<BackupData> LoadBackupFileList(string folder)
+        {
+            List<BackupData> ListBackups = new List<BackupData>();
+            if (Directory.Exists(folder))
+            {
+                BackupData backupData;
+                FileInfo fileInfo;
+                foreach (string file in Directory.GetFiles(folder))
+                {
+                    if (file.Contains(".wbk"))
+                    {
+                        backupData = new BackupData
+                        {
+                            Folder = folder.Substring(folder.LastIndexOf("\\") + 1),
+                            Name = Path.GetFileName(file)
+                        };
+                        fileInfo = new FileInfo(file);
+                        backupData.Date = fileInfo.CreationTime.ToString("dd:MM HH:mm");
+                        backupData.Size = Math.Round((double)fileInfo.Length / 1048576).ToString();
+                        backupData.isRunning = false;
+                        ListBackups.Add(backupData);
+                    }
+                }
+            }
+            return ListBackups;
+        }
+
+        private void buttonChooseFolderRestore_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            if(dialog.ShowDialog() == DialogResult.OK) { 
+                textBoxFolderRestore.Text = dialog.SelectedPath;
+                Common.GlobalSettings["folderRestore"] = dialog.SelectedPath;
+            }
+            else
+            {
+                textBoxFolderRestore.Text = "";
+            }
+        }
+
     }
 }

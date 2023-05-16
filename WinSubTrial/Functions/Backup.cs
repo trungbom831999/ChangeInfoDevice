@@ -77,7 +77,7 @@ namespace WinSubTrial.Functions
             return false;
         }
 
-        public bool Restore(string filePath, string bk_packages, bool isReboot = true)
+        public bool Restore(string filePath, string bk_packages, bool isReboot = true, bool isWipeApp = true)
         {
             string appRestorepath = "";
             if (bk_packages != "")
@@ -110,7 +110,10 @@ namespace WinSubTrial.Functions
                 return false;
             }
 
-            new Change { device = device }.WipeApps();
+            if (isWipeApp)
+            {
+                new Change { device = device }.WipeApps();
+            }
 
             Adb.ShellSu(device.Serial, "mount -o rw,remount /; mount -o rw,remount /system");
 
