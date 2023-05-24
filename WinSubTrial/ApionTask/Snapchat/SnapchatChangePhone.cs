@@ -67,11 +67,12 @@ namespace WinSubTrial
                 if (TextDump == "")
                 {
                     //Bấm ko cho phép truy cập danh bạ
+                    Common.Sleep(3000);
                     TapPosition(serial, new Point(x: 650, y: 1900));
                     Common.Sleep(500);
                     //Bấm avatar
                     TapPosition(serial, new Point(x: 50, y: 100));
-                    Common.Sleep(2000);
+                    Common.Sleep(3000);
                     Common.SetStatus(serial, "Tap icon avatar 1");
                     continue;
                 }
@@ -80,6 +81,7 @@ namespace WinSubTrial
                 if (ContainsIgnoreCase(TextDump, "neon_header_avatar_container"))
                 {
                     //Bấm ko cho phép truy cập danh bạ
+                    Common.Sleep(3000);
                     TapPosition(serial, new Point(x: 650, y: 1900));
                     TapDynamic(serial, "neon_header_avatar_container");
                     Common.SetStatus(serial, "Tap icon avatar 2");

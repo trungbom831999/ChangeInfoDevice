@@ -1049,21 +1049,21 @@ namespace WinSubTrial
             {
                 Device device = devicesModel.FirstOrDefault(x => x.Serial.Equals(serial));
                 int times = 10000000;
-                int timesChanged = constTimesChanged;
-                //int timesChanged = 1;
+                //int timesChanged = constTimesChanged;
+                int timesChanged = 2;
 
                 while (times > 0)
                 {
-                    if (timesChanged > (constTimesChanged - 1)) // reboot
+                    // wipe app /
+                    new ChangeA1 { device = device }.WipeAppsData();
+                    if (timesChanged > 1) // reboot
                     {
                         //reboot khi quá số lần auto
-                        //RebootDevice(serial, device);
+                        RebootDevice(serial, device);
                         timesChanged = 0;
                     }
                     else
                     {
-                        // wipe app /
-                        new ChangeA1 { device = device }.WipeAppsData();
                         timesChanged += 1;
                     }
 
@@ -1072,7 +1072,7 @@ namespace WinSubTrial
                     {
                         case TaskResult.Success:
                             {
-                                Common.SetStatus(serial, $"Password snapchat done");
+                                Common.SetStatus(serial, $"Telegram done");
                                 break;
                             }
                         case TaskResult.StopAuto:
@@ -1080,9 +1080,12 @@ namespace WinSubTrial
                                 return;
                             }
                         case TaskResult.OtpError:
+                            timesChanged = 2;
+                            Common.SetStatus(serial, $"Telegram fail send SMS or OTP!");
+                            continue;
                         case TaskResult.Failure:
                             {
-                                Common.SetStatus(serial, $"Password snapchat fail, run other phone!");
+                                Common.SetStatus(serial, $"Telegramt fail, run other phone!");
                                 continue;
                             }
                         default:

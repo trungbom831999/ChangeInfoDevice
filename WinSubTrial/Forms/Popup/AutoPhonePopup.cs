@@ -186,6 +186,10 @@ namespace WinSubTrial.Forms.Popup
             });
         }
 
+        private void buttonTelegramNet1_Click(object sender, EventArgs e)
+        {
+            TelegramRegister("net1");
+        }
         private void buttonTelegramNet2_Click(object sender, EventArgs e)
         {
             TelegramRegister("net2");

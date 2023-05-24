@@ -150,8 +150,8 @@ namespace WinSubTrial
                 //Nhập mật khẩu
                 if (ContainsIgnoreCase(TextDump, "reset_password_scroll_view"))
                 {
-                    string newPassword = EnumPassword.passwordDefault;
-                    //string newPassword = RandomPasswordString();
+                    //string newPassword = EnumPassword.passwordDefault;
+                    string newPassword = RandomPasswordString();
                     InputDynamic(serial, "input_field_edit_text", newPassword);
                     Adb.SendKey(serial, "KEYCODE_DPAD_DOWN");
                     Input(serial, newPassword);
@@ -222,13 +222,15 @@ namespace WinSubTrial
         //Lưu lại số
         private void SavePhoneSuccess(string numberphone, string net)
         {
+            DateTime today = DateTime.Today; // As DateTime
+            string s_today = today.ToString("dd-MM-yyyy");
             switch (net)
             {
                 case "net1":
-                    MyFile.WriteAllText("Data\\03-SN1ForgotPasswordSuccess.txt", numberphone, true);
+                    MyFile.WriteAllText(@"Data\\SnapchatSuccess\\03-SN1ForgotPasswordSuccess_"+ s_today +".txt", numberphone, true);
                     break;
                 case "net2":
-                    MyFile.WriteAllText("Data\\14-SN2ForgotPasswordSuccess.txt", numberphone, true);
+                    MyFile.WriteAllText(@"Data\\SnapchatSuccess\\14-SN2ForgotPasswordSuccess_"+ s_today +".txt", numberphone, true);
                     break;
             }
         }
