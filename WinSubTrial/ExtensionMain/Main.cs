@@ -192,7 +192,7 @@ namespace WinSubTrial
             {
                 return;
             }
-            Device device = viewModel.devicesModel.First(x => x.Serial.Equals(serial));
+            Device device = viewModel.devicesModel.FirstOrDefault(x => x.Serial.Equals(serial));
             DataGridViewRow row;
             if (dgvDevice == null)
                 return;

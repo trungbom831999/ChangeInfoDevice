@@ -254,6 +254,9 @@ namespace WinSubTrial.ApionTask
                 case "xbank":
                     Adb.Shell(serial, "pm clear com.xbank_rn");
                     break;
+                case "tiktoklite":
+                    Adb.Shell(serial, "pm clear com.zhiliaoapp.musically.go");
+                    break;
             }
         }
         //Mở app
@@ -290,6 +293,9 @@ namespace WinSubTrial.ApionTask
                     break;
                 case "xbank":
                     Adb.Shell(serial, "am start -n com.xbank_rn/.MainActivity");
+                    break;
+                case "tiktoklite":
+                    Adb.Shell(serial, "am start -n com.zhiliaoapp.musically.go/com.ss.android.ugc.aweme.main.homepage.MainActivity");
                     break;
 
             }

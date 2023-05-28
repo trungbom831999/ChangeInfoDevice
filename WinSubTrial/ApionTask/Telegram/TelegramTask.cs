@@ -78,21 +78,35 @@ namespace WinSubTrial
                     continue;
                 }
 
-                //Nhập OTP
+                //Lỗi OTP
                 if (ContainsIgnoreCase(TextDump, "Unable to send SMS") || ContainsIgnoreCase(TextDump, "Sorry"))
                 {
                     return TaskResult.OtpError;
                 }
                 //Nhập OTP
-                if (ContainsIgnoreCase(TextDump, "Enter code")||ContainsIgnoreCase(TextDump, "Telegram message")||TextDump=="") 
+                if (ContainsIgnoreCase(TextDump, "Enter code")||ContainsIgnoreCase(TextDump, "Telegram message")||TextDump=="")
                 {
-                    //GetOTP(serial);
-                    //Quay lại điền OTP
-                    //OpenApp(serial);
-                    //DumpUi(serial);
-                    //TapDynamic(serial, "index=\"2\"");
-                    //TapPosition(serial, new Point(x: 400, y: 800));
-
+                    //Bấm vào nút gửi thêm SMS
+                    if (ContainsIgnoreCase(TextDump, "code via SMS"))
+                    {
+                        TapDynamic(serial, "code via SMS");
+                        Common.Sleep(2000);
+                    }
+                    //Lấy OTP và dán vào
+                    GetOTP(serial);
+                    OpenApp(serial);
+                    DumpUi(serial);
+                    TapPosition(serial, new Point(x: 400, y: 1000));
+                    Common.Sleep(1000);
+                    TapPosition(serial, new Point(x: 400, y: 1000));
+                    TapPosition(serial, new Point(x: 400, y: 800));
+                    Common.Sleep(5000);
+                    DumpUi(serial);
+                    //Nếu nhập otp thành công
+                    //if (ContainsIgnoreCase(TextDump, "code via SMS"))
+                    //{
+                        
+                    //}
                     SavePhoneSuccess(numberphone, net);
                     //Nhấn back lại và Edit
                     TapPosition(serial, new Point(x: 100, y: 200));

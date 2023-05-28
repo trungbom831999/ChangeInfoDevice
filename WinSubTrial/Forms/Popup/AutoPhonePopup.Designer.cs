@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelAutoPopup = new System.Windows.Forms.Panel();
+            this.buttonTelegramNet1 = new System.Windows.Forms.Button();
             this.buttonChooseFolderBackup = new System.Windows.Forms.Button();
             this.labelFolderBackup = new System.Windows.Forms.Label();
             this.textBoxFolderBackup = new System.Windows.Forms.TextBox();
@@ -55,12 +56,13 @@
             this.buttonSnapchatPassword = new System.Windows.Forms.Button();
             this.buttonTinder = new System.Windows.Forms.Button();
             this.buttonSnapchat = new System.Windows.Forms.Button();
-            this.buttonTelegramNet1 = new System.Windows.Forms.Button();
+            this.buttonTiktokLogin = new System.Windows.Forms.Button();
             this.panelAutoPopup.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelAutoPopup
             // 
+            this.panelAutoPopup.Controls.Add(this.buttonTiktokLogin);
             this.panelAutoPopup.Controls.Add(this.buttonTelegramNet1);
             this.panelAutoPopup.Controls.Add(this.buttonChooseFolderBackup);
             this.panelAutoPopup.Controls.Add(this.labelFolderBackup);
@@ -89,15 +91,25 @@
             this.panelAutoPopup.Controls.Add(this.buttonTinder);
             this.panelAutoPopup.Controls.Add(this.buttonSnapchat);
             this.panelAutoPopup.Location = new System.Drawing.Point(3, 5);
-            this.panelAutoPopup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelAutoPopup.Margin = new System.Windows.Forms.Padding(2);
             this.panelAutoPopup.Name = "panelAutoPopup";
             this.panelAutoPopup.Size = new System.Drawing.Size(785, 300);
             this.panelAutoPopup.TabIndex = 0;
             // 
+            // buttonTelegramNet1
+            // 
+            this.buttonTelegramNet1.Location = new System.Drawing.Point(433, 53);
+            this.buttonTelegramNet1.Name = "buttonTelegramNet1";
+            this.buttonTelegramNet1.Size = new System.Drawing.Size(139, 23);
+            this.buttonTelegramNet1.TabIndex = 96;
+            this.buttonTelegramNet1.Text = "Telegram Net1";
+            this.buttonTelegramNet1.UseVisualStyleBackColor = true;
+            this.buttonTelegramNet1.Click += new System.EventHandler(this.buttonTelegramNet1_Click);
+            // 
             // buttonChooseFolderBackup
             // 
             this.buttonChooseFolderBackup.Location = new System.Drawing.Point(230, 171);
-            this.buttonChooseFolderBackup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonChooseFolderBackup.Margin = new System.Windows.Forms.Padding(2);
             this.buttonChooseFolderBackup.Name = "buttonChooseFolderBackup";
             this.buttonChooseFolderBackup.Size = new System.Drawing.Size(52, 23);
             this.buttonChooseFolderBackup.TabIndex = 95;
@@ -118,7 +130,7 @@
             // textBoxFolderBackup
             // 
             this.textBoxFolderBackup.Location = new System.Drawing.Point(0, 173);
-            this.textBoxFolderBackup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxFolderBackup.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFolderBackup.Name = "textBoxFolderBackup";
             this.textBoxFolderBackup.Size = new System.Drawing.Size(228, 20);
             this.textBoxFolderBackup.TabIndex = 93;
@@ -147,7 +159,7 @@
             // textBoxFolderRestore
             // 
             this.textBoxFolderRestore.Location = new System.Drawing.Point(1, 236);
-            this.textBoxFolderRestore.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxFolderRestore.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFolderRestore.Name = "textBoxFolderRestore";
             this.textBoxFolderRestore.Size = new System.Drawing.Size(228, 20);
             this.textBoxFolderRestore.TabIndex = 90;
@@ -174,8 +186,8 @@
             // 
             // buttonXbank
             // 
-            this.buttonXbank.Location = new System.Drawing.Point(576, 53);
-            this.buttonXbank.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonXbank.Location = new System.Drawing.Point(432, 111);
+            this.buttonXbank.Margin = new System.Windows.Forms.Padding(2);
             this.buttonXbank.Name = "buttonXbank";
             this.buttonXbank.Size = new System.Drawing.Size(139, 23);
             this.buttonXbank.TabIndex = 86;
@@ -185,8 +197,8 @@
             // 
             // buttonRangDong
             // 
-            this.buttonRangDong.Location = new System.Drawing.Point(433, 140);
-            this.buttonRangDong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonRangDong.Location = new System.Drawing.Point(578, 82);
+            this.buttonRangDong.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRangDong.Name = "buttonRangDong";
             this.buttonRangDong.Size = new System.Drawing.Size(139, 23);
             this.buttonRangDong.TabIndex = 85;
@@ -195,7 +207,7 @@
             // 
             // buttonGlobalSmart
             // 
-            this.buttonGlobalSmart.Location = new System.Drawing.Point(433, 111);
+            this.buttonGlobalSmart.Location = new System.Drawing.Point(578, 53);
             this.buttonGlobalSmart.Name = "buttonGlobalSmart";
             this.buttonGlobalSmart.Size = new System.Drawing.Size(139, 23);
             this.buttonGlobalSmart.TabIndex = 84;
@@ -248,7 +260,7 @@
             // buttonTelegramNet2
             // 
             this.buttonTelegramNet2.Location = new System.Drawing.Point(433, 82);
-            this.buttonTelegramNet2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonTelegramNet2.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTelegramNet2.Name = "buttonTelegramNet2";
             this.buttonTelegramNet2.Size = new System.Drawing.Size(139, 23);
             this.buttonTelegramNet2.TabIndex = 78;
@@ -259,7 +271,7 @@
             // buttonCamScanner
             // 
             this.buttonCamScanner.Location = new System.Drawing.Point(289, 111);
-            this.buttonCamScanner.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCamScanner.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCamScanner.Name = "buttonCamScanner";
             this.buttonCamScanner.Size = new System.Drawing.Size(139, 23);
             this.buttonCamScanner.TabIndex = 77;
@@ -270,7 +282,7 @@
             // buttonChamet
             // 
             this.buttonChamet.Location = new System.Drawing.Point(290, 82);
-            this.buttonChamet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonChamet.Margin = new System.Windows.Forms.Padding(2);
             this.buttonChamet.Name = "buttonChamet";
             this.buttonChamet.Size = new System.Drawing.Size(138, 23);
             this.buttonChamet.TabIndex = 76;
@@ -348,15 +360,15 @@
             this.buttonSnapchat.UseVisualStyleBackColor = true;
             this.buttonSnapchat.Click += new System.EventHandler(this.snapchatButtonTapped);
             // 
-            // buttonTelegramNet1
+            // buttonTiktokLogin
             // 
-            this.buttonTelegramNet1.Location = new System.Drawing.Point(433, 53);
-            this.buttonTelegramNet1.Name = "buttonTelegramNet1";
-            this.buttonTelegramNet1.Size = new System.Drawing.Size(139, 23);
-            this.buttonTelegramNet1.TabIndex = 96;
-            this.buttonTelegramNet1.Text = "Telegram Net1";
-            this.buttonTelegramNet1.UseVisualStyleBackColor = true;
-            this.buttonTelegramNet1.Click += new System.EventHandler(this.buttonTelegramNet1_Click);
+            this.buttonTiktokLogin.Location = new System.Drawing.Point(578, 110);
+            this.buttonTiktokLogin.Name = "buttonTiktokLogin";
+            this.buttonTiktokLogin.Size = new System.Drawing.Size(139, 23);
+            this.buttonTiktokLogin.TabIndex = 97;
+            this.buttonTiktokLogin.Text = "TikTok Login";
+            this.buttonTiktokLogin.UseVisualStyleBackColor = true;
+            this.buttonTiktokLogin.Click += new System.EventHandler(this.buttonTiktokLogin_Click);
             // 
             // AutoPhonePopup
             // 
@@ -364,7 +376,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 309);
             this.Controls.Add(this.panelAutoPopup);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AutoPhonePopup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Auto Cho App Điện thoại";
@@ -405,5 +417,6 @@
         private System.Windows.Forms.Label labelFolderBackup;
         private System.Windows.Forms.TextBox textBoxFolderBackup;
         private System.Windows.Forms.Button buttonTelegramNet1;
+        private System.Windows.Forms.Button buttonTiktokLogin;
     }
 }

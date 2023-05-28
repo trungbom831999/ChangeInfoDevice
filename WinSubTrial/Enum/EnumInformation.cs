@@ -24,6 +24,7 @@ namespace WinSubTrial.Enum
         public static string telegram = "TE";
         public static string globalsmart = "RD";
         public static string xbank = "XB";
+        public static string tiktok = "T";
     }
 
     static class EnumPassword
