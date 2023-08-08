@@ -1246,6 +1246,47 @@ namespace WinSubTrial
             deviceThreads[serial] = thread;
             thread.Start();
         }
+        public void TiktokLoginPassword(string serial)
+        {
+            if (IsDeviceInTask(serial))
+            {
+                deviceThreads[serial].Abort();
+            }
+            Thread thread = new Thread(new ThreadStart(() =>
+            {
+                Device device = devicesModel.FirstOrDefault(x => x.Serial.Equals(serial));
+                int times = 10000000;
+
+                while (times > 0)
+                {
+                    RebootDevice(serial, device);
+                    TaskResult result = new TiktokLogin { }.TiktokLoginPassword(serial);
+                    switch (result)
+                    {
+                        case TaskResult.Success:
+                            {
+                                Common.SetStatus(serial, $"Login Tiktok done");
+                                break;
+                            }
+                        case TaskResult.StopAuto:
+                            {
+                                return;
+                            }
+                        case TaskResult.OtpError:
+                        case TaskResult.Failure:
+                            {
+                                Common.SetStatus(serial, $"Login Tiktok fail!");
+                                continue;
+                            }
+                        default:
+                            return;
+                    }
+                }
+            }))
+            { IsBackground = true };
+            deviceThreads[serial] = thread;
+            thread.Start();
+        }
         public void SnapchatLoginBackup(string serial)
         {
             if (IsDeviceInTask(serial))

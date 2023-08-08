@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelAutoPopup = new System.Windows.Forms.Panel();
+            this.buttonTiktokLogin = new System.Windows.Forms.Button();
             this.buttonTelegramNet1 = new System.Windows.Forms.Button();
             this.buttonChooseFolderBackup = new System.Windows.Forms.Button();
             this.labelFolderBackup = new System.Windows.Forms.Label();
@@ -56,12 +57,13 @@
             this.buttonSnapchatPassword = new System.Windows.Forms.Button();
             this.buttonTinder = new System.Windows.Forms.Button();
             this.buttonSnapchat = new System.Windows.Forms.Button();
-            this.buttonTiktokLogin = new System.Windows.Forms.Button();
+            this.buttonTiktokLoginPassword = new System.Windows.Forms.Button();
             this.panelAutoPopup.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelAutoPopup
             // 
+            this.panelAutoPopup.Controls.Add(this.buttonTiktokLoginPassword);
             this.panelAutoPopup.Controls.Add(this.buttonTiktokLogin);
             this.panelAutoPopup.Controls.Add(this.buttonTelegramNet1);
             this.panelAutoPopup.Controls.Add(this.buttonChooseFolderBackup);
@@ -95,6 +97,16 @@
             this.panelAutoPopup.Name = "panelAutoPopup";
             this.panelAutoPopup.Size = new System.Drawing.Size(785, 300);
             this.panelAutoPopup.TabIndex = 0;
+            // 
+            // buttonTiktokLogin
+            // 
+            this.buttonTiktokLogin.Location = new System.Drawing.Point(578, 110);
+            this.buttonTiktokLogin.Name = "buttonTiktokLogin";
+            this.buttonTiktokLogin.Size = new System.Drawing.Size(139, 23);
+            this.buttonTiktokLogin.TabIndex = 97;
+            this.buttonTiktokLogin.Text = "TikTok Login";
+            this.buttonTiktokLogin.UseVisualStyleBackColor = true;
+            this.buttonTiktokLogin.Click += new System.EventHandler(this.buttonTiktokLogin_Click);
             // 
             // buttonTelegramNet1
             // 
@@ -360,15 +372,15 @@
             this.buttonSnapchat.UseVisualStyleBackColor = true;
             this.buttonSnapchat.Click += new System.EventHandler(this.snapchatButtonTapped);
             // 
-            // buttonTiktokLogin
+            // buttonTiktokLoginPassword
             // 
-            this.buttonTiktokLogin.Location = new System.Drawing.Point(578, 110);
-            this.buttonTiktokLogin.Name = "buttonTiktokLogin";
-            this.buttonTiktokLogin.Size = new System.Drawing.Size(139, 23);
-            this.buttonTiktokLogin.TabIndex = 97;
-            this.buttonTiktokLogin.Text = "TikTok Login";
-            this.buttonTiktokLogin.UseVisualStyleBackColor = true;
-            this.buttonTiktokLogin.Click += new System.EventHandler(this.buttonTiktokLogin_Click);
+            this.buttonTiktokLoginPassword.Location = new System.Drawing.Point(578, 139);
+            this.buttonTiktokLoginPassword.Name = "buttonTiktokLoginPassword";
+            this.buttonTiktokLoginPassword.Size = new System.Drawing.Size(139, 23);
+            this.buttonTiktokLoginPassword.TabIndex = 98;
+            this.buttonTiktokLoginPassword.Text = "TikTok Login 2";
+            this.buttonTiktokLoginPassword.UseVisualStyleBackColor = true;
+            this.buttonTiktokLoginPassword.Click += new System.EventHandler(this.buttonTiktokLoginPassword_Click);
             // 
             // AutoPhonePopup
             // 
@@ -418,5 +430,6 @@
         private System.Windows.Forms.TextBox textBoxFolderBackup;
         private System.Windows.Forms.Button buttonTelegramNet1;
         private System.Windows.Forms.Button buttonTiktokLogin;
+        private System.Windows.Forms.Button buttonTiktokLoginPassword;
     }
 }

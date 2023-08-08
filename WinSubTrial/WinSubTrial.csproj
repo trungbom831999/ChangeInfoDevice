@@ -94,9 +94,12 @@
     <Compile Include="ApionTask\Chamet\ChametTask.cs" />
     <Compile Include="ApionTask\EnumApp.cs" />
     <Compile Include="ApionTask\GlobalSmart\GlobalSmartTask.cs" />
+    <Compile Include="ApionTask\Snapchat\SnapchatChangePhone.cs" />
     <Compile Include="ApionTask\Snapchat\SnapchatPasswordTask.cs" />
     <Compile Include="ApionTask\Bigo\BigoSMSTask.cs" />
+    <Compile Include="ApionTask\Snapchat\SnapchatLoginBackup.cs" />
     <Compile Include="ApionTask\Telegram\TelegramTask.cs" />
+    <Compile Include="ApionTask\Tiktok\TiktokLogin.cs" />
     <Compile Include="ApionTask\Tinder\TinderTask.cs" />
     <Compile Include="ApionTask\Snapchat\SnapchatTask.cs" />
     <Compile Include="ApionTask\SubscribeYoutubeTask.cs" />

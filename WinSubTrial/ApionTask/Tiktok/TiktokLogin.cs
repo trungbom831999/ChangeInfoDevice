@@ -45,12 +45,12 @@ namespace WinSubTrial
 
                     return TaskResult.StopAuto;
                 }
-                //DateTime currentTime = DateTime.Now;
-                //if ((currentTime - startTime).TotalSeconds > 600)
-                //{
-                //    Common.SetStatus(serial, "Timeout, timed out");
-                //    return TaskResult.Failure;
-                //}
+                DateTime currentTime = DateTime.Now;
+                if ((currentTime - startTime).TotalSeconds > 600)
+                {
+                    Common.SetStatus(serial, "Timeout, timed out");
+                    return TaskResult.Failure;
+                }
 
                 DumpUi(serial);
 
@@ -95,23 +95,145 @@ namespace WinSubTrial
                     Common.SetStatus(serial, "Send OTP");
                     Common.Sleep(3000);
                     DumpUi(serial);
-
-                    if (ContainsIgnoreCase(TextDump, "com.zhiliaoapp.musically.go:id/ul"))
-                    {
-                        return TaskResult.Success;
-                    }
-                    else if (ContainsIgnoreCase(TextDump, "com.zhiliaoapp.musically.go:id/uy"))
+                    if (ContainsIgnoreCase(TextDump, "com.zhiliaoapp.musically.go:id/uy"))
                     {
                         return TaskResult.Failure;
                     }
                     continue;
                 }
 
-                //if (ContainsIgnoreCase(TextDump, "abcxyz")) { }
+                if (ContainsIgnoreCase(TextDump, "com.zhiliaoapp.musically.go:id/ul"))
+                {
+                    //Lấy OTP và dán vào
+                    GetOTP(serial);
+                    OpenApp(serial);
+                    DumpUi(serial);
+                    TapDynamic(serial, "com.zhiliaoapp.musically.go:id/ul");
+                    InputClipboard(serial);
+                    Common.Sleep(3000);
+                    DumpUi(serial);
+                    if (ContainsIgnoreCase(TextDump, "com.zhiliaoapp.musically.go:id/ul"))
+                    {
+                        return TaskResult.Failure;
+                    }
+                    else
+                    {
+                        return TaskResult.Success;
+                    }
+                }
+                if (ContainsIgnoreCase(TextDump, "abcxyz")) { }
 
             }
         }
 
+        public TaskResult TiktokLoginPassword(string serial)
+        {
+            string numberphone = GetRandomNumberPhone();
+            if (numberphone == null)
+            {
+                Common.SetStatus(serial, "Call API fail. Out of number");
+                return TaskResult.StopAuto;
+            }
+            Adb.SendKey(serial, "KEYCODE_HOME");
+            FillInfoGetCodeAPI(serial, numberphone, EnumBrandApp.tiktok);
+            OpenApp(serial);
+            Common.Sleep(2000);
+            DateTime startTime = DateTime.Now;
+            while (true)
+            {
+                if (isStopAuto)
+                {
+                    Common.SetStatus(serial, "Stopped Auto");
+
+                    return TaskResult.StopAuto;
+                }
+                DateTime currentTime = DateTime.Now;
+                if ((currentTime - startTime).TotalSeconds > 600)
+                {
+                    Common.SetStatus(serial, "Timeout, timed out");
+                    return TaskResult.Failure;
+                }
+
+                DumpUi(serial);
+                //Vào màn chính
+                if (TextDump == "" || ContainsIgnoreCase(TextDump, "com.zhiliaoapp.musically.go:id/t0"))
+                {
+                    TapPosition(serial, new Point(x: 1400, y: 2500));
+                    Common.SetStatus(serial, "Tap Tôi");
+                    continue;
+                }
+                //Chính sách quyền riêng tư
+                if (ContainsIgnoreCase(TextDump, "com.zhiliaoapp.musically.go:id/a2z"))
+                {
+                    TapDynamic(serial, "com.zhiliaoapp.musically.go:id/a2z");
+                    Common.SetStatus(serial, "Tap chinh sach");
+                    continue;
+                }
+                //Nhấn đăng nhập và nhấn đăng nhập qua sđt
+                if (ContainsIgnoreCase(TextDump, "com.zhiliaoapp.musically.go:id/abm"))
+                {
+                    if (!ContainsIgnoreCase(TextDump, "TikTok ID"))
+                    {
+                        //Nhấn đăng nhập
+                        TapDynamic(serial, "com.zhiliaoapp.musically.go:id/abm");
+                        Common.SetStatus(serial, "Tap login");
+                    }
+                    else
+                    {
+                        //Đăng nhập bằng sđt
+                        TapDynamic(serial, "com.zhiliaoapp.musically.go:id/ab9");
+                        Common.SetStatus(serial, "Tap login by phone");
+                    }
+                    continue;
+                }
+                //Nhấn sang tab  
+                if (ContainsIgnoreCase(TextDump, "com.zhiliaoapp.musically.go:id/a1z"))
+                {
+                    TapDynamic(serial, "Email");
+                    DumpUi(serial);
+                    TapDynamic(serial, "com.zhiliaoapp.musically.go:id/pw");
+                    DumpUi(serial);
+                    TapDynamic(serial, "android:id/text1");
+                    continue;
+                }
+                //Nhập sđt
+                if (ContainsIgnoreCase(TextDump, "com.zhiliaoapp.musically.go:id/uy"))
+                {
+                    InputDynamic(serial, "com.zhiliaoapp.musically.go:id/uy", numberphone);
+                    Common.SetStatus(serial, "Input numberphone");
+                    TapDynamic(serial, "com.zhiliaoapp.musically.go:id/y2");
+                    Common.SetStatus(serial, "Send OTP");
+                    Common.Sleep(3000);
+                    DumpUi(serial);
+                    if (ContainsIgnoreCase(TextDump, "com.zhiliaoapp.musically.go:id/uy"))
+                    {
+                        return TaskResult.Failure;
+                    }
+                    continue;
+                }
+
+                if (ContainsIgnoreCase(TextDump, "com.zhiliaoapp.musically.go:id/ul"))
+                {
+                    //Lấy OTP và dán vào
+                    GetOTP(serial);
+                    OpenApp(serial);
+                    DumpUi(serial);
+                    TapDynamic(serial, "com.zhiliaoapp.musically.go:id/ul");
+                    InputClipboard(serial);
+                    Common.Sleep(3000);
+                    DumpUi(serial);
+                    if (ContainsIgnoreCase(TextDump, "com.zhiliaoapp.musically.go:id/ul"))
+                    {
+                        return TaskResult.Failure;
+                    }
+                    else
+                    {
+                        return TaskResult.Success;
+                    }
+                }
+                //if (ContainsIgnoreCase(TextDump, "abcxyz")) { }
+            }
+        }
         private void OpenApp(string serial)
         {
             OpenApp(serial, "tiktoklite");

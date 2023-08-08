@@ -245,6 +245,18 @@ namespace WinSubTrial.Forms.Popup
                 });
             });
         }
+        private void buttonTiktokLoginPassword_Click(object sender, EventArgs e)
+        {
+            if (!viewModel.someDevicesSelected()) return;
+            viewModel.devicesModel.Where(x => x.isSelected == true).AsParallel().ForAll(device =>
+            {
+                Task.Run(() =>
+                {
+                    viewModel.deviceWaitForStop[device.Serial] = false;
+                    viewModel.TiktokLoginPassword(device.Serial);
+                });
+            });
+        }
 
         private void buttonSnapchatLoginBackup_Click(object sender, EventArgs e)
         {
@@ -343,5 +355,6 @@ namespace WinSubTrial.Forms.Popup
                 textBoxFolderRestore.Text = "";
             }
         }
+
     }
 }
